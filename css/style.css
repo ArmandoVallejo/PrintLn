@@ -74,7 +74,7 @@ body a{
   }
  
   .menu li a:hover, .menu li.active a {
-	color: #000; /* Color del texto al pasar el cursor */
+	color: #000; 
   }
  #nav .current a {
 	 color:red;
