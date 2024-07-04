@@ -159,9 +159,10 @@ body a{
 }
 .header_right {
   float: right;
-  width: 6%;
+  width: 7%;
   margin-top: 16px;
 }
+
 .sb-search {
   position: absolute;
   top: 7px;
