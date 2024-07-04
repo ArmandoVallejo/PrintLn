@@ -116,6 +116,17 @@
 		 </div>
 	    </div>
 	  </div>
+	<div id="header-placeholder"></div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            fetch('header.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('header-placeholder').innerHTML = data;
+                })
+                .catch(error => console.error('Error cargando el encabezado:', error));
+        });
+    </script>
      <div class="main">
       <div class="shop_top">
 		<div class="container">
@@ -197,6 +208,7 @@
 		 </div>
 	   </div>
 	  </div>
+
 	</div>
 	<div class="footer">
 		<div class="container">
@@ -254,5 +266,18 @@
 			</div>
 		</div>
 	</div>
+
+	  <div id="footer-placeholder"></div>
+	  <script>
+		  document.addEventListener("DOMContentLoaded", function() {
+			  fetch('footer.html')
+				  .then(response => response.text())
+				  .then(data => {
+					  document.getElementById('footer-placeholder').innerHTML = data;
+				  })
+				  .catch(error => console.error('Error cargando el encabezado:', error));
+		  });
+	  </script>
+
 </body>	
 </html>
