@@ -348,6 +348,16 @@ ul.icon1 {
 .active-icon {
   display: block;
 }
+
+.remember-register label a{
+  color: #777;
+  line-height: 2.8em;
+  font-size: 0.95em;
+  font-weight: 400;
+  margin: 0;
+  margin-bottom: 1;
+  display: block;
+}
 .icon1 ul li:first-child > a:after {
   content: "";
   position: absolute;
@@ -1740,8 +1750,18 @@ div.k2AccountPage input[type="text"] {
   font-family: "Open Sans", sans-serif;
   font-size: 0.85em;
 }
-.remember {
-  margin: 10px;
+
+.button-registrar{
+  background: #ff5555;
+  border: none;
+  color: #000;
+  padding: 10px 30px;
+  cursor: pointer;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  font-family: "Open Sans", sans-serif;
+  outline: none;
+  font-size: 1em;
 }
 
 fieldset.input input[type="submit"] {
