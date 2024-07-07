@@ -1837,19 +1837,21 @@ ul.product-colors {
   padding: 7%;
 }
 p.price2 {
+  text-align: center;
   color: #333;
-  font-size: 2em;
+  font-size: 1rem;
   font-weight: 700;
   margin-bottom: 5%;
 }
 .prosuct-qty {
+  text-align: center;
   margin-bottom: 1.5em;
   padding: 0;
 }
 .prosuct-qty select {
   font-family: "Open Sans", sans-serif;
   border: 1px solid #eee;
-  padding: 5% 41%;
+  padding: 3% 34%;
   font-size: 1em;
   outline: none;
 }
@@ -1866,9 +1868,9 @@ p.price2 {
 }
 .box-info-product .exclusive span {
   font-weight: 700;
-  font-size: 20px;
+  font-size: 1rem;
   line-height: 22px;
-  padding: 12px 36px 14px 60px;
+  padding: 6px 6px 6px 60px;
   color: #fff;
   display: block !important;
 }
