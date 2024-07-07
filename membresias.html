@@ -1,0 +1,182 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>println</title>
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <!--<link href="css/bootstrap.css" rel='stylesheet' type='text/css' />-->
+        <link
+            href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+            rel="stylesheet">
+        <script
+            src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <link href="css/style.css" rel='stylesheet' type='text/css' />
+        <meta name="viewport"
+            content="width=device-width, initial-scale=1, maximum-scale=1">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link
+            href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800'
+            rel='stylesheet' type='text/css'>
+        <script
+            type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+        <script src="js/jquery.min.js"></script>
+        <!--<script src="js/jquery.easydropdown.js"></script>-->
+        <!--start slider -->
+        <link rel="stylesheet" href="css/fwslider.css" media="all">
+        <script src="js/jquery-ui.min.js"></script>
+        <script src="js/fwslider.js"></script>
+        <!--end slider -->
+        <script type="text/javascript">
+        $(document).ready(function() {
+            $(".dropdown img.flag").addClass("flagvisibility");
+
+            $(".dropdown dt a").click(function() {
+                $(".dropdown dd ul").toggle();
+            });
+                        
+            $(".dropdown dd ul li a").click(function() {
+                var text = $(this).html();
+                $(".dropdown dt a span").html(text);
+                $(".dropdown dd ul").hide();
+                $("#result").html("Selected value is: " + getSelectedValue("sample"));
+            });
+                        
+            function getSelectedValue(id) {
+                return $("#" + id).find("dt a span.value").html();
+            }
+
+            $(document).bind('click', function(e) {
+                var $clicked = $(e.target);
+                if (! $clicked.parents().hasClass("dropdown"))
+                    $(".dropdown dd ul").hide();
+            });
+
+
+            $("#flagSwitcher").click(function() {
+                $(".dropdown img.flag").toggleClass("flagvisibility");
+            });
+        });
+     </script>
+    </head>
+    <body>
+        <div id="header-placeholder"></div>
+        <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            fetch('header.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('header-placeholder').innerHTML = data;
+                })
+                .catch(error => console.error('Error cargando el encabezado:', error));
+        });
+    </script>
+
+        <div class="main">
+            <div class="shop_top">
+                <div class="container">
+                    <div class="row d-flex justify-content-center"
+                        style="box-shadow: 0px 0px 10px rgba(64, 64, 64, 1);">
+                        <div class="banner_top col-lg-12 col-md-12 col-sm-12">
+                            <h2 class="text-center"
+                                style="margin-top: 50px;">PLANES Y
+                                MEMBRESIAS</h2>
+                            <br>
+                            <p class="text-center"
+                                style="margin-bottom: 50px;">Encuentra la
+                                membresia que mas se adapte a tus necesidades,
+                                <br> disfruta de nuestros beneficios para
+                                mayoristas y clientes recurrentes. </p>
+                            
+                        </div>
+                        <div class="col-lg-4 col-sm-12" style="padding: 20px;">
+                            <div class="container-sub" style="  box-shadow: 0px 0px 10px rgba(64, 64, 64, 1);">
+                                <div class="member-title d-flex justify-content-center">
+                                    <h2 style="margin: 10px; color: #41b1aa;">Basica</h2>
+                                </div>
+                                <div class="member-content mt-2">
+                                    <p class="text-center mb-3"><i class="fa fa-check"></i> Descuentos en compras</p>
+                                    <p class="text-center mb-3"><i class="fa fa-check"></i> Acceso a Ofertas Exclusivas</p>
+                                    <p class="text-center mb-3"><i class="fa fa-times"></i> Envío gratuito</p>
+                                    <p class="text-center mb-3"><i class="fa fa-times"></i> Atencion al cliente prioritaria</p>
+                                    <p class="text-center mb-3"><i class="fa fa-times"></i> Garantia extendida en playeras</p>
+                                    <p class="text-center mb-3"><i class="fa fa-times"></i> Consultoria gratuita 24/7</p>
+                                </div>
+                                <div class="member-price m-4">
+                                    <h3 class="text-center">$MXN 200/mes</h3>
+                                </div>
+                                <div class="member-btn mt-2 d-flex justify-content-center">
+                                    <form action="">
+                                        <input type="submit" value="Suscribirme" class="suscribirme-button1 mb-4">
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-sm-12" style="padding: 20px;">
+                            <div class="container-sub" style="  box-shadow: 0px 0px 10px rgba(64, 64, 64, 1);">
+                                <div class="member-title d-flex justify-content-center">
+                                    <h2 style="margin: 10px; color: #030072;">Plus</h2>
+                                </div>
+                                <div class="member-content mt-2">
+                                    <p class="text-center mb-3"><i class="fa fa-check"></i> Descuentos en compras</p>
+                                    <p class="text-center mb-3"><i class="fa fa-check"></i> Acceso a Ofertas Exclusivas</p>
+                                    <p class="text-center mb-3"><i class="fa fa-check"></i> Envío gratuito</p>
+                                    <p class="text-center mb-3"><i class="fa fa-check"></i> Atencion al cliente prioritaria</p>
+                                    <p class="text-center mb-3"><i class="fa fa-times"></i> Garantia extendida en playeras</p>
+                                    <p class="text-center mb-3"><i class="fa fa-times"></i> Consultoria gratuita 24/7</p>
+                                </div>
+                                <div class="member-price m-4">
+                                    <h3 class="text-center">$MXN 450/mes</h3>
+                                </div>
+                                <div class="member-btn mt-2 d-flex justify-content-center">
+                                    <form action="">
+                                        <input type="submit" value="Suscribirme" class="suscribirme-button2 mb-4">
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-sm-12" style="padding: 20px;">
+                            <div class="container-sub" style="box-shadow: 0px 0px 10px rgba(64, 64, 64, 1);">
+                                <div class="member-title d-flex justify-content-center">
+                                    <h2 style="margin: 10px; color: #ff5555;">Deluxe</h2>
+                                </div>
+                                <div class="member-content mt-2">
+                                    <p class="text-center mb-3"><i class="fa fa-check"></i> Descuentos en compras</p>
+                                    <p class="text-center mb-3"><i class="fa fa-check"></i> Acceso a Ofertas Exclusivas</p>
+                                    <p class="text-center mb-3"><i class="fa fa-check"></i> Envío gratuito</p>
+                                    <p class="text-center mb-3"><i class="fa fa-check"></i> Atencion al cliente prioritaria</p>
+                                    <p class="text-center mb-3"><i class="fa fa-check"></i> Garantia extendida en playeras</p>
+                                    <p class="text-center mb-3"><i class="fa fa-check"></i> Consultoria gratuita 24/7</p>
+                                </div>
+                                <div class="member-price m-4">
+                                    <h3 class="text-center">$MXN 600/mes</h3>
+                                </div>
+                                <div class="member-btn mt-2 d-flex justify-content-center">
+                                    <form action="">
+                                        <input type="submit" value="Suscribirme" class="suscribirme-button3 mb-4">
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row d-flex justify-content-center">
+                        
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+        <div id="footer-placeholder"></div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            fetch('footer.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('footer-placeholder').innerHTML = data;
+                })
+                .catch(error => console.error('Error cargando el encabezado:', error));
+        });
+    </script>
+
+    </body>
+</html>
