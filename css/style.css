@@ -1576,6 +1576,83 @@ p.m_8 {
   cursor: pointer;
   outline: none;
 }
+
+.suscribirme-button1{
+  color: #fff;
+  font-family: "Open Sans", sans-serif;
+  font-size: 0.95em;
+  font-weight: normal;
+  padding: 15px 40px;
+  text-transform: uppercase;
+  background: #41b1aa;
+  display: inline-block;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -ms-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+  font-weight: 100;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+.suscribirme-button2{
+  color: #fff;
+  font-family: "Open Sans", sans-serif;
+  font-size: 0.95em;
+  font-weight: normal;
+  padding: 15px 40px;
+  text-transform: uppercase;
+  background: #030072;
+  display: inline-block;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -ms-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+  font-weight: 100;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+.suscribirme-button3{
+  color: #fff;
+  font-family: "Open Sans", sans-serif;
+  font-size: 0.95em;
+  font-weight: normal;
+  padding: 15px 40px;
+  text-transform: uppercase;
+  background: #e25050;
+  display: inline-block;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -ms-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+  font-weight: 100;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+.suscribirme-button1:hover{
+  background: #A6DDD9;
+}
+.suscribirme-button2:hover{
+  background: #6B69C6;
+}
+.suscribirme-button3:hover{
+  background: #ff9696;
+  color: #fff;
+}
+.container-sub{
+  background-color: #fff;
+  transition: background-color 0.5s ease;
+}
+.container-sub:hover{
+  background-color: #E4E4E4;
+  
+}
+
 .form-submit input[type="submit"]:hover {
   background: #333;
 }
