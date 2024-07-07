@@ -276,7 +276,8 @@ body a{
 .nav ul {
   list-style: none;
 }
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 860px) {
+  
   .active {
     display: block;
   }
@@ -405,7 +406,6 @@ body a{
 	background: #44475e url('../images/img-sprite.png') no-repeat 0px 1px;
 	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"; /* IE 8 */
     filter: alpha(opacity=0); /* IE 5-7 */
-   
 	color: transparent;
 	border: none;
 	outline: none;
