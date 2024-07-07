@@ -29,3 +29,26 @@
     background-color: #ff4081;
     color: white;
 }
+.image-container {
+    position: relative;
+}
+
+.wishlist-btn {
+    position: absolute;
+    top: 245px;  
+    right: 30px;  
+    display: inline-block;
+    color: #0;
+    font-size: 1.5em;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.wishlist-btn:hover {
+    color: #ff0000;; 
+}
+
+.wishlist-btn .fas.fa-heart {
+    margin-right: 5px;
+}
+
