@@ -2178,7 +2178,7 @@ table#my-orders-table a.view-order {
   background: var(--bg-primary);
   width: 100%;
   float: left;
-  padding: 100px 0 0;
+  padding: 50px 0 0;
 }
 
 .tg-account .account-banner .inner-banner .detail * {
