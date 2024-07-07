@@ -4,5 +4,5 @@ function handleCategoryChange(category) {
 }
 function addToWishlist(event) {
     event.preventDefault();
-    alert("Producto agregado a la lista de deseos");
+    alert("Producto agregado a la lista de favoritos");
 }

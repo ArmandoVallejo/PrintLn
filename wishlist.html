@@ -1,0 +1,121 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Wishlist</title>
+    <link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
+    <link href="css/style.css" rel='stylesheet' type='text/css' />
+    <link href="css/categoriashop.css" rel='stylesheet' type='text/css' />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="css/wishlist.css" rel='stylesheet' type='text/css' />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <script type="application/x-javascript"> 
+        addEventListener("load", function() { 
+            setTimeout(hideURLbar, 0); 
+        }, false); 
+        function hideURLbar() { 
+            window.scrollTo(0, 1); 
+        } 
+    </script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/categoriashop.js"></script>
+</head>
+<body>
+    <div id="header-placeholder"></div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            fetch('header.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('header-placeholder').innerHTML = data;
+                })
+                .catch(error => console.error('Error cargando el encabezado:', error));
+        });
+    </script>
+<div style="text-align:left; margin-top:2%;margin-left: 9%;">
+    <h2 style="font-family: 'Open Sans', sans-serif;">Mi lista de favoritos.</h2>
+</div>
+<div class="main">
+    <div class="shop_top">
+        <div class="container">
+            <div class="row shop_box-top">
+                <div class="col-md-3 shop_box"><a href="single.html">
+                    <img src="images/shopTees/pic5.jpg" class="img-responsive" alt=""/>
+                    <span class="new-box">
+                        <span class="new-label">New</span>
+                    </span>
+                    <span class="sale-box">
+                        <span class="sale-label">Sale!</span>
+                    </span>
+                    <div class="shop_desc">
+                        <h3><a href="#">Playera 1</a></h3>
+                        <p>Playera estampada de composición 50% algodón y 50% poliester </p>
+                        <span class="reducedfrom">$66.00</span>
+                        <span class="actual">$12.00</span><br>
+                        <ul class="buttons">
+                            <li class="cart"><a href="#">Add To Cart</a></li>
+                            <li class="shop_btn"><a href="#">Read More</a></li>
+                            <div class="clear"> </div>
+                        </ul>
+                    </div>
+                </a></div>
+               
+    <div class="col-md-3 shop_box"><a href="single.html">
+        <img src="images/shopTees/pic9.jpg" class="img-responsive" alt=""/>
+        <span class="new-box">
+            <span class="new-label">New</span>
+        </span>
+        <span class="sale-box">
+            <span class="sale-label">Sale!</span>
+        </span>
+        <div class="shop_desc">
+            <h3><a href="#">Playera 1</a></h3>
+            <p>Playera estampada de composición 50% algodón y 50% poliester </p>
+            <span class="reducedfrom">$66.00</span>
+            <span class="actual">$12.00</span><br>
+            <ul class="buttons">
+                <li class="cart"><a href="#">Add To Cart</a></li>
+                <li class="shop_btn"><a href="#">Read More</a></li>
+                <div class="clear"> </div>
+            </ul>
+        </div>
+    </a></div>
+    <div class="col-md-3 shop_box"><a href="single.html">
+        <img src="images/shopTees/pic11.jpg" class="img-responsive" alt=""/>
+        <span class="new-box">
+            <span class="new-label">New</span>
+        </span>
+        <span class="sale-box">
+            <span class="sale-label">Sale!</span>
+        </span>
+        <div class="shop_desc">
+            <h3><a href="#">Playera 1</a></h3>
+            <p>Playera estampada de composición 50% algodón y 50% poliester </p>
+            <span class="reducedfrom">$66.00</span>
+            <span class="actual">$12.00</span><br>
+            <ul class="buttons">
+                <li class="cart"><a href="#">Add To Cart</a></li>
+                <li class="shop_btn"><a href="#">Read More</a></li>
+                <div class="clear"> </div>
+            </ul>
+        </div>
+    </a></div>
+
+    </div>
+</div>
+</div>
+</div>
+    <div id="footer-placeholder"></div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            fetch('footer.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('footer-placeholder').innerHTML = data;
+                })
+                .catch(error => console.error('Error cargando el pie de página:', error));
+        });
+    </script>
+</body>
+</html>
