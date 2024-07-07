@@ -1952,7 +1952,7 @@ div.k2AccountPage input[type="text"] {
   background: var(--bg-primary);
   width: 100%;
   float: left;
-  padding: 100px 0 0;
+  padding: 50px 0 0;
 }
 
 .tg-account .account-banner .inner-banner .detail * {
@@ -2040,7 +2040,7 @@ div#my-orders-table_filter {
 }
 
 .tg-tabs-content-wrapp form.tg-form button {
-  background: var(--bg-primary);
+  background: #ff5555;
   border: none;
   padding: 10px 32px;
   cursor: pointer;
@@ -2106,7 +2106,7 @@ div#my-orders-table_paginate span a.current {
 
 .tg-tabs-content-wrapp .my-account-dashboard .card:hover,
 .tg-tabs-content-wrapp .my-account-dashboard .card.active {
-  background: var(--text-primary);
+  background: #ff5555;
 }
 
 .tg-tabs-content-wrapp .my-account-dashboard .card:hover *,

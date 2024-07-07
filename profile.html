@@ -112,7 +112,7 @@
                                                 aria-controls="dashboard"
                                                 aria-selected="true"><i
                                                     class="fas fa-tachometer-alt"></i>
-                                                <span>Dashboard</span></a>
+                                                <span>Tablero</span></a>
                                         </li>
                                         <li class="nav-item">
                                             <a class="nav-link" id="my-order"
@@ -121,7 +121,7 @@
                                                 aria-controls="my-orders"
                                                 aria-selected="false"><i
                                                     class="fas fa-file-invoice"></i>
-                                                <span>Orders</span></a>
+                                                <span>Mis Ordenes</span></a>
                                         </li>
                                         <li class="nav-item">
                                             <a class="nav-link" id="my-address"
@@ -130,7 +130,7 @@
                                                 aria-controls="address"
                                                 aria-selected="false"><i
                                                     class="fas fa-map-marker-alt"></i>
-                                                <span>Address</span></a>
+                                                <span>Direccion</span></a>
                                         </li>
                                         <li class="nav-item">
                                             <a class="nav-link"
@@ -141,7 +141,7 @@
                                                 aria-controls="account-details"
                                                 aria-selected="false"><i
                                                     class="fas fa-user-alt"></i>
-                                                <span>Account Details</span></a>
+                                                <span>Cuenta</span></a>
                                         </li>
                                         <li class="nav-item">
                                             <a class="nav-link" id="logout"
@@ -150,7 +150,7 @@
                                                 aria-controls="logout"
                                                 aria-selected="false"><i
                                                     class="fas fa-sign-out-alt"></i>
-                                                <span>Logout</span></a>
+                                                <span>Cerrar Sesion</span></a>
                                         </li>
                                     </ul>
                                 </div>
@@ -166,9 +166,7 @@
                             <div class="container">
                                 <div class="inner">
                                     <div class="tab-content" id="myTabContent">
-                                        <div class="tab-pane fade show active"
-                                            id="dashboard" role="tabpanel"
-                                            aria-labelledby="dashboard-link">
+                                        <div class="tab-pane fade show active" id="dashboard" role="tabpanel" aria-labelledby="dashboard-link">
                                             <div class="my-account-dashboard">
                                                 <div class="inner">
                                                     <div class="row">
@@ -183,18 +181,9 @@
                                                                         <a><img
                                                                                 src="https://res.cloudinary.com/templategalaxy/image/upload/v1631257421/codepen-my-account/images/orders_n2aopq.png"></a>
                                                                     </div>
-                                                                    <h2>Your
-                                                                        Orders</h2>
-                                                                    <p>Lorem
-                                                                        Ipsum is
-                                                                        simply
-                                                                        dummy
-                                                                        text of
-                                                                        the
-                                                                        printing
-                                                                        and
-                                                                        typesetting
-                                                                        industry.</p>
+                                                                    <h2>Tus
+                                                                        Ordenes</h2>
+                                                                    <p>Verifica los detalles de tus pedidos como el total, la fecha y el estatus en el que se encuentra tu pedido.</p>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -209,18 +198,8 @@
                                                                         <a><img
                                                                                 src="https://res.cloudinary.com/templategalaxy/image/upload/v1631257421/codepen-my-account/images/notebook_psrhv5.png"></a>
                                                                     </div>
-                                                                    <h2>Your
-                                                                        Addresses</h2>
-                                                                    <p>Lorem
-                                                                        Ipsum is
-                                                                        simply
-                                                                        dummy
-                                                                        text of
-                                                                        the
-                                                                        printing
-                                                                        and
-                                                                        typesetting
-                                                                        industry.</p>
+                                                                    <h2>Tu Direccion</h2>
+                                                                    <p>Encuentra y modifica los datos de envio, puedes agregar una direccion secundaria para seleccionarla en los envios.</p>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -235,18 +214,8 @@
                                                                         <a><img
                                                                                 src="https://res.cloudinary.com/templategalaxy/image/upload/v1631257421/codepen-my-account/images/login_aq9v9z.png"></a>
                                                                     </div>
-                                                                    <h2>Account
-                                                                        Details</h2>
-                                                                    <p>Lorem
-                                                                        Ipsum is
-                                                                        simply
-                                                                        dummy
-                                                                        text of
-                                                                        the
-                                                                        printing
-                                                                        and
-                                                                        typesetting
-                                                                        industry.</p>
+                                                                    <h2>Detalles de la Cuenta</h2>
+                                                                    <p>Actualiza tus datos, y encuentra la informacion de tu cuenta.</p>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -254,21 +223,21 @@
                                                     </div>
                                                 </div>
                                             </div>
+                                            
                                         </div>
-                                        <div class="tab-pane fade"
-                                            id="my-orders" role="tabpanel"
-                                            aria-labelledby="my-order">
+                                        
+                                        <div class="tab-pane fade" id="my-orders" role="tabpanel" aria-labelledby="my-order">
                                             <table id="my-orders-table"
                                                 class="table table-striped table-bordered dt-responsive nowrap"
                                                 style="width:100%">
                                                 <thead>
                                                     <tr>
-                                                        <th>Order</th>
-                                                        <th>Date</th>
+                                                        <th>Orden</th>
+                                                        <th>Fecha</th>
                                                         <th>Status</th>
                                                         <th>Total</th>
                                                         <th
-                                                            class="action">Action</th>
+                                                            class="action">Accion</th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
@@ -276,41 +245,39 @@
                                                     <tr>
                                                         <td>#8083</td>
                                                         <td>Sep 9, 2021</td>
-                                                        <td>Completed</td>
+                                                        <td>Completado</td>
                                                         <td>$350</td>
                                                         <td class="action"><a
                                                                 href="#"
-                                                                class="view-order">View
-                                                                Order</a></td>
+                                                                class="view-order">Ver
+                                                                Orden</a></td>
                                                     </tr>
 
                                                     <tr>
                                                         <td>#8283</td>
                                                         <td>Sep 8, 2021</td>
-                                                        <td>Pending</td>
+                                                        <td>Envio Pendiente</td>
                                                         <td>$190</td>
                                                         <td class="action"><a
                                                                 href="#"
-                                                                class="view-order">View
-                                                                Order</a></td>
+                                                                class="view-order">Ver
+                                                                Orden</a></td>
                                                     </tr>
 
                                                     <tr>
                                                         <td>#8483</td>
                                                         <td>Sep 7, 2021</td>
-                                                        <td>Completed</td>
+                                                        <td>Completado</td>
                                                         <td>$399</td>
                                                         <td class="action"><a
                                                                 href="#"
-                                                                class="view-order">View
-                                                                Order</a></td>
+                                                                class="view-order">Ver
+                                                                Orden</a></td>
                                                     </tr>
                                                 </tbody>
                                             </table>
                                         </div>
-                                        <div class="tab-pane fade" id="address"
-                                            role="tabpanel"
-                                            aria-labelledby="my-address">
+                                        <div class="tab-pane fade" id="address" role="tabpanel" aria-labelledby="my-address">
                                             <div class="address-form">
                                                 <div class="inner">
                                                     <form class="tg-form" action
@@ -318,7 +285,7 @@
 
                                                         <div class="form-group">
                                                             <label
-                                                                for="inputAddress">Address</label>
+                                                                for="inputAddress">Direccion</label>
                                                             <input type="text"
                                                                 class="form-control"
                                                                 id="inputAddress"
@@ -326,7 +293,7 @@
                                                         </div>
                                                         <div class="form-group">
                                                             <label
-                                                                for="inputAddress2">Address
+                                                                for="inputAddress2">Direccion
                                                                 2</label>
                                                             <input type="text"
                                                                 class="form-control"
@@ -337,7 +304,7 @@
                                                             <div
                                                                 class="form-group col-md-6">
                                                                 <label
-                                                                    for="inputCity">City</label>
+                                                                    for="inputCity">Ciudad</label>
                                                                 <input
                                                                     type="text"
                                                                     class="form-control"
@@ -346,19 +313,19 @@
                                                             <div
                                                                 class="form-group col-md-4">
                                                                 <label
-                                                                    for="inputState">State</label>
+                                                                    for="inputState">Estado</label>
                                                                 <select
                                                                     id="inputState"
                                                                     class="form-control">
                                                                     <option
-                                                                        selected>Choose...</option>
+                                                                        selected>Selecciona...</option>
                                                                     <option>...</option>
                                                                 </select>
                                                             </div>
                                                             <div
                                                                 class="form-group col-md-2">
                                                                 <label
-                                                                    for="inputZip">Zip</label>
+                                                                    for="inputZip">Codigo Postal</label>
                                                                 <input
                                                                     type="text"
                                                                     class="form-control"
@@ -367,57 +334,65 @@
                                                         </div>
 
                                                         <button type="submit"
-                                                            class="btn btn-primary">Update</button>
+                                                            class="btn">Actualizar</button>
                                                     </form>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="tab-pane fade"
-                                            id="account-details" role="tabpanel"
-                                            aria-labelledby="account-detail">
+                                        <div class="tab-pane fade" id="account-details" role="tabpanel" aria-labelledby="account-detail">
                                             <div class="account-detail-form">
                                                 <div class="inner">
-                                                    <form> 
+                                                    <form class="tg-form" enctype="multipart/form-data">
                                                         <div class="register-top-grid">
-                                                                <h3>PERSONAL INFORMATION</h3>
-                                                                <div>
-                                                                    <span>First Name<label>*</label></span>
-                                                                    <input type="text"> 
-                                                                </div>
-                                                                <div>
-                                                                    <span>Last Name<label>*</label></span>
-                                                                    <input type="text"> 
-                                                                </div>
-                                                                <div>
-                                                                    <span>Email Address<label>*</label></span>
-                                                                    <input type="text"> 
-                                                                </div>
-                                                                <div class="clear"> </div>
-                                                                    <a class="news-letter" href="#">
-                                                                        <label class="checkbox"><input type="checkbox" name="checkbox" checked=""><i> </i>Sign Up for Newsletter</label>
-                                                                    </a>
-                                                                <div class="clear"> </div>
+                                                            <h3>INFORMACIÓN PERSONAL</h3>
+                    
+                                                            <div class="form-group">
+                                                                <span>Nombres<label>*</label></span>
+                                                                <input type="text"  class="form-control">
+                                                            </div>
+                                                            <div>
+                                                                <span>Apellidos<label>*</label></span>
+                                                                <input type="text"  class="form-control">
+                                                            </div>
+                                                            <div>
+                                                                <span>Correo Electrónico<label>*</label></span>
+                                                                <input type="text"  class="form-control">
+                                                            </div>
+                                                            <div>
+                                                                <span>Fecha de Nacimiento<label>*</label></span>
+                                                                <input type="text"  placeholder="DD/MM/YY"  class="form-control">
+                                                            </div>
+                                                    
+                                                            <div>
+                                                                <span>Contraseña<label>*</label></span>
+                                                                <input type="text"  class="form-control">
+                                                            </div>
+                                                            <div>
+                                                                <span>Confirmar contraseña<label>*</label></span>
+                                                                <input type="text"  class="form-control">
+                                                            </div>
+                                                            <div>
+                                                                <span>Elige tu foto de perfil</span>
+                                                                <input type="file" accept="image/*">
+                                                            </div>
+                                                            <div class="clear"></div>
                                                         </div>
+                                                        
+                    
                                                         <div class="clear"> </div>
-                                                        <div class="register-bottom-grid">
-                                                                <h3>LOGIN INFORMATION</h3>
-                                                                <div>
-                                                                    <span>Password<label>*</label></span>
-                                                                    <input type="text">
-                                                                </div>
-                                                                <div>
-                                                                    <span>Confirm Password<label>*</label></span>
-                                                                    <input type="text">
-                                                                </div>
-                                                                <div class="clear"> </div>
-                                                        </div>
-                                                        <div class="clear"> </div>
-                                                        <input type="submit" value="submit">
-                                                </form>
+                                                        <input
+                                                            type="submit"
+                                                            name="Submit"
+                                                            class="button-registrar"
+                                                            value="Actualizar" />
+                                                        
+                                                    </form>
                                                 </div>
                                             </div>
+                                         
                                         </div>
-
+                                     
+                                
                                     </div>
                                 </div>
                             </div>
@@ -427,6 +402,7 @@
             </div>
             
         </section>
+        
         <!-- partial -->
          <script>
             $('#myTab a').on('click', function(e) {
@@ -461,6 +437,6 @@ $(document).ready(function() {
             src='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js'></script><script
             src="./script.js"></script>
             
-
+            
     </body>
 </html>
