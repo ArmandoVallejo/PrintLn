@@ -1,0 +1,479 @@
+<!--A Design by W3layouts
+Author: W3layout
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>println</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
+<link href="css/style.css" rel='stylesheet' type='text/css' />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<script src="js/jquery.min.js"></script>
+<!--<script src="js/jquery.easydropdown.js"></script>-->
+<!--start slider -->
+<link rel="stylesheet" href="css/fwslider.css" media="all">
+<script src="js/jquery-ui.min.js"></script>
+<script src="js/fwslider.js"></script>
+<link rel="stylesheet" href="css/styles1.css">
+<!--end slider -->
+<script type="text/javascript">
+        $(document).ready(function() {
+            $(".dropdown img.flag").addClass("flagvisibility");
+
+            $(".dropdown dt a").click(function() {
+                $(".dropdown dd ul").toggle();
+            });
+                        
+            $(".dropdown dd ul li a").click(function() {
+                var text = $(this).html();
+                $(".dropdown dt a span").html(text);
+                $(".dropdown dd ul").hide();
+                $("#result").html("Selected value is: " + getSelectedValue("sample"));
+            });
+                        
+            function getSelectedValue(id) {
+                return $("#" + id).find("dt a span.value").html();
+            }
+
+            $(document).bind('click', function(e) {
+                var $clicked = $(e.target);
+                if (! $clicked.parents().hasClass("dropdown"))
+                    $(".dropdown dd ul").hide();
+            });
+
+
+            $("#flagSwitcher").click(function() {
+                $(".dropdown img.flag").toggleClass("flagvisibility");
+            });
+        });
+     </script>
+</head>
+<body>
+	<!--<div id="header-placeholder"></div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            fetch('header.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('header-placeholder').innerHTML = data;
+                })
+                .catch(error => console.error('Error cargando el encabezado:', error));
+        });
+    </script>-->
+
+	<header>
+		<div class="header-left">
+		  <div class="logo">
+			<img src="images/WhatsApp_Image_2024-07-02_at_9.33.25_AM-removebg-preview.png" alt="Logo" style="width: 80px;  height: 60px">
+		  </div>
+		  <nav class="menu">
+			<ul class="nav-links" id="nav-links">
+			  <li><a href="shop.html">Shop</a></li>
+			  <!---->
+			  <li><a href="laboratory.html">Custom</a></li>
+			  <li><a href="faq.html">FaQ</a></li>
+			  <li><a href="contact.html">Contact</a></li>
+			  <li><a href="chat.html">Chat</a></li>
+			  <li><a href="wishlist.html">Wishlist</a></li>
+			</ul>
+			<div class="menu-icon" onclick="toggleMenu()">
+			  &#9776;
+			</div>
+		  </nav>
+		</div>
+		<div class="header-right">
+		  <div class="icons">
+			<ul class="icon1 sub-icon1 profile_img">
+			  <li>
+				<a class="active-icon c1" href="single.html"></i></a>
+				<ul class="sub-icon1 list">
+				  <div class="product_control_buttons">
+					<a href="profile.html"><img src="images/edit.png" alt=""></a>
+					<a href="profile.html"><img src="images/close_edit.png" alt=""></a>
+				  </div>
+				  <div class="clear"></div>
+				  <li class="list_img"><img src="images/ansiedad2.png" alt="" width="60"></li>
+				  <li class="list_desc">
+					<h4><a href="single.html">Playera ansiedad</a></h4>
+					<span class="actual">1 x $12.00</span>
+				  </li>
+				  <div class="login_buttons">
+					<div class="check_button"><a href="checkout.html">Check out</a></div>
+					<div class="clear"></div>
+				  </div>
+				  <div class="clear"></div>
+				</ul>
+			  </li>
+			  <li>
+				<a class="icon1 sub-icon1 profile_img" href="login.html"><i class="fas fa-user"></i></a>
+				<!-- Aqui se pondira el link a la pagina de login-->
+			  </li>
+			</ul>
+			<ul>
+			</ul>
+		  </div>
+		  <div class="search">
+			<form class="search-form">
+			  <input type="text" placeholder="Busca tu playera">
+			  <input type="submit" value="Buscar">
+			</form>
+		  </div>
+		</div>
+	  </header>
+
+	<div class="banner">
+	<!-- start slider -->
+       <div id="fwslider">
+         <div class="slider_container">
+            <div class="slide"> 
+                <!-- Slide image -->
+               <img src="images/WhatsApp Image 2024-07-02 at 9.33.25 AM.jpeg" class="img-responsive" alt=""/>
+                <!-- /Slide image -->
+                <!-- Texts container -->
+                <div class="slide_content">
+                    <div class="slide_content_wrap">
+                        <!-- Text title -->
+                        <h1 class="title">PrintLn<br>La mejor calidad en impresiones</h1>
+                        <!-- /Text title -->
+                        <div class="button"><a href="single.html">Ver detalles</a></div>
+                    </div>
+                </div>
+               <!-- /Texts container -->
+            </div>
+            <!-- /Duplicate to create more slides -->
+            <div class="slide">
+               <img src="images/WhatsApp Image 2024-07-02 at 9.33.25 AM.jpeg" class="img-responsive" alt=""/>
+                <div class="slide_content">
+                    <div class="slide_content_wrap">
+                         <h1 class="title">PrintLn<br>La mejor calidad en impresiones</h1>
+                       	<div class="button"><a href="single.html">Ver detalles</a></div>
+                    </div>
+                </div>
+            </div>
+            <!--/slide -->
+        </div>
+        <div class="timers"></div>
+        <div class="slidePrev"><span></span></div>
+        <div class="slideNext"><span></span></div>
+       </div>
+       <!--/slider -->
+      </div>
+	  <div class="main">
+		<div class="content-top">
+			<h2>Categorias</h2>
+			<p>Encuentra la playera adecuada para ti</p>
+			<div class="close_but"><i class="close1"> </i></div>
+				<ul id="flexiselDemo3">
+				<li><img src="images/Olimpia.jpg" /><p>Olimpica</p></li>
+				<li><img src="images/Polo.webp" /><p>Polo</p></li>
+				<li><img src="images/Deportiva.jpg" /><p>Deportiva</p></li>
+				<li><img src="images/cuellov.jpg" /><p>Cuello V</p></li>
+				<li><img src="images/cuellor.jpg" /><p>Cuello Redondo</p></li>
+			</ul>
+		<h3></h3>
+			<script type="text/javascript">
+		$(window).load(function() {
+			$("#flexiselDemo3").flexisel({
+				visibleItems: 5,
+				animationSpeed: 1000,
+				autoPlay: true,
+				autoPlaySpeed: 3000,    		
+				pauseOnHover: true,
+				enableResponsiveBreakpoints: true,
+		    	responsiveBreakpoints: { 
+		    		portrait: { 
+		    			changePoint:480,
+		    			visibleItems: 1
+		    		}, 
+		    		landscape: { 
+		    			changePoint:640,
+		    			visibleItems: 2
+		    		},
+		    		tablet: { 
+		    			changePoint:768,
+		    			visibleItems: 3
+		    		}
+		    	}
+		    });
+		    
+		}); 
+
+		
+		</script>
+		<script type="text/javascript" src="js/jquery.flexisel.js"></script>
+		</div>
+	</div>
+	<div class="content-bottom">
+		<div class="container">
+			<div class="row content_bottom-text">
+			  <div class="col-md-7">
+
+				<h3 id="about-us">Acerca de Nostros<br>PrintLn</h3>
+				<p class="m_1">Bienvenidos a PrintLn, tu tienda especializada en playeras personalizadas. Nos apasiona ofrecerte productos de alta calidad que reflejen tu estilo y creatividad, utilizando las mejores tecnologías de impresión disponibles en el mercado.
+					<br>
+					<br>Nuestra Misión
+					<br>
+					<br>En PrintLn, nuestro objetivo es proporcionar a nuestros clientes playeras y otros productos personalizados que no solo cumplan, sino que superen sus expectativas. Queremos que cada prenda cuente una historia única y especial.</p>
+				<p class="m_2">Nuestras Técnicas de Impresión
+					<br>
+					<br>Imprenta Tradicional
+					<br>Utilizamos métodos como la serigrafía, ideales para grandes tirajes. Esta técnica permite la aplicación de tintas vibrantes y duraderas, asegurando que los diseños mantengan su integridad y color por un largo tiempo. Es perfecta para proyectos que requieren uniformidad en grandes cantidades, como pedidos corporativos, eventos o equipos deportivos.
+					<br>
+					<br>Impresión Directa a la Prenda (DTG)
+					<br>La tecnología DTG es perfecta para tirajes pequeños o únicos, permitiendo una personalización completa sin limitaciones de color. Utilizamos impresoras especializadas que aplican tintas directamente sobre las fibras de la tela, logrando detalles precisos y una reproducción fiel de los colores y diseños más complejos. Ideal para aquellos que buscan crear piezas únicas o ediciones limitadas con una calidad fotográfica.</p>
+			  </div>
+			</div>
+		</div>
+	</div>
+	<div class="features">
+		<div class="container">
+			<h3 class="m_3">Productos más vendidos</h3>
+			<div class="close_but"><i class="close1"> </i></div>
+			  <div class="row">
+                </div>
+                <div class="col-md-3 top_box">
+					<div class="view view-ninth"><a href="single.html">
+                    <img src="images/Baki (1).jpg" class="img-responsive" alt=""/>
+                    <div class="mask mask-1"> </div>
+                    <div class="mask mask-2"> </div>
+                      <div class="content">
+						<h2>Playera Olimpica</h2>
+                        <p>Playera con diseño inspirado en el anime "Baki". <br>Haz click para ver el producto.</p>
+                      </div>
+                    </a> </div>
+					<h4 class="m_4"><a href="single.html">Playera Baki Hanma</a></h4>
+					<p class="m_5">Categoria: Olimpica</p>
+					<div class="button-container">
+						<button class="btn add-to-cart"><i class="fas fa-shopping-cart"></i></button>
+						<button class="btn add-to-wishlist"><i class="fas fa-heart"></i></button> 
+						<button class="btn buy-now"><i class="fas fa-credit-card"></i></button>
+					</div>
+				</div>
+				<div class="col-md-3 top_box">
+					<div class="view view-ninth"><a href="single.html">
+                    <img src="images/Hallowen.jpg" class="img-responsive" alt=""/>
+                    <div class="mask mask-1"> </div>
+                    <div class="mask mask-2"> </div>
+                      <div class="content">
+                        <h2>Playera Polo</h2>
+                        <p>Playera con diseño inspirado en Hallowen. <br>Haz click para ver el producto.</p>
+                      </div>
+                    </a> </div>
+                   <h4 class="m_4"><a href="single.html">Playera Hallowen</a></h4>
+                   <p class="m_5">Categoria: Polo</p>
+				   <div class="button-container">
+					<button class="btn add-to-cart"><i class="fas fa-shopping-cart"></i></button><button class="btn add-to-wishlist"><i class="fas fa-heart"></i></button> <button class="btn buy-now"><i class="fas fa-credit-card"></i></button>
+				</div>
+				</div>
+				<div class="col-md-3 top_box1">
+					<div class="view view-ninth"><a href="single.html">
+                    <img src="images/NBA.jpg" class="img-responsive" alt=""/>
+                    <div class="mask mask-1"> </div>
+                    <div class="mask mask-2"> </div>
+                      <div class="content">
+                        <h2>Playera Deportiva</h2>
+						<p>Playera con diseño inspirado en el equipo de la NBA GS Warriors. <br>Haz click para ver el producto.</p>
+                      </div>
+                     </a> </div>
+                   <h4 class="m_4"><a href="single.html">Playera GS Warriors</a></h4>
+                   <p class="m_5">Categoria: Deportiva</p>
+				   <div class="button-container">
+					<button class="btn add-to-cart"><i class="fas fa-shopping-cart"></i></button><button class="btn add-to-wishlist"><i class="fas fa-heart"></i></button> <button class="btn buy-now"><i class="fas fa-credit-card"></i></button>
+				</div>
+				</div>
+				<div class="col-md-3 top_box1">
+					<div class="view view-ninth"><a href="single.html">
+                    <img src="images/Boy.jpg" class="img-responsive" alt=""/>
+                    <div class="mask mask-1"> </div>
+                    <div class="mask mask-2"> </div>
+                      <div class="content">
+                        <h2>Playera Cuello Redondo</h2>
+                        <p>Playera con diseño inspirado en el anime "Cowboy Bebop". <br>Haz click para ver el producto.</p>
+                      </div>
+                     </a> </div>
+                   <h4 class="m_4"><a href="single.html">Playera Cowboy Bebop</a></h4>
+                   <p class="m_5">Categoria: Cuello Redondo</p>
+				   <div class="button-container">
+					<button class="btn add-to-cart"><i class="fas fa-shopping-cart"></i></button><button class="btn add-to-wishlist"><i class="fas fa-heart"></i></button> <button class="btn buy-now"><i class="fas fa-credit-card"></i></button>
+				</div>
+				</div>
+			</div>
+		 </div>
+	    </div>
+		<style>/* Básicos de la Página */
+			body {
+			  font-family: 'Open Sans', sans-serif;
+			  margin: 0;
+			  padding: 0;
+			  box-sizing: border-box;
+			}
+			
+			/* Estilos del Footer */
+			.footer {
+			  background-color: #333;
+			  color: #f8f8f2;
+			  padding: 40px 0;
+			}
+			
+			.footer .container {
+			  max-width: 1200px;
+			  margin: 0 auto;
+			  padding: 0 15px;
+			}
+			
+			.footer .row {
+			  display: flex;
+			  flex-wrap: wrap;
+			}
+			
+			.footer .col-md-3 {
+			  flex: 0 0 25%;
+			  max-width: 25%;
+			  padding: 0 15px;
+			}
+			
+			.footer .footer_box {
+			  list-style: none;
+			  padding: 0;
+			}
+			
+			.footer .footer_box h4 {
+			  font-size: 18px;
+			  margin-bottom: 15px;
+			  color: #fff;
+			}
+			
+			.footer .footer_box li {
+			  margin-bottom: 10px;
+			}
+			
+			.footer .footer_box li a {
+			  color: #ccc;
+			  text-decoration: none;
+			  transition: color 0.3s;
+			}
+			
+			.footer .footer_box li a:hover {
+			  color: #fff;
+			}
+			
+			.footer .social {
+			  display: flex;
+			  gap: 10px;
+			  padding: 0;
+			  list-style: none;
+			}
+			
+			.footer .social li {
+			  display: inline-block;
+			}
+			
+			.footer .social li a {
+			  color: #f8f8f2;
+			  font-size: 20px;
+			  transition: color 0.3s;
+			}
+			
+			.footer .social li a:hover {
+			  color: #fff;
+			}
+			
+			.footer_bottom {
+			  text-align: center;
+			  padding: 20px 0;
+			  border-top: 1px solid #444;
+			}
+			
+			.footer_bottom p {
+			  margin: 0;
+			  color: #ccc;
+			}
+			
+			.footer_bottom p a {
+			  color: #fff;
+			  text-decoration: none;
+			}
+			
+			.footer_bottom p a:hover {
+			  color: #ccc;
+			}
+			</style>
+		  <!-- Footer Section -->
+		  <div class="footer">
+			<div class="container">
+			  <div class="row">
+				<div class="col-md-3">
+				  <ul class="footer_box">
+					<h4>Products</h4>
+					<li><a href="shop.html">Shop</a></li>
+					<li><a href="laboratory.html">Custom</a></li>
+					<li><a href="membresias.html">Memberships</a></li>
+				  </ul>
+				</div>
+				<div class="col-md-3">
+				  <ul class="footer_box">
+					<h4>About</h4>
+					<li><a href="#about-us">About us</a></li>
+					<li><a href="contact.html">Contacto</a></li>
+				  </ul>
+				</div>
+				<div class="col-md-3">
+				  <ul class="footer_box">
+					<h4>Customer Support</h4>
+					<li><a href="contact.html">Contact Us</a></li>
+					<li><a href="profile.html">Shipping and Order Tracking</a></li>
+					<li><a href="chat.html">Chat Support</a></li>
+			
+				  </ul>
+				</div>
+				<div class="col-md-3">
+				  <ul class="footer_box">
+					<h4></h4>
+					<p style="color: #f8f8f2;"></p>
+					<ul class="social">
+					  <li class="facebook">
+						<a href="#"><i class="fab fa-facebook-f"></i></a>
+					  </li>
+					  <li class="X">
+						<a href="#"><i class="fab fa-twitter"></i></a>
+					  </li>
+					  <li class="instagram">
+						<a href="#"><i class="fab fa-instagram"></i></a>
+					  </li>
+					  <li class="youtube">
+						<a href="#"><i class="fab fa-youtube"></i></a>
+					  </li>
+					</ul>
+				  </ul>
+				</div>
+			  </div>
+			  <div class="row footer_bottom">
+				<div class="copy">
+				  <p>
+					© 2024 web page by
+					<a href="https://github.com/ArmandoVallejo/PrintLn" target="_blank">Equipo 3</a>
+				  </p>
+				</div>
+			  </div>
+			</div>
+		  </div>
+		<!--<div id="footer-placeholder"></div>
+		<script>
+			document.addEventListener("DOMContentLoaded", function() {
+				fetch('footer.html')
+					.then(response => response.text())
+					.then(data => {
+						document.getElementById('footer-placeholder').innerHTML = data;
+					})
+					.catch(error => console.error('Error cargando el encabezado:', error));
+			});
+		</script>-->
+</body>	
+</html>
