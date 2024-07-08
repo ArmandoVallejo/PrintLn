@@ -75,3 +75,23 @@ flex:1;
 }
 
 
+.filter-side {
+    background-color: #e6e6e6;
+    margin: 20px;
+    padding: 10px;
+    border-radius: 2px;
+    border: 1px solid #cccccc; 
+}
+
+.filter-group label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.filter-group div {
+    margin-bottom: 10px;
+}
+
+.slider-container {
+    margin-top: 10px;
+}

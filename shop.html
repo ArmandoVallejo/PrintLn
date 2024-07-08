@@ -8,6 +8,7 @@
     <link href="css/bootstrap.css" rel='stylesheet' type='text/css' />-->
     <link href="css/style.css" rel='stylesheet' type='text/css' />
     <link href="css/wishop.css" rel='stylesheet' type='text/css' />
+    <link href="css/ratings.css" rel='stylesheet' type='text/css' />
     <link href="css/categoriashop.css" rel='stylesheet' type='text/css' />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -98,27 +99,36 @@
                                 <input type="radio" id="precio2" name="precio" value="1001">
                                 <label for="precio2">Más de MXN 1,000</label>
                             </div>
-                            <div>
-                                <input type="range" min="0" max="5000" value="0" id="rangePrecio">
+                            <div class="slider-container">
+                                <input type="range" min="1001" max="10000" value="1001" id="rangePrecio" oninput="updatePriceValue()">
+                                <div id="priceValue">Precio: $1001 </div>
                             </div>
                         </div>
                         <div class="filter-group">
                             <label>Categoría</label>
                             <div style="display: flex;">
-                                <input type="radio" id="categoria1" name="categoria" value="motores">
-                                <label for="categoria1">Primavera</label>
+                                <input type="radio" id="categoria1" name="categoria" value="Tendencias">
+                                <label for="categoria1">Tendencias</label>
                             </div>
                             <div style="display: flex;">
-                                <input type="radio" id="categoria2" name="categoria" value="conjuntos">
-                                <label for="categoria2">Verano</label>
+                                <input type="radio" id="categoria2" name="categoria" value="Deportivo">
+                                <label for="categoria2">Deportivo</label>
                             </div>
                             <div style="display: flex;">
-                                <input type="radio" id="categoria3" name="categoria" value="rendimiento">
-                                <label for="categoria3">Invierno</label>
+                                <input type="radio" id="categoria3" name="categoria" value="Casual">
+                                <label for="categoria3">Casual</label>
                             </div>
                             <div style="display: flex;">
-                                <input type="radio" id="categoria4" name="categoria" value="cuidado">
-                                <label for="categoria4">Por agotarse</label>
+                                <input type="radio" id="categoria4" name="categoria" value="Anime">
+                                <label for="categoria4">Anime</label>
+                            </div>
+                            <div style="display: flex;">
+                                <input type="radio" id="categoria5" name="categoria" value="Oversized">
+                                <label for="categoria4">Oversized</label>
+                            </div>
+                            <div style="display: flex;">
+                                <input type="radio" id="categoria6" name="categoria" value="Personalización">
+                                <label for="categoria4">Personalización</label>
                             </div>
                         </div>
                         <div class="filter-group">
@@ -131,18 +141,19 @@
                         <div class="filter-group">
                             <label>Condición</label>
                             <div style="display: flex;">
-                                <input type="checkbox" id="nuevo" name="condicion">
+                                <input type="checkbox" id="nuevo" name="condicion" onclick="toggleCheckbox('nuevo', 'usado')">
                                 <label for="nuevo">Artículos nuevos</label>
                             </div>
                             <div style="display: flex;">
-                                <input type="checkbox" id="usado" name="condicion">
+                                <input type="checkbox" id="usado" name="condicion" onclick="toggleCheckbox('usado', 'nuevo')">
                                 <label for="usado">Artículos usados</label>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-9">
-                    <!--<div class="row shop_box-top">
+
+                    <div class="row">
                         <div class="col-md-3 shop_box"><a href="single.html">
                             <img src="images/shopTees/pic5.jpg" class="img-responsive" alt=""/>
                             <span class="new-box">
@@ -157,6 +168,9 @@
                                 <span class="reducedfrom">$66.00</span>
                                 <span class="actual">$12.00</span><br>
                                 <ul class="buttons">
+                                    <div class="rating">
+                                        <span>★★★★★</span>
+                                    </div>
                                     <li class="cart"><a href="#">Add To Cart</a></li>
                                     <li class="shop_btn"><a href="#">Read More</a></li>
                                     <li class="wishlist">
@@ -178,6 +192,9 @@
                                 <p>Playera estampada de composición 50% algodón y 50% poliester</p>
                                 <span class="actual">$12.00</span><br>
                                 <ul class="buttons">
+                                    <div class="rating">
+                                        <span>★★★★☆</span>
+                                    </div>
                                     <li class="cart"><a href="#">Add To Cart</a></li>
                                     <li class="shop_btn"><a href="#">Read More</a></li>
                                     <li class="wishlist">
@@ -203,6 +220,9 @@
                                 <span class="reducedfrom">$66.00</span>
                                 <span class="actual">$12.00</span><br>
                                 <ul class="buttons">
+                                   <div class="rating">
+                                    <span>★★★★★</span>
+                                </div>
                                     <li class="cart"><a href="#">Add To Cart</a></li>
                                     <li class="shop_btn"><a href="#">Read More</a></li>
                                     <li class="wishlist">
@@ -215,7 +235,7 @@
                             </div>
                         </a></div>
                         <div class="col-md-3 shop_box"><a href="single.html">
-                            <img src="images/shopTees/pic12.jpg" class="img-responsive" alt=""/>
+                            <img src="images/shopTees/pic8.jpg" class="img-responsive" alt=""/>
                             <span class="new-box">
                                 <span class="new-label">New</span>
                             </span>
@@ -225,6 +245,9 @@
                                 <span class="reducedfrom">$66.00</span>
                                 <span class="actual">$12.00</span><br>
                                 <ul class="buttons">
+                                    <div class="rating">
+                                        <span>★★★☆☆</span>
+                                    </div>
                                     <li class="cart"><a href="#">Add To Cart</a></li>
                                     <li class="shop_btn"><a href="#">Read More</a></li>
                                     <li class="wishlist">
@@ -236,29 +259,7 @@
                                 </ul>
                             </div>
                         </a></div>
-                    </div>-->
-                    <div class="row">
-                        <div class="col-md-6 col-lg-3 col-sm-12 shop_box"><a href="single.html">
-                                <img src="images/shopTees/pic9.jpg" class="img-responsive" alt="" />
-                                <span class="new-box">
-                                    <span class="new-label">New</span>
-                                </span>
-                                <div class="shop_desc">
-                                    <h3><a href="#">Playera 5</a></h3>
-                                    <p>Playera estampada de composición 50% algodón y 50% poliester</p>
-                                    <span class="actual">$12.00</span><br>
-                                    <ul class="buttons">
-                                        <li class="cart"><a href="#">Add To Cart</a></li>
-                                        <li class="shop_btn"><a href="#">Read More</a></li>
-                                        <li class="wishlist">
-                                            <a href="#" class="wishlist-btn" onclick="addToWishlist(event)">
-                                                <i class="fas fa-heart"></i>
-                                            </a>
-                                        </li>
-                                        <div class="clear"> </div>
-                                    </ul>
-                                </div>
-                            </a></div>
+                       
                         <div class="col-md-6 col-lg-3 col-sm-12 shop_box"><a href="single.html">
                                 <img src="images/shopTees/pic10.jpg" class="img-responsive" alt="" />
                                 <span class="new-box">
@@ -270,6 +271,9 @@
                                     <span class="reducedfrom">$66.00</span>
                                     <span class="actual">$12.00</span><br>
                                     <ul class="buttons">
+                                        <div class="rating">
+                                            <span>★★★★★</span>
+                                        </div>
                                         <li class="cart"><a href="#">Add To Cart</a></li>
                                         <li class="shop_btn"><a href="#">Read More</a></li>
                                         <li class="wishlist">
@@ -295,6 +299,9 @@
                                     <span class="reducedfrom">$66.00</span>
                                     <span class="actual">$12.00</span><br>
                                     <ul class="buttons">
+                                        <div class="rating">
+                                            <span>★★★★☆</span>
+                                        </div>
                                         <li class="cart"><a href="#">Add To Cart</a></li>
                                         <li class="shop_btn"><a href="#">Read More</a></li>
                                         <li class="wishlist">
@@ -317,6 +324,9 @@
                                     <span class="reducedfrom">$66.00</span>
                                     <span class="actual">$12.00</span><br>
                                     <ul class="buttons">
+                                        <div class="rating">
+                                            <span>★★★★☆</span>
+                                        </div>
                                         <li class="cart"><a href="#">Add To Cart</a></li>
                                         <li class="shop_btn"><a href="#">Read More</a></li>
                                         <li class="wishlist">
@@ -334,10 +344,13 @@
                                     <span class="new-label">New</span>
                                 </span>
                                 <div class="shop_desc">
-                                    <h3><a href="#">Playera 5</a></h3>
+                                    <h3><a href="#">Playera 9</a></h3>
                                     <p>Playera estampada de composición 50% algodón y 50% poliester</p>
                                     <span class="actual">$12.00</span><br>
                                     <ul class="buttons">
+                                        <div class="rating">
+                                            <span>★★★★★</span>
+                                        </div>
                                         <li class="cart"><a href="#">Add To Cart</a></li>
                                         <li class="shop_btn"><a href="#">Read More</a></li>
                                         <li class="wishlist">
@@ -349,79 +362,11 @@
                                     </ul>
                                 </div>
                             </a></div>
-                        <div class="col-md-6 col-lg-3 col-sm-12 shop_box"><a href="single.html">
-                                <img src="images/shopTees/pic10.jpg" class="img-responsive" alt="" />
-                                <span class="new-box">
-                                    <span class="new-label">New</span>
-                                </span>
-                                <div class="shop_desc">
-                                    <h3><a href="#">Playera 6</a></h3>
-                                    <p>Playera estampada de composición 50% algodón y 50% poliester</p>
-                                    <span class="reducedfrom">$66.00</span>
-                                    <span class="actual">$12.00</span><br>
-                                    <ul class="buttons">
-                                        <li class="cart"><a href="#">Add To Cart</a></li>
-                                        <li class="shop_btn"><a href="#">Read More</a></li>
-                                        <li class="wishlist">
-                                            <a href="#" class="wishlist-btn" onclick="addToWishlist(event)">
-                                                <i class="fas fa-heart"></i>
-                                            </a>
-                                        </li>
-                                        <div class="clear"> </div>
-                                    </ul>
-                                </div>
-                            </a></div>
-                        <div class="col-md-6 col-lg-3 col-sm-12 shop_box"><a href="single.html">
-                                <img src="images/shopTees/pic11.jpg" class="img-responsive" alt="" />
-                                <span class="new-box">
-                                    <span class="new-label">New</span>
-                                </span>
-                                <span class="sale-box">
-                                    <span class="sale-label">Sale!</span>
-                                </span>
-                                <div class="shop_desc">
-                                    <h3><a href="#">Playera 7</a></h3>
-                                    <p>Playera estampada de composición 50% algodón y 50% poliester </p>
-                                    <span class="reducedfrom">$66.00</span>
-                                    <span class="actual">$12.00</span><br>
-                                    <ul class="buttons">
-                                        <li class="cart"><a href="#">Add To Cart</a></li>
-                                        <li class="shop_btn"><a href="#">Read More</a></li>
-                                        <li class="wishlist">
-                                            <a href="#" class="wishlist-btn" onclick="addToWishlist(event)">
-                                                <i class="fas fa-heart"></i>
-                                            </a>
-                                        </li>
-                                        <div class="clear"> </div>
-                                    </ul>
-                                </div>
-                            </a></div>
-                        <div class="col-md-6 col-lg-3 col-sm-12 shop_box"><a href="single.html">
-                                <img src="images/shopTees/pic12.jpg" class="img-responsive" alt="" />
-                                <span class="new-box">
-                                    <span class="new-label">New</span>
-                                </span>
-                                <div class="shop_desc">
-                                    <h3><a href="#">Playera 8</a></h3>
-                                    <p>Playera estampada de composición 50% algodón y 50% poliester</p>
-                                    <span class="reducedfrom">$66.00</span>
-                                    <span class="actual">$12.00</span><br>
-                                    <ul class="buttons">
-                                        <li class="cart"><a href="#">Add To Cart</a></li>
-                                        <li class="shop_btn"><a href="#">Read More</a></li>
-                                        <li class="wishlist">
-                                            <a href="#" class="wishlist-btn" onclick="addToWishlist(event)">
-                                                <i class="fas fa-heart"></i>
-                                            </a>
-                                        </li>
-                                        <div class="clear"> </div>
-                                    </ul>
-                                </div>
-                            </a></div>
+                        
                     </div>
                 </div>
             </div>
-            <!--</div>-->
+ 
         </div>
     </div>
     <div id="footer-placeholder"></div>
