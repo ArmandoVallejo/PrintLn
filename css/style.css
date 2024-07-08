@@ -10,6 +10,7 @@ html, body{
 	font-size: 100%;
 }
 
+
 .checkout-container {
   max-width: 800px;
   margin: 0 auto;
@@ -276,7 +277,8 @@ body a{
 .nav ul {
   list-style: none;
 }
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 860px) {
+  
   .active {
     display: block;
   }
@@ -405,7 +407,6 @@ body a{
 	background: #44475e url('../images/img-sprite.png') no-repeat 0px 1px;
 	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"; /* IE 8 */
     filter: alpha(opacity=0); /* IE 5-7 */
-   
 	color: transparent;
 	border: none;
 	outline: none;
@@ -1576,6 +1577,83 @@ p.m_8 {
   cursor: pointer;
   outline: none;
 }
+
+.suscribirme-button1{
+  color: #fff;
+  font-family: "Open Sans", sans-serif;
+  font-size: 0.95em;
+  font-weight: normal;
+  padding: 15px 40px;
+  text-transform: uppercase;
+  background: #41b1aa;
+  display: inline-block;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -ms-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+  font-weight: 100;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+.suscribirme-button2{
+  color: #fff;
+  font-family: "Open Sans", sans-serif;
+  font-size: 0.95em;
+  font-weight: normal;
+  padding: 15px 40px;
+  text-transform: uppercase;
+  background: #030072;
+  display: inline-block;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -ms-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+  font-weight: 100;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+.suscribirme-button3{
+  color: #fff;
+  font-family: "Open Sans", sans-serif;
+  font-size: 0.95em;
+  font-weight: normal;
+  padding: 15px 40px;
+  text-transform: uppercase;
+  background: #e25050;
+  display: inline-block;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -ms-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+  font-weight: 100;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+.suscribirme-button1:hover{
+  background: #A6DDD9;
+}
+.suscribirme-button2:hover{
+  background: #6B69C6;
+}
+.suscribirme-button3:hover{
+  background: #ff9696;
+  color: #fff;
+}
+.container-sub{
+  background-color: #fff;
+  transition: background-color 0.5s ease;
+  transition: box-shadow 0.5s ease;
+}
+.container-sub:hover{
+  box-shadow: 0px 0px 10px rgba(64, 64, 64, 1);
+}
+
 .form-submit input[type="submit"]:hover {
   background: #333;
 }
@@ -1760,19 +1838,21 @@ ul.product-colors {
   padding: 7%;
 }
 p.price2 {
+  text-align: center;
   color: #333;
-  font-size: 2em;
+  font-size: 1rem;
   font-weight: 700;
   margin-bottom: 5%;
 }
 .prosuct-qty {
+  text-align: center;
   margin-bottom: 1.5em;
   padding: 0;
 }
 .prosuct-qty select {
   font-family: "Open Sans", sans-serif;
   border: 1px solid #eee;
-  padding: 5% 41%;
+  padding: 3% 34%;
   font-size: 1em;
   outline: none;
 }
@@ -1789,9 +1869,9 @@ p.price2 {
 }
 .box-info-product .exclusive span {
   font-weight: 700;
-  font-size: 20px;
+  font-size: 1rem;
   line-height: 22px;
-  padding: 12px 36px 14px 60px;
+  padding: 6px 6px 6px 60px;
   color: #fff;
   display: block !important;
 }
@@ -1942,6 +2022,458 @@ div.k2AccountPage input[type="text"] {
   font-family: "Open Sans", sans-serif;
   outline: none;
   font-size: 1em;
+}
+.tg {
+  --bg-primary: #6272a4;
+  --text-primary: #207ba1;
+}
+
+.tg-account .account-banner {
+  background: var(--bg-primary);
+  width: 100%;
+  float: left;
+  padding: 50px 0 0;
+}
+
+.tg-account .account-banner .inner-banner .detail * {
+  color: #fff;
+}
+
+.tg-account .account-banner .inner-banner .profile {
+  text-align: center;
+}
+
+.tg-account .account-banner .inner-banner .profile span.image img {
+  width: 160px;
+  border-radius: 50%;
+  box-shadow: 0px 0px 15px -10px #000;
+}
+
+.tg-account .account-banner .inner-banner .detail h3.user-name {
+  font-size: 30px;
+  margin-top: 20px;
+}
+
+.tg-account .account-banner .inner-banner .nav-area {
+  width: 100%;
+  float: left;
+  margin-top: 45px;
+}
+
+.tg-account .account-banner .inner-banner .nav-area ul li a {
+  background: rgba(255, 255, 255, .4);
+  color: var(--text-primary);
+  font-weight: 500;
+  border-radius: 0px;
+  font-size: 16px;
+  border: none;
+  padding: 10px 28px;
+  min-width: 120px;
+  display: block;
+  transition: .4s;
+  text-align: center;
+}
+
+.tg-account .account-banner .inner-banner .nav-area ul li {
+  margin-right: 7px;
+}
+
+.tg-account .account-banner .inner-banner .nav-area ul li a.active,
+.tg-account .account-banner .inner-banner .nav-area ul li a:hover {
+  color:#fff;
+  background: #ff5555;
+}
+
+.tg-tabs-content-wrapp {
+  width: 100%;
+  float: left;
+  padding: 30px 0;
+}
+
+div#my-orders-table_length {
+  width: fit-content;
+  float: left;
+}
+
+div#my-orders-table_filter {
+  width: fit-content;
+  float: right;
+}
+
+div#my-orders-table_length select,
+div#my-orders-table_filter input {
+  border: 1px solid #207ba1;
+  padding: 5px 15px;
+}
+
+div#my-orders-table_length,
+div#my-orders-table_filter {
+  margin-bottom: 22px;
+}
+
+.tg-tabs-content-wrapp form.tg-form {
+  width: 100%;
+  float: left;
+  background: #f7f7f7;
+  padding: 30px 30px 60px;
+  border: 1px solid #eaeaea;
+}
+
+.tg-tabs-content-wrapp form.tg-form button {
+  background: #ff5555;
+  border: none;
+  padding: 10px 32px;
+  cursor: pointer;
+  margin: 13px 0 0;
+}
+
+.tg-tabs-content-wrapp .my-account-dashboard .card img {
+  max-width: 80px;
+}
+
+.tg-tabs-content-wrapp .my-account-dashboard .card {
+  text-align: center;
+}
+
+.tg-tabs-content-wrapp .my-account-dashboard .card h2 {
+  font-size: 20px;
+  margin-top: 14px;
+}
+
+.tg-tabs-content-wrapp .my-account-dashboard .card p {
+  font-size: 15px;
+}
+
+div#my-orders-table_info {
+  float: left;
+}
+
+div#my-orders-table_paginate {
+  float: right;
+}
+
+.page-item.active .page-link {
+  background-color: lightgrey !important;
+  border: 1px solid black;
+}
+
+.page-link {
+  color: black !important;
+}
+
+div#my-orders-table_paginate a {
+  background: #e6e6e6;
+  margin: 0 2px;
+  padding: 3px 11px;
+  display: inline-block;
+  cursor: pointer;
+  text-decoration: none;
+  color: #000;
+}
+
+div#my-orders-table_paginate {
+  margin-top: 8px;
+}
+
+div#my-orders-table_paginate span a.current {
+  color: #fff !important;
+  background: var(--primary);
+}
+
+.tg-tabs-content-wrapp .my-account-dashboard .card {
+  cursor: pointer;
+}
+
+.tg-tabs-content-wrapp .my-account-dashboard .card:hover,
+.tg-tabs-content-wrapp .my-account-dashboard .card.active {
+  background: #ff5555;
+}
+
+.tg-tabs-content-wrapp .my-account-dashboard .card:hover *,
+.tg-tabs-content-wrapp .my-account-dashboard .card.active * {
+  color: #fff;
+}
+
+.tg-tabs-content-wrapp .my-account-dashboard .card {
+  transition: .4s;
+  border-radius: 0px;
+  box-shadow: 0px 2px 7px -5px;
+}
+
+table#my-orders-table a.view-order {
+  background: var(--text-primary);
+  cursor: pointer;
+  text-decoration: none;
+  color: #fff;
+  padding: 4px 11px;
+  border-radius: 3px;
+}
+
+@media(min-width:768px) {
+  table#my-orders-table td.action,
+  table#my-orders-table th.action {
+      text-align: center;
+  }
+}
+
+@media(max-width:768px) {
+  .tg-account .account-banner .inner-banner .nav-area ul li a {
+      min-width: auto !important;
+      padding: 8px 15px;
+  }
+}
+
+@media(max-width:600px) {
+  .tg-account .account-banner .inner-banner .nav-area ul li a span {
+      display: none;
+  }
+  .tg-account .account-banner .inner-banner .nav-area ul li a {
+      min-width: auto;
+      padding: 8px 20px;
+  }
+  .tg-account .account-banner .inner-banner .nav-area ul {
+      text-align: center;
+      margin: 0 auto;
+      width: fit-content;
+  }
+  .tg-account .detail {
+      text-align: center;
+  }
+  div#my-orders-table_length select,
+  div#my-orders-table_filter input {
+      max-width: 120px;
+      font-size: 14px;
+  }
+  div#my-orders-table_length label,
+  div#my-orders-table_filter label {
+      font-size: 0px;
+  }
+}
+.tg {
+  --bg-primary: #6272a4;
+  --text-primary: #207ba1;
+}
+
+.tg-account .account-banner {
+  background: var(--bg-primary);
+  width: 100%;
+  float: left;
+  padding: 50px 0 0;
+}
+
+.tg-account .account-banner .inner-banner .detail * {
+  color: #fff;
+}
+
+.tg-account .account-banner .inner-banner .profile {
+  text-align: center;
+}
+
+.tg-account .account-banner .inner-banner .profile span.image img {
+  width: 160px;
+  border-radius: 50%;
+  box-shadow: 0px 0px 15px -10px #000;
+}
+
+.tg-account .account-banner .inner-banner .detail h3.user-name {
+  font-size: 30px;
+  margin-top: 20px;
+}
+
+.tg-account .account-banner .inner-banner .nav-area {
+  width: 100%;
+  float: left;
+  margin-top: 45px;
+}
+
+.tg-account .account-banner .inner-banner .nav-area ul li a {
+  background: rgba(255, 255, 255, .4);
+  color: var(--text-primary);
+  font-weight: 500;
+  border-radius: 0px;
+  font-size: 16px;
+  border: none;
+  padding: 10px 28px;
+  min-width: 120px;
+  display: block;
+  transition: .4s;
+  text-align: center;
+}
+
+.tg-account .account-banner .inner-banner .nav-area ul li {
+  margin-right: 7px;
+}
+
+.tg-account .account-banner .inner-banner .nav-area ul li a.active,
+.tg-account .account-banner .inner-banner .nav-area ul li a:hover {
+  color:#fff;
+  background: #ff5555;
+}
+
+.tg-tabs-content-wrapp {
+  width: 100%;
+  float: left;
+  padding: 30px 0;
+}
+
+div#my-orders-table_length {
+  width: fit-content;
+  float: left;
+}
+
+div#my-orders-table_filter {
+  width: fit-content;
+  float: right;
+}
+
+div#my-orders-table_length select,
+div#my-orders-table_filter input {
+  border: 1px solid #207ba1;
+  padding: 5px 15px;
+}
+
+div#my-orders-table_length,
+div#my-orders-table_filter {
+  margin-bottom: 22px;
+}
+
+.tg-tabs-content-wrapp form.tg-form {
+  width: 100%;
+  float: left;
+  background: #f7f7f7;
+  padding: 30px 30px 60px;
+  border: 1px solid #eaeaea;
+}
+
+.tg-tabs-content-wrapp form.tg-form button {
+  background: var(--bg-primary);
+  border: none;
+  padding: 10px 32px;
+  cursor: pointer;
+  margin: 13px 0 0;
+}
+
+.tg-tabs-content-wrapp .my-account-dashboard .card img {
+  max-width: 80px;
+}
+
+.tg-tabs-content-wrapp .my-account-dashboard .card {
+  text-align: center;
+}
+
+.tg-tabs-content-wrapp .my-account-dashboard .card h2 {
+  font-size: 20px;
+  margin-top: 14px;
+}
+
+.tg-tabs-content-wrapp .my-account-dashboard .card p {
+  font-size: 15px;
+}
+
+div#my-orders-table_info {
+  float: left;
+}
+
+div#my-orders-table_paginate {
+  float: right;
+}
+
+.page-item.active .page-link {
+  background-color: lightgrey !important;
+  border: 1px solid black;
+}
+
+.page-link {
+  color: black !important;
+}
+
+div#my-orders-table_paginate a {
+  background: #e6e6e6;
+  margin: 0 2px;
+  padding: 3px 11px;
+  display: inline-block;
+  cursor: pointer;
+  text-decoration: none;
+  color: #000;
+}
+
+div#my-orders-table_paginate {
+  margin-top: 8px;
+}
+
+div#my-orders-table_paginate span a.current {
+  color: #fff !important;
+  background: var(--primary);
+}
+
+.tg-tabs-content-wrapp .my-account-dashboard .card {
+  cursor: pointer;
+}
+
+.tg-tabs-content-wrapp .my-account-dashboard .card:hover,
+.tg-tabs-content-wrapp .my-account-dashboard .card.active {
+  background: var(--text-primary);
+}
+
+.tg-tabs-content-wrapp .my-account-dashboard .card:hover *,
+.tg-tabs-content-wrapp .my-account-dashboard .card.active * {
+  color: #fff;
+}
+
+.tg-tabs-content-wrapp .my-account-dashboard .card {
+  transition: .4s;
+  border-radius: 0px;
+  box-shadow: 0px 2px 7px -5px;
+}
+
+table#my-orders-table a.view-order {
+  background: var(--text-primary);
+  cursor: pointer;
+  text-decoration: none;
+  color: #fff;
+  padding: 4px 11px;
+  border-radius: 3px;
+}
+
+@media(min-width:768px) {
+  table#my-orders-table td.action,
+  table#my-orders-table th.action {
+      text-align: center;
+  }
+}
+
+@media(max-width:768px) {
+  .tg-account .account-banner .inner-banner .nav-area ul li a {
+      min-width: auto !important;
+      padding: 8px 15px;
+  }
+}
+
+@media(max-width:600px) {
+  .tg-account .account-banner .inner-banner .nav-area ul li a span {
+      display: none;
+  }
+  .tg-account .account-banner .inner-banner .nav-area ul li a {
+      min-width: auto;
+      padding: 8px 20px;
+  }
+  .tg-account .account-banner .inner-banner .nav-area ul {
+      text-align: center;
+      margin: 0 auto;
+      width: fit-content;
+  }
+  .tg-account .detail {
+      text-align: center;
+  }
+  div#my-orders-table_length select,
+  div#my-orders-table_filter input {
+      max-width: 120px;
+      font-size: 14px;
+  }
+  div#my-orders-table_length label,
+  div#my-orders-table_filter label {
+      font-size: 0px;
+  }
 }
 
 fieldset.input input[type="submit"] {

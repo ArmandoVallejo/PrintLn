@@ -33,5 +33,45 @@
     position: relative;
 }
 
+.filter-section {
+    margin: 3px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    background-color: #f9f9f9;
+}
+
+.filter-group {
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.filter-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.filter-group input[type="radio"],
+.filter-group input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+.filter-section-container {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.filter-section {
+    flex: 0 0 20%; 
+}
+
+.product-section {
+flex:1;
+}
+.filter-side{
+    background-origin: border-box;
+    padding: 1rem;
+   width: 100%;
+}
 
 
