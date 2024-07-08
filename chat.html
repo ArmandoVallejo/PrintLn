@@ -1,0 +1,480 @@
+<!--A Design by W3layouts
+Author: W3layout
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>println</title>
+<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+<link rel="stylesheet" href="css/styles1.css">
+<link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
+<link href="css/style.css" rel='stylesheet' type='text/css' />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<script src="js/jquery.min.js"></script>
+<!--<script src="js/jquery.easydropdown.js"></script>-->
+<!--start slider -->
+<link rel="stylesheet" href="css/fwslider.css" media="all">
+<script src="js/jquery-ui.min.js"></script>
+<script src="js/fwslider.js"></script>
+<!--end slider -->
+<script type="text/javascript">
+        $(document).ready(function() {
+            $(".dropdown img.flag").addClass("flagvisibility");
+
+            $(".dropdown dt a").click(function() {
+                $(".dropdown dd ul").toggle();
+            });
+                        
+            $(".dropdown dd ul li a").click(function() {
+                var text = $(this).html();
+                $(".dropdown dt a span").html(text);
+                $(".dropdown dd ul").hide();
+                $("#result").html("Selected value is: " + getSelectedValue("sample"));
+            });
+                        
+            function getSelectedValue(id) {
+                return $("#" + id).find("dt a span.value").html();
+            }
+
+            $(document).bind('click', function(e) {
+                var $clicked = $(e.target);
+                if (! $clicked.parents().hasClass("dropdown"))
+                    $(".dropdown dd ul").hide();
+            });
+
+
+            $("#flagSwitcher").click(function() {
+                $(".dropdown img.flag").toggleClass("flagvisibility");
+            });
+        }); 
+
+		function sendMessage() {
+            var userInput = document.getElementById("userInput");
+            var chatMessages = document.getElementById("chatMessages");
+
+            if (userInput.value.trim() !== "") {
+                var userMessage = document.createElement("div");
+                userMessage.className = "message user-message";
+                userMessage.innerText = userInput.value;
+                chatMessages.appendChild(userMessage);
+                chatMessages.scrollTop = chatMessages.scrollHeight;
+
+                var botMessage = document.createElement("div");
+                botMessage.className = "message bot-message";
+                botMessage.innerText = "Recibido: " + userInput.value;  // Simple bot response
+                chatMessages.appendChild(botMessage);
+                chatMessages.scrollTop = chatMessages.scrollHeight;
+
+                userInput.value = "";
+            }
+        }
+
+        function checkEnter(event) {
+            if (event.key === "Enter") {
+                sendMessage();
+            }
+        }
+     </script>
+</head>
+<body>
+	<!--<div class="header">
+		<div class="container">
+			<div class="row">
+			  <div class="col-md-12">
+				 <div class="header-left">
+					 <div class="logo">
+						<a href="index.html"><img src="images\WhatsApp_Image_2024-07-02_at_9.33.25_AM-removebg-preview.png" alt="" style="width: 75px; height: 60px; "/></a>
+					 </div>
+					 <div class="menu">
+						  <a class="toggleMenu" href="#"><img src="images/nav.png" alt="" /></a>
+						    <ul class="nav" id="nav">
+						    	<li><a href="shop.html">Shop</a></li>
+						    	<li><a href="team.html">Team</a></li>
+						    	<li><a href="experiance.html">Events</a></li>
+						    	<li><a href="experiance.html">Experiance</a></li>
+						    	<li><a href="shop.html">Company</a></li>
+								<li><a href="contact.html">Contact</a></li>								
+								<div class="clear"></div>
+							</ul>
+							<script type="text/javascript" src="js/responsive-nav.js"></script>
+				    </div>							
+	    		    <div class="clear"></div>
+	    	    </div>
+	            <div class="header_right">-->
+	    		  
+					<!-- start search-->
+
+				      <!--<div class="search-box">
+							<div id="sb-search" class="sb-search">
+								<form>
+									<input class="sb-search-input" placeholder="Enter your search term..." type="search" name="search" id="search">
+									<input class="sb-search-submit" type="submit" value="">
+									<span class="sb-icon-search"> </span>
+								</form>
+							</div>
+						</div>-->
+						<!----search-scripts---->
+
+						<!--<script src="js/classie.js"></script>
+						<script src="js/uisearch.js"></script>
+						<script>
+							new UISearch( document.getElementById( 'sb-search' ) );
+						</script>-->
+
+						<!----//search-scripts---->
+				    <!--<ul class="icon1 sub-icon1 profile_img">
+					 <li><a class="active-icon c1" href="#"> </a>
+						<ul class="sub-icon1 list">
+						  <div class="product_control_buttons">
+						  	<a href="#"><img src="images/edit.png" alt=""/></a>
+						  		<a href="#"><img src="images/close_edit.png" alt=""/></a>
+						  </div>
+						   <div class="clear"></div>
+						  <li class="list_img"><img src="images/1.jpg" alt=""/></li>
+						  <li class="list_desc"><h4><a href="#">velit esse molestie</a></h4><span class="actual">1 x
+                          $12.00</span></li>
+						  <div class="login_buttons">
+							 <div class="check_button"><a href="checkout.html">Check out</a></div>
+							 <div class="login_button"><a href="login.html">Login</a></div>
+							 <div class="clear"></div>
+						  </div>
+						  <div class="clear"></div>
+						</ul>
+					 </li>
+				   </ul>
+		           <div class="clear"></div>
+	       </div>
+	      </div>
+		 </div>
+	    </div>
+	-->
+	<header>
+		<div class="header-left">
+		  <div class="logo">
+			<img src="images/WhatsApp_Image_2024-07-02_at_9.33.25_AM-removebg-preview.png" alt="Logo" style="width: 80px;  height: 60px">
+		  </div>
+		  <nav class="menu">
+			<ul class="nav-links" id="nav-links">
+			  <li><a href="shop.html">Shop</a></li>
+			  <!---->
+			  <li><a href="laboratory.html">Custom</a></li>
+			  <li><a href="faq.html">FaQ</a></li>
+			  <li><a href="contact.html">Contact</a></li>
+			  <li><a href="chat.html">Chat</a></li>
+			  <li><a href="wishlist.html">Wishlist</a></li>
+			</ul>
+			<div class="menu-icon" onclick="toggleMenu()">
+			  &#9776;
+			</div>
+		  </nav>
+		</div>
+		<div class="header-right">
+		  <div class="icons">
+			<ul class="icon1 sub-icon1 profile_img">
+			  <li>
+				<a class="active-icon c1" href="single.html"></i></a>
+				<ul class="sub-icon1 list">
+				  <div class="product_control_buttons">
+					<a href="profile.html"><img src="images/edit.png" alt=""></a>
+					<a href="profile.html"><img src="images/close_edit.png" alt=""></a>
+				  </div>
+				  <div class="clear"></div>
+				  <li class="list_img"><img src="images/ansiedad2.png" alt="" width="60"></li>
+				  <li class="list_desc">
+					<h4><a href="single.html">Playera ansiedad</a></h4>
+					<span class="actual">1 x $12.00</span>
+				  </li>
+				  <div class="login_buttons">
+					<div class="check_button"><a href="checkout.html">Check out</a></div>
+					<div class="clear"></div>
+				  </div>
+				  <div class="clear"></div>
+				</ul>
+			  </li>
+			  <li>
+				<a class="icon1 sub-icon1 profile_img" href="login.html"><i class="fas fa-user"></i></a>
+				<!-- Aqui se pondira el link a la pagina de login-->
+			  </li>
+			</ul>
+			<ul>
+			</ul>
+		  </div>
+		  <div class="search">
+			<form class="search-form">
+			  <input type="text" placeholder="Busca tu playera">
+			  <input type="submit" value="Buscar">
+			</form>
+		  </div>
+		</div>
+	  </header>
+	<div class="container chat-container">
+        <div class="chat-header">
+            <h2>Consultoría en Línea</h2>
+            <p>¡Estamos aquí para ayudarte!</p>
+        </div>
+        <div class="chat-messages" id="chatMessages">
+            <div class="message bot-message">Hola, ¿en qué puedo ayudarte hoy?</div>
+        </div>
+        <div class="input-group">
+            <input type="text" class="form-control" placeholder="Escribe tu mensaje aquí..." id="userInput" onkeypress="checkEnter(event)">
+            <div class="input-group-append">
+				<br>
+				<br>
+				<br>
+				<br>
+                <button class="btn btn-primary" type="button" onclick="sendMessage()">
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+
+    </div>
+	<!--<div class="footer">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-3">
+						<ul class="footer_box">
+							<h4>Products</h4>
+							<li><a href="#">Mens</a></li>
+							<li><a href="#">Womens</a></li>
+							<li><a href="#">Youth</a></li>
+						</ul>
+					</div>
+					<div class="col-md-3">
+						<ul class="footer_box">
+							<h4>About</h4>
+							<li><a href="#">Careers and internships</a></li>
+							<li><a href="#">Sponserships</a></li>
+							<li><a href="#">team</a></li>
+							<li><a href="#">Catalog Request/Download</a></li>
+						</ul>
+					</div>
+					<div class="col-md-3">
+						<ul class="footer_box">
+							<h4>Customer Support</h4>
+							<li><a href="#">Contact Us</a></li>
+							<li><a href="#">Shipping and Order Tracking</a></li>
+							<li><a href="#">Easy Returns</a></li>
+							<li><a href="#">Warranty</a></li>
+							<li><a href="#">Replacement Binding Parts</a></li>
+						</ul>
+					</div>
+					<div class="col-md-3">
+						<ul class="footer_box">
+							<h4>Newsletter</h4>
+							<div class="footer_search">
+								<input 
+								type="text" 
+								value="Enter your email" 
+								onfocus="this.value = '';" 
+								onblur="if (this.value == '') {this.value = 'Enter your email';}" 
+								pattern="^[^ ]+@[^ ]+\.[a-z]{2,6}$"
+								title="Please enter a valid email address without spaces and with a @ symbol."
+								required
+							>
+							<input type="submit" value="Go">
+							<script>
+								function validateEmail(form) {
+									const emailInput = form.querySelector('input[type="text"]');
+									const emailValue = emailInput.value;
+									const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,6}$/;
+								
+									if (!emailPattern.test(emailValue)) {
+										alert('Please enter a valid email address without spaces and with a @ symbol.');
+										return false; // Prevent form submission
+									}
+									return true; // Allow form submission
+								}
+								</script>
+
+					        </div>
+							<ul class="social">	
+							  <li class="facebook"><a href="#"><span> </span></a></li>
+							  <li class="twitter"><a href="#"><span> </span></a></li>
+							  <li class="instagram"><a href="#"><span> </span></a></li>	
+							  <li class="pinterest"><a href="#"><span> </span></a></li>	
+							  <li class="youtube"><a href="#"><span> </span></a></li>										  				
+						    </ul>
+		   					
+						</ul>
+					</div>
+				</div>
+				<div class="row footer_bottom">
+				    <div class="copy">
+			           <p>© 2024 page by <a href="https://github.com/ArmandoVallejo/PrintLn" target="_blank">Equipo 3</a></p>
+		            </div>
+   				</div>
+			</div>
+		</div>
+	-->
+	<style>/* Básicos de la Página */
+		body {
+		  font-family: 'Open Sans', sans-serif;
+		  margin: 0;
+		  padding: 0;
+		  box-sizing: border-box;
+		}
+		
+		/* Estilos del Footer */
+		.footer {
+		  background-color: #333;
+		  color: #f8f8f2;
+		  padding: 40px 0;
+		}
+		
+		.footer .container {
+		  max-width: 1200px;
+		  margin: 0 auto;
+		  padding: 0 15px;
+		}
+		
+		.footer .row {
+		  display: flex;
+		  flex-wrap: wrap;
+		}
+		
+		.footer .col-md-3 {
+		  flex: 0 0 25%;
+		  max-width: 25%;
+		  padding: 0 15px;
+		}
+		
+		.footer .footer_box {
+		  list-style: none;
+		  padding: 0;
+		}
+		
+		.footer .footer_box h4 {
+		  font-size: 18px;
+		  margin-bottom: 15px;
+		  color: #fff;
+		}
+		
+		.footer .footer_box li {
+		  margin-bottom: 10px;
+		}
+		
+		.footer .footer_box li a {
+		  color: #ccc;
+		  text-decoration: none;
+		  transition: color 0.3s;
+		}
+		
+		.footer .footer_box li a:hover {
+		  color: #fff;
+		}
+		
+		.footer .social {
+		  display: flex;
+		  gap: 10px;
+		  padding: 0;
+		  list-style: none;
+		}
+		
+		.footer .social li {
+		  display: inline-block;
+		}
+		
+		.footer .social li a {
+		  color: #f8f8f2;
+		  font-size: 20px;
+		  transition: color 0.3s;
+		}
+		
+		.footer .social li a:hover {
+		  color: #fff;
+		}
+		
+		.footer_bottom {
+		  text-align: center;
+		  padding: 20px 0;
+		  border-top: 1px solid #444;
+		}
+		
+		.footer_bottom p {
+		  margin: 0;
+		  color: #ccc;
+		}
+		
+		.footer_bottom p a {
+		  color: #fff;
+		  text-decoration: none;
+		}
+		
+		.footer_bottom p a:hover {
+		  color: #ccc;
+		}
+		</style>
+	  <!-- Footer Section -->
+	  <div class="footer">
+		<div class="container">
+		  <div class="row">
+			<div class="col-md-3">
+			  <ul class="footer_box">
+				<h4>Products</h4>
+				<li><a href="shop.html">Shop</a></li>
+				<li><a href="laboratory.html">Custom</a></li>
+				<li><a href="membresias.html">Memberships</a></li>
+			  </ul>
+			</div>
+			<div class="col-md-3">
+			  <ul class="footer_box">
+				<h4>About</h4>
+				<li><a href="#about-us">About us</a></li>
+				<li><a href="contact.html">Contacto</a></li>
+			  </ul>
+			</div>
+			<div class="col-md-3">
+			  <ul class="footer_box">
+				<h4>Customer Support</h4>
+				<li><a href="contact.html">Contact Us</a></li>
+				<li><a href="profile.html">Shipping and Order Tracking</a></li>
+				<li><a href="chat.html">Chat Support</a></li>
+		
+			  </ul>
+			</div>
+			<div class="col-md-3">
+			  <ul class="footer_box">
+				<h4></h4>
+				<p style="color: #f8f8f2;"></p>
+				<ul class="social">
+				  <li class="facebook">
+					<a href="#"><i class="fab fa-facebook-f"></i></a>
+				  </li>
+				  <li class="X">
+					<a href="#"><i class="fab fa-twitter"></i></a>
+				  </li>
+				  <li class="instagram">
+					<a href="#"><i class="fab fa-instagram"></i></a>
+				  </li>
+				  <li class="youtube">
+					<a href="#"><i class="fab fa-youtube"></i></a>
+				  </li>
+				</ul>
+			  </ul>
+			</div>
+		  </div>
+		  <div class="row footer_bottom">
+			<div class="copy">
+			  <p>
+				© 2024 web page by
+				<a href="https://github.com/ArmandoVallejo/PrintLn" target="_blank">Equipo 3</a>
+			  </p>
+			</div>
+		  </div>
+		</div>
+	  </div>
+</body>	
+</html>
