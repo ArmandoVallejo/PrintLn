@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout de Camiseta</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            padding: 20px;
+        }
+
+        .checkout-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+
+        .checkout-header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .checkout-header h2 {
+            margin-bottom: 10px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .btn-custom {
+            width: 100%;
+            border-radius: 50px;
+            padding: 10px;
+        }
+
+        .summary {
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .summary p {
+            margin: 0;
+        }
+
+        .payment-methods {
+            margin-bottom: 20px;
+        }
+
+        .payment-methods img {
+            width: 50px;
+            margin-right: 10px;
+            cursor: pointer;
+        }
+
+        .flex-container {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .form-section {
+            flex: 1;
+            padding-right: 20px;
+        }
+
+        .summary-section {
+            width: 250px;
+        }
+
+        .card-details {
+            display: none;
+            margin-top: 20px;
+        }
+
+        .product-image {
+            width: 100%;
+            border-radius: 5px;
+        }
+
+        .product-description {
+            margin-top: 10px;
+            font-size: 14px;
+            color: #555;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container checkout-container">
+        <div class="checkout-header">
+            <h2>Checkout de Camiseta</h2>
+            <p>Completa tu información para finalizar el pago</p>
+        </div>
+        <div class="flex-container">
+            <div class="form-section">
+                <div class="payment-methods">
+                    <h5>Métodos de Pago</h5>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Visa_Inc._logo.svg" alt="Visa"
+                        onclick="toggleCardDetails('visa')">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Mastercard-logo.svg"
+                        alt="Mastercard" onclick="toggleCardDetails('mastercard')">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a4/Paypal_2014_logo.png" alt="PayPal"
+                        onclick="toggleCardDetails('paypal')">
+                </div>
+                <form id="checkoutForm">
+                    <div class="form-group">
+                        <label for="fullName">Nombre Completo</label>
+                        <input type="text" class="form-control" id="fullName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Correo Electrónico</label>
+                        <input type="email" class="form-control" id="email" required>
+                    </div>
+                    <div class="card-details" id="visaDetails">
+                        <div class="form-group">
+                            <label for="visaCardNumber">Número de Tarjeta Visa</label>
+                            <input type="text" class="form-control" id="visaCardNumber" maxlength="16" required>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="visaExpiryDate">Fecha de Expiración</label>
+                                <input type="text" class="form-control" id="visaExpiryDate" placeholder="MM/AA"
+                                    maxlength="5" required>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="visaCvv">CVV</label>
+                                <input type="text" class="form-control" id="visaCvv" maxlength="3" required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-details" id="mastercardDetails">
+                        <div class="form-group">
+                            <label for="mastercardNumber">Número de Tarjeta Mastercard</label>
+                            <input type="text" class="form-control" id="mastercardNumber" maxlength="16" required>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="mastercardExpiryDate">Fecha de Expiración</label>
+                                <input type="text" class="form-control" id="mastercardExpiryDate" placeholder="MM/AA"
+                                    maxlength="5" required>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="mastercardCvv">CVV</label>
+                                <input type="text" class="form-control" id="mastercardCvv" maxlength="3" required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-details" id="paypalDetails">
+                        <div class="form-group">
+                            <label for="paypalEmail">Correo Electrónico de PayPal</label>
+                            <input type="email" class="form-control" id="paypalEmail" required>
+                        </div>
+                    </div>
+                    <button type="button" class="btn btn-primary btn-custom" onclick="processPayment()">Pagar Ahora
+                    </button>
+                </form>
+            </div>
+            <div class="summary-section">
+                <div class="summary">
+                    <h5>Resumen de la Orden</h5>
+                    <img src="images/Playera.jpeg" alt="Imagen de Camiseta" class="product-image">
+                    <p class="product-description">Camiseta de alta calidad, lavable, diseño inspirado en el Capitan America.</p>
+                    <p>Producto: <span id="product">Camiseta</span></p>
+                    <p>Subtotal: <span id="subtotal">$29.99</span></p>
+                    <p>IVA (16%): <span id="iva">$4.80</span></p>
+                    <hr>
+                    <p>Total a Pagar: <span id="totalAmount">$34.79</span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleCardDetails(method) {
+            var cardDetails = document.getElementsByClassName('card-details');
+
+            for (var i = 0; i < cardDetails.length; i++) {
+                cardDetails[i].style.display = 'none';
+            }
+
+            var selectedMethodDetails = document.getElementById(method + 'Details');
+            if (selectedMethodDetails) {
+                selectedMethodDetails.style.display = 'block';
+            }
+        }
+
+        function processPayment() {
+            var fullName = document.getElementById('fullName').value;
+            var email = document.getElementById('email').value;
+            var visaCardNumber = document.getElementById('visaCardNumber').value;
+            var visaExpiryDate = document.getElementById('visaExpiryDate').value;
+            var visaCvv = document.getElementById('visaCvv').value;
+            var mastercardNumber = document.getElementById('mastercardNumber').value;
+            var mastercardExpiryDate = document.getElementById('mastercardExpiryDate').value;
+            var mastercardCvv = document.getElementById('mastercardCvv').value;
+            var paypalEmail = document.getElementById('paypalEmail').value;
+
+            if (fullName && email) {
+                if ((visaCardNumber && visaExpiryDate && visaCvv) || (mastercardNumber && mastercardExpiryDate && mastercardCvv) || paypalEmail) {
+                    var subtotal = 29.99;
+                    var iva = subtotal * 0.16;
+                    var total = subtotal + iva;
+
+                    document.getElementById('subtotal').innerText = '$' + subtotal.toFixed(2);
+                    document.getElementById('iva').innerText = '$' + iva.toFixed(2);
+                    document.getElementById('totalAmount').innerText = '$' + total.toFixed(2);
+
+                    alert('Pago realizado con éxito para ' + fullName);
+                } else {
+                    alert('Por favor, completa los datos de la tarjeta o el correo de PayPal.');
+                }
+            } else {
+                alert('Por favor, completa todos los campos del formulario.');
+            }
+        }
+    </script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
