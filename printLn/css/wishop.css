@@ -1,0 +1,24 @@
+.shop_box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: justify;
+}
+.wishlist-btn {
+    position: absolute;
+    top: 360px;  
+    right: 30px;  
+    display: inline-block;
+    color: #0362cf;
+    font-size: 1.5em;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.wishlist-btn:hover {
+    color: #ff0000;; 
+}
+
+.wishlist-btn .fas.fa-heart {
+    margin-right: 5px;
+}
