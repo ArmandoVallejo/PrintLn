@@ -198,7 +198,7 @@ body a{
 }
 .header{
 	background:#282a36;
-	padding: 1.5% 0;
+	padding: 1.5%;
 }
 .header-left{
 	float:left;
@@ -206,7 +206,7 @@ body a{
 }
 .logo{
 	float:left;
-	margin-right: 2%;
+  margin-right: 15px;
 }
 .menu{
 	 float:left;
