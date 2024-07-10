@@ -1,114 +1,155 @@
 
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Preguntas Frecuentes</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    
-</head>
+  <head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <!-- Bootstrap Icons CSS    -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles1.css">
+    <link href="css/style.css" rel='stylesheet' type='text/css' />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  
 
-<body>
-<div class="container">
-    <h1>Preguntas Frecuentes</h1>
+  </head>
 
-    <div class="accordion-item">
+  <body>
+    <div id="header-placeholder"></div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            fetch('header.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('header-placeholder').innerHTML = data;
+                })
+                .catch(error => console.error('Error cargando el encabezado:', error));
+        });
+
+    </script>
+    <div class="container">
+      <h1>Preguntas Frecuentes</h1>
+
+      <div class="accordion-item">
         <div class="accordion-header">
           ¿Cómo puedo personalizar mi playera?
         </div>
         <div class="accordion-body">
-            <p>Puedes personalizar tu playera seleccionando el diseño, color, tamaño y añadiendo texto o imágenes según tus preferencias en nuestra herramienta de personalización en línea.</p>
+          <p>Puedes personalizar tu playera seleccionando el diseño, color,
+            tamaño y añadiendo texto o imágenes según tus preferencias en
+            nuestra herramienta de personalización en línea.</p>
         </div>
-    </div>
+      </div>
 
-    <div class="accordion-item">
+      <div class="accordion-item">
         <div class="accordion-header">
           ¿Qué tipos de playeras ofrecen para personalizar?
         </div>
         <div class="accordion-body">
-            <p>Ofrecemos una variedad de tipos de playeras, incluyendo playeras de manga corta, manga larga, cuello redondo, cuello en V, y más, en diferentes materiales y colores.</p>
+          <p>Ofrecemos una variedad de tipos de playeras, incluyendo playeras de
+            manga corta, manga larga, cuello redondo, cuello en V, y más, en
+            diferentes materiales y colores.</p>
         </div>
-    </div>
+      </div>
 
-    <div class="accordion-item">
+      <div class="accordion-item">
         <div class="accordion-header">
           ¿Puedo ver ejemplos de playeras personalizadas que han hecho antes?
         </div>
         <div class="accordion-body">
-            <p>Sí, puedes ver ejemplos de playeras personalizadas en nuestra galería de clientes satisfechos en nuestro sitio web o en nuestras redes sociales.
-            </p>
+          <p>Sí, puedes ver ejemplos de playeras personalizadas en nuestra
+            galería de clientes satisfechos en nuestro sitio web o en nuestras
+            redes sociales.
+          </p>
         </div>
-    </div>
-    <div class="accordion-item">
-      <div class="accordion-header">
-        ¿Cuánto tiempo toma el proceso de personalización y entrega?
       </div>
-      <div class="accordion-body">
-          <p>El tiempo de personalización y entrega varía, pero generalmente toma entre 15 días hábiles desde la confirmación del diseño hasta la entrega.</p>
+      <div class="accordion-item">
+        <div class="accordion-header">
+          ¿Cuánto tiempo toma el proceso de personalización y entrega?
+        </div>
+        <div class="accordion-body">
+          <p>El tiempo de personalización y entrega varía, pero generalmente
+            toma entre 15 días hábiles desde la confirmación del diseño hasta la
+            entrega.</p>
+        </div>
       </div>
-  </div>
 
-  <div class="accordion-item">
-    <div class="accordion-header">
-      ¿Cuáles son las opciones de pago disponibles?
+      <div class="accordion-item">
+        <div class="accordion-header">
+          ¿Cuáles son las opciones de pago disponibles?
+        </div>
+        <div class="accordion-body">
+          <p>Aceptamos pagos con tarjeta de crédito/débito, PayPal y otros
+            métodos de pago seguros en nuestra plataforma en línea.</p>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <div class="accordion-header">
+          ¿Ofrecen descuentos por pedidos grandes?
+        </div>
+        <div class="accordion-body">
+          <p>Sí, ofrecemos descuentos por pedidos grandes. Ponte en contacto con
+            nuestro equipo de atención al cliente para obtener más detalles y
+            una cotización personalizada.</p>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <div class="accordion-header">
+          ¿Hay alguna restricción en cuanto al diseño que puedo imprimir en la
+          playera?
+        </div>
+        <div class="accordion-body">
+          <p>Recomendamos diseños de alta resolución en formatos como JPG, PNG,
+            o SVG. Evita contenido protegido por derechos de autor sin
+            permiso.</p>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <div class="accordion-header">
+          ¿Qué materiales utilizan para las playeras?
+        </div>
+        <div class="accordion-body">
+          <p>Utilizamos materiales de alta calidad, como algodón orgánico,
+            poliéster, y mezclas de algodón/poliéster, dependiendo del tipo de
+            playera seleccionada.</p>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <div class="accordion-header">
+          ¿Cómo puedo lavar y cuidar mi playera personalizada?
+        </div>
+        <div class="accordion-body">
+          <p>Te recomendamos lavar las playeras del revés con agua fría y
+            secarlas al aire para preservar la calidad de la impresión y
+            prolongar su vida útil.
+          </p>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <div class="accordion-header">
+          ¿Cuál es su política de devolución o cambio si no estoy satisfecho con
+          mi pedido?
+        </div>
+        <div class="accordion-body">
+          <p>Si no estás satisfecho con tu pedido, contáctanos dentro de los 15
+            días posteriores a la recepción para discutir opciones de
+            devolución, cambio o reembolso según nuestras políticas.</p>
+        </div>
+      </div>
+
     </div>
-    <div class="accordion-body">
-        <p>Aceptamos pagos con tarjeta de crédito/débito, PayPal y otros métodos de pago seguros en nuestra plataforma en línea.</p>
-    </div>
-</div>
 
-<div class="accordion-item">
-  <div class="accordion-header">
-    ¿Ofrecen descuentos por pedidos grandes?
-  </div>
-  <div class="accordion-body">
-      <p>Sí, ofrecemos descuentos por pedidos grandes. Ponte en contacto con nuestro equipo de atención al cliente para obtener más detalles y una cotización personalizada.</p>
-  </div>
-</div>
-
-<div class="accordion-item">
-  <div class="accordion-header">
-    ¿Hay alguna restricción en cuanto al diseño que puedo imprimir en la playera?
-  </div>
-  <div class="accordion-body">
-      <p>Recomendamos diseños de alta resolución en formatos como JPG, PNG, o SVG. Evita contenido protegido por derechos de autor sin permiso.</p>
-  </div>
-</div>
-<div class="accordion-item">
-  <div class="accordion-header">
-    ¿Qué materiales utilizan para las playeras?
-  </div>
-  <div class="accordion-body">
-      <p>Utilizamos materiales de alta calidad, como algodón orgánico, poliéster, y mezclas de algodón/poliéster, dependiendo del tipo de playera seleccionada.</p>
-  </div>
-</div>
-<div class="accordion-item">
-  <div class="accordion-header">
-    ¿Cómo puedo lavar y cuidar mi playera personalizada?
-  </div>
-  <div class="accordion-body">
-      <p>Te recomendamos lavar las playeras del revés con agua fría y secarlas al aire para preservar la calidad de la impresión y prolongar su vida útil.
-      </p>
-  </div>
-</div>
-<div class="accordion-item">
-  <div class="accordion-header">
-    ¿Cuál es su política de devolución o cambio si no estoy satisfecho con mi pedido?
-  </div>
-  <div class="accordion-body">
-      <p>Si no estás satisfecho con tu pedido, contáctanos dentro de los 15 días posteriores a la recepción para discutir opciones de devolución, cambio o reembolso según nuestras políticas.</p>
-  </div>
-</div>
-
-</div>
-
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-<script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
     document.addEventListener("DOMContentLoaded", function() {
         const accordionHeaders = document.querySelectorAll(".accordion-header");
 
@@ -121,7 +162,7 @@
     });
 </script>
 
-<div id="footer-placeholder"></div>
+    <div id="footer-placeholder"></div>
     <script>
         document.addEventListener("DOMContentLoaded", function() {
             fetch('footer.html')
@@ -133,6 +174,6 @@
         });
     </script>
 
-</body>
+  </body>
 
 </html>
