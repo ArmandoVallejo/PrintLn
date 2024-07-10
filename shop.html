@@ -459,163 +459,17 @@
         </div>
     </div>
 
-    <style>
-    /* Básicos de la Página */
-    body {
-        font-family: 'Open Sans', sans-serif;
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
-
-    /* Estilos del Footer */
-    .footer {
-        background-color: #333;
-        color: #f8f8f2;
-        padding: 40px 0;
-    }
-
-    .footer .container {
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 0 15px;
-    }
-
-    .footer .row {
-        display: flex;
-        flex-wrap: wrap;
-    }
-
-    .footer .col-md-3 {
-        flex: 0 0 25%;
-        max-width: 25%;
-        padding: 0 15px;
-    }
-
-    .footer .footer_box {
-        list-style: none;
-        padding: 0;
-    }
-
-    .footer .footer_box h4 {
-        font-size: 18px;
-        margin-bottom: 15px;
-        color: #fff;
-    }
-
-    .footer .footer_box li {
-        margin-bottom: 10px;
-    }
-
-    .footer .footer_box li a {
-        color: #ccc;
-        text-decoration: none;
-        transition: color 0.3s;
-    }
-
-    .footer .footer_box li a:hover {
-        color: #fff;
-    }
-
-    .footer .social {
-        display: flex;
-        gap: 10px;
-        padding: 0;
-        list-style: none;
-    }
-
-    .footer .social li {
-        display: inline-block;
-    }
-
-    .footer .social li a {
-        color: #f8f8f2;
-        font-size: 20px;
-        transition: color 0.3s;
-    }
-
-    .footer .social li a:hover {
-        color: #fff;
-    }
-
-    .footer_bottom {
-        text-align: center;
-        padding: 20px 0;
-        border-top: 1px solid #444;
-    }
-
-    .footer_bottom p {
-        margin: 0;
-        color: #ccc;
-    }
-
-    .footer_bottom p a {
-        color: #fff;
-        text-decoration: none;
-    }
-
-    .footer_bottom p a:hover {
-        color: #ccc;
-    }
-    </style>
-    <!-- Footer Section -->
-    <div class="footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-3">
-                    <ul class="footer_box">
-                        <h4>Products</h4>
-                        <li><a href="shop.html">Shop</a></li>
-                        <li><a href="laboratory.html">Custom</a></li>
-                        <li><a href="membresias.html">Memberships</a></li>
-                    </ul>
-                </div>
-                <div class="col-md-3">
-                    <ul class="footer_box">
-                        <h4>About</h4>
-                        <li><a href="#about-us">About us</a></li>
-                        <li><a href="contact.html">Contacto</a></li>
-                    </ul>
-                </div>
-                <div class="col-md-3">
-                    <ul class="footer_box">
-                        <h4>Customer Support</h4>
-                        <li><a href="contact.html">Contact Us</a></li>
-                        <li><a href="profile.html">Shipping and Order Tracking</a></li>
-                        <li><a href="chat.html">Chat Support</a></li>
-                    </ul>
-                </div>
-                <div class="col-md-3">
-                    <ul class="footer_box">
-                        <h4></h4>
-                        <p style="color: #f8f8f2;"></p>
-                        <ul class="social">
-                            <li class="facebook">
-                                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                            </li>
-                            <li class="X">
-                                <a href="#"><i class="fab fa-twitter"></i></a>
-                            </li>
-                            <li class="instagram">
-                                <a href="#"><i class="fab fa-instagram"></i></a>
-                            </li>
-                            <li class="youtube">
-                                <a href="#"><i class="fab fa-youtube"></i></a>
-                            </li>
-                        </ul>
-                    </ul>
-                </div>
-            </div>
-            <div class="row footer_bottom">
-                <div class="copy">
-                    <p>
-                        © 2024 web page by
-                        <a href="https://github.com/ArmandoVallejo/PrintLn" target="_blank">Equipo 3</a>
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
+    <div id="footer-placeholder"></div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            fetch('footer.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('footer-placeholder').innerHTML = data;
+                })
+                .catch(error => console.error('Error cargando el encabezado:', error));
+        });
+    </script>
     <!--<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>-->
 
 </body>
