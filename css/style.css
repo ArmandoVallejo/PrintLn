@@ -27,7 +27,6 @@ body {
     font-size: 100%;
 }
 
-
 .checkout-container {
     max-width: 800px;
     margin: 0 auto;
@@ -207,6 +206,7 @@ body {
 }
 
 .buy-now:hover {
+
     background-color: #0069d9;
 }
 
@@ -263,6 +263,8 @@ body a {
     background: #ff5555;
     /* Rojo */
 }
+
+  
 
 .menu li:nth-child(2) a:hover {
     background: #bd93f9;
@@ -2272,6 +2274,7 @@ p.cart {
 }
 
 h4.title {
+
     color: #000;
     margin-bottom: 0.5em;
     font-size: 1em;
@@ -2282,6 +2285,7 @@ h4.title {
     text-transform: uppercase;
     border-bottom: 1px solid #cfcfcf;
     padding-bottom: 13px;
+
 }
 
 .button1 input[type="submit"] {
@@ -2835,17 +2839,21 @@ fieldset.input input[type="submit"]:hover {
 /*--register--*/
 .register-top-grid h3,
 .register-bottom-grid h3 {
+
     color: #000;
-    font-size: 1em;
+    font-size: 1rem;
     padding-bottom: 5px;
-    margin: 0;
+    margin: 0px;
+
 }
 
 .register-top-grid div,
 .register-bottom-grid div {
+
     width: 48%;
     float: left;
     margin: 10px 0;
+
 }
 
 .register-top-grid span,

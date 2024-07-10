@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/styles1.css">
+    <link rel="stylesheet" href="css/style.css">
     <title>Checkout de Camiseta</title>
     <!--<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">-->
     <!-- Bootstrap CSS v5.0-->
@@ -33,7 +33,6 @@
         }
 
          
-
         .form-group {
             margin-bottom: 15px;
         }
@@ -316,6 +315,7 @@
     }
     </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
     <!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>-->
     <style>
     /* Básicos de la Página */
@@ -474,6 +474,20 @@
             </div>
         </div>
     </div>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <div id="footer-placeholder"></div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            fetch('footer.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('footer-placeholder').innerHTML = data;
+                })
+                .catch(error => console.error('Error cargando el encabezado:', error));
+        });
+    </script>
+
 </body>
 
 </html>

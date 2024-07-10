@@ -440,6 +440,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
    				</div>
 			</div>
 		</div>-->
+
     <style>
     /* Básicos de la Página */
     body {
@@ -597,6 +598,22 @@ License URL: http://creativecommons.org/licenses/by/3.0/
             </div>
         </div>
     </div>
-</body>
+
+
+
+		
+		  <!-- Footer Section -->
+		  <div id="footer-placeholder"></div>
+		  <script>
+			  document.addEventListener("DOMContentLoaded", function() {
+				  fetch('footer.html')
+					  .then(response => response.text())
+					  .then(data => {
+						  document.getElementById('footer-placeholder').innerHTML = data;
+					  })
+					  .catch(error => console.error('Error cargando el encabezado:', error));
+			  });
+		  </script>
+</body>	
 
 </html>
