@@ -6,76 +6,74 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 -->
 <!DOCTYPE HTML>
 <html>
+
 <head>
-<title>PrintLn</title>
-
-<!--íconos-->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-
-
-<!-- JQuery -->
-<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-<link rel="stylesheet" href="css/styles1.css">
-
-
-<!--bootstrap-->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <title>PrintLn</title>
+    <!--íconos-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- JQuery -->
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <link rel="stylesheet" href="css/styles1.css">
+    <!--bootstrap-->
+    <!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">-->
+    <!-- Bootstrap CSS v5.0-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <!-- Bootstrap Icons CSS    -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <!--<link href="css/bootstrap.css" rel='stylesheet' type='text/css' />-->
+    <link href="css/style.css" rel='stylesheet' type='text/css' />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <script type="application/x-javascript">
+    addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
 
+    function hideURLbar() { window.scrollTo(0, 1); }
+    </script>
+    <!--<script src="js/jquery.min.js"></script>-->
+    <script type="text/javascript">
+    $(document).ready(function() {
+        $(".dropdown img.flag").addClass("flagvisibility");
 
-<!--<link href="css/bootstrap.css" rel='stylesheet' type='text/css' />-->
-
-
-<link href="css/style.css" rel='stylesheet' type='text/css' />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
-<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
-
-<!--<script src="js/jquery.min.js"></script>-->
-
-
-<script type="text/javascript">
-        $(document).ready(function() {
-            $(".dropdown img.flag").addClass("flagvisibility");
-
-            $(".dropdown dt a").click(function() {
-                $(".dropdown dd ul").toggle();
-            });
-                        
-            $(".dropdown dd ul li a").click(function() {
-                var text = $(this).html();
-                $(".dropdown dt a span").html(text);
-                $(".dropdown dd ul").hide();
-                $("#result").html("Selected value is: " + getSelectedValue("sample"));
-            });
-                        
-            function getSelectedValue(id) {
-                return $("#" + id).find("dt a span.value").html();
-            }
-
-            $(document).bind('click', function(e) {
-                var $clicked = $(e.target);
-                if (! $clicked.parents().hasClass("dropdown"))
-                    $(".dropdown dd ul").hide();
-            });
-
-
-            $("#flagSwitcher").click(function() {
-                $(".dropdown img.flag").toggleClass("flagvisibility");
-            });
+        $(".dropdown dt a").click(function() {
+            $(".dropdown dd ul").toggle();
         });
-     </script>
-     <!----details-product-slider--->
-				<!-- Include the Etalage files -->
-					<link rel="stylesheet" href="css/etalage.css">
-					<script src="js/jquery.etalage.min.js"></script>
-				<!-- Include the Etalage files -->
-				<script>
-						jQuery(document).ready(function($){
+
+        $(".dropdown dd ul li a").click(function() {
+            var text = $(this).html();
+            $(".dropdown dt a span").html(text);
+            $(".dropdown dd ul").hide();
+            $("#result").html("Selected value is: " + getSelectedValue("sample"));
+        });
+
+        function getSelectedValue(id) {
+            return $("#" + id).find("dt a span.value").html();
+        }
+
+        $(document).bind('click', function(e) {
+            var $clicked = $(e.target);
+            if (!$clicked.parents().hasClass("dropdown"))
+                $(".dropdown dd ul").hide();
+        });
+
+
+        $("#flagSwitcher").click(function() {
+            $(".dropdown img.flag").toggleClass("flagvisibility");
+        });
+    });
+    </script>
+    <!----details-product-slider--->
+    <!-- Include the Etalage files -->
+    <link rel="stylesheet" href="css/etalage.css">
+    <script src="js/jquery.etalage.min.js"></script>
+    <!-- Include the Etalage files -->
+    <script>
+        jQuery(document).ready(function($){
 			
 							$('#etalage').etalage({
 								thumb_image_width: 300,
@@ -93,76 +91,117 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
 					});
 				</script>
-				<!----//details-product-slider--->	
+    <!----//details-product-slider--->
 </head>
+
 <body>
-	<header>
-		<div class="header-left">
-		  <div class="logo">
-			<img src="images/WhatsApp_Image_2024-07-02_at_9.33.25_AM-removebg-preview.png" alt="Logo" style="width: 80px;  height: 60px">
-		  </div>
-		  <nav class="menu">
-			<ul class="nav-links" id="nav-links">
-			  <li><a href="shop.html">Shop</a></li>
-			  <!---->
-			  <li><a href="laboratory.html">Custom</a></li>
-			  <li><a href="faq.html">FaQ</a></li>
-			  <li><a href="contact.html">Contact</a></li>
-			  <li><a href="chat.html">Chat</a></li>
-			  <li><a href="wishlist.html">Wishlist</a></li>
-			</ul>
-			<div class="menu-icon" onclick="toggleMenu()">
-			  &#9776;
-			</div>
-		  </nav>
-		</div>
-		<div class="header-right">
-		  <div class="icons">
-			<ul class="icon1 sub-icon1 profile_img">
-			  <li>
-				<a class="active-icon c1" href="single.html"></i></a>
-				<ul class="sub-icon1 list">
-				  <div class="product_control_buttons">
-					<a href="profile.html"><img src="images/edit.png" alt=""></a>
-					<a href="profile.html"><img src="images/close_edit.png" alt=""></a>
-				  </div>
-				  <div class="clear"></div>
-				  <li class="list_img"><img src="images/ansiedad2.png" alt="" width="60"></li>
-				  <li class="list_desc">
-					<h4><a href="single.html">Playera ansiedad</a></h4>
-					<span class="actual">1 x $12.00</span>
-				  </li>
-				  <div class="login_buttons">
-					<div class="check_button"><a href="checkout.html">Check out</a></div>
-					<div class="clear"></div>
-				  </div>
-				  <div class="clear"></div>
-				</ul>
-			  </li>
-			  <li>
-				<a class="icon1 sub-icon1 profile_img" href="login.html"><i class="fas fa-user"></i></a>
-				<!-- Aqui se pondira el link a la pagina de login-->
-			  </li>
-			</ul>
-			<ul>
-			</ul>
-		  </div>
-		  <div class="search">
-			<form class="search-form">
-			  <input type="text" placeholder="Busca tu playera">
-			  <input type="submit" value="Buscar">
-			</form>
-		  </div>
-		</div>
-	  </header>
-     <div class="main">
-      <div class="shop_top">
-		<div class="container">
-			<div class="row mb-1">
-				<!--<div class="col-md-12 ">-->
-				   <div class="single_image col-lg-6 col-md-6 col-sm-6 col-xs-12">
-						<img width="100%" src="images/ansiedad1.png">
-					     <!--<ul id="etalage" style="width: 100;">
+    <!--<header>
+        <div class="header-left">
+            <div class="logo">
+                <img src="images/WhatsApp_Image_2024-07-02_at_9.33.25_AM-removebg-preview.png" alt="Logo" style="width: 80px;  height: 60px">
+            </div>
+            <nav class="menu">
+                <ul class="nav-links" id="nav-links">
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="laboratory.html">Custom</a></li>
+                    <li><a href="faq.html">FaQ</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="chat.html">Chat</a></li>
+                    <li><a href="wishlist.html">Wishlist</a></li>
+                </ul>
+                <div class="menu-icon" onclick="toggleMenu()">
+                    &#9776;
+                </div>
+            </nav>
+        </div>
+        <div class="header-right">
+            <div class="icons">
+                <ul class="icon1 sub-icon1 profile_img">
+                    <li>
+                        <a class="active-icon c1" href="single.html"></i></a>
+                        <ul class="sub-icon1 list">
+                            <div class="product_control_buttons">
+                                <a href="profile.html"><img src="images/edit.png" alt=""></a>
+                                <a href="profile.html"><img src="images/close_edit.png" alt=""></a>
+                            </div>
+                            <div class="clear"></div>
+                            <li class="list_img"><img src="images/ansiedad2.png" alt="" width="60"></li>
+                            <li class="list_desc">
+                                <h4><a href="single.html">Playera ansiedad</a></h4>
+                                <span class="actual">1 x $12.00</span>
+                            </li>
+                            <div class="login_buttons">
+                                <div class="check_button"><a href="checkout.html">Check out</a></div>
+                                <div class="clear"></div>
+                            </div>
+                            <div class="clear"></div>
+                        </ul>
+                    </li>
+                    <li>
+                        <a class="icon1 sub-icon1 profile_img" href="login.html"><i class="fas fa-user"></i></a>
+                    </li>
+                </ul>
+                <ul>
+                </ul>
+            </div>
+            <div class="search">
+                <form class="search-form">
+                    <input type="text" placeholder="Busca tu playera">
+                    <input type="submit" value="Buscar">
+                </form>
+            </div>
+        </div>
+    </header>-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark py-4">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+                <img src="images/logo-2.png" alt="" width="80" height="24">
+            </a>
+            <!-- Parte responsiva -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item mx-2">
+                        <a class="nav-link active text-btn" aria-current="page" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link text-btn" aria-current="page" href="shop.html">Tienda</a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link text-btn" href="laboratory.html">Customizado</a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link text-btn" href="contact.html">Contacto</a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link text-btn" href="membresias.html">Membresías</a>
+                    </li>
+                </ul>
+                <div class="d-flex">
+                    <div class="nav-item mx-2">
+                        <a class="nav-link" aria-current="page" href="profile.html"><i class="bi bi-heart-fill icon-color"></i></a>
+                    </div>
+                    <div class="nav-item mx-2">
+                        <a class="nav-link" aria-current="page" href="profile.html"><i class="bi bi-cart-fill icon-color"></i></a>
+                    </div>
+                    <form class="d-flex">
+                        <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit"><i class="bi bi-search"></i></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="main">
+        <div class="shop_top">
+            <div class="container">
+                <div class="row mb-1">
+                    <!--<div class="col-md-12 ">-->
+                    <div class="single_image col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                        <img width="100%" src="images/ansiedad1.png">
+                        <!--<ul id="etalage" style="width: 100;">
 							<li>
 								<a href="optionallink.html">
 									//mascaradelatex.com/cdn/shop/files/17178-principal.jpg?v=1719511882&width=600
@@ -196,41 +235,41 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 								<img class="etalage_source_image" src="images/9.jpg" />
 							</li>
 						</ul>-->
-					</div>
-				        <!-- end product_slider -->
-				    <div class="single_right  col-lg-5 col-md-5 col-sm-5 col-xs-12">
-				        	<h3>Intensamente 2 Ansiedad </h3>
-				        	<p class="m_10">
-								Descubre la nueva adición a nuestra colección de playeras de la aclamada película "Intensamente 2" con nuestro diseño exclusivo de Ansiedad. Esta playera captura perfectamente la esencia de uno de los personajes más entrañables y complejos de la saga.<br>
-								Compra la tuya hoy y añade un toque de "Ansiedad" a tu guardarropa!
-							</p>
-				        	<div class="row">
-								<div class= "col-md-8">
-									<ul class="options">
-										<h4 class="m_12">Select a Size(cm)</h4>
-										<li><a href="#">XS</a></li>
-										<li><a href="#">S</a></li>
-										<li><a href="#">M</a></li>
-										<li><a href="#">L</a></li>
-										<li><a href="#">XL</a></li>
-									</ul>
-									<ul class="product-colors">
-										<h3>available Colors</h3>
-										<li><a class="color1" href="#"><span> </span></a></li>
-										<li><a class="color2" href="#"><span> </span></a></li>
-										<li><a class="color3" href="#"><span> </span></a></li>
-										<li><a class="color4" href="#"><span> </span></a></li>
-										<li><a class="color5" href="#"><span> </span></a></li>
-										<li><a class="color6" href="#"><span> </span></a></li>
-										<div class="clear"> </div>
-									</ul>
-									<div class="btn_form">
-									<form>
-										<a  href="checkoutprd.html" type="submit" value="buy now" title=""></a>
-									</form>
-									</div>
-								</div>
-								<!--<ul class="add-to-links">
+                    </div>
+                    <!-- end product_slider -->
+                    <div class="single_right  col-lg-5 col-md-5 col-sm-5 col-xs-12">
+                        <h3>Intensamente 2 Ansiedad </h3>
+                        <p class="m_10">
+                            Descubre la nueva adición a nuestra colección de playeras de la aclamada película "Intensamente 2" con nuestro diseño exclusivo de Ansiedad. Esta playera captura perfectamente la esencia de uno de los personajes más entrañables y complejos de la saga.<br>
+                            Compra la tuya hoy y añade un toque de "Ansiedad" a tu guardarropa!
+                        </p>
+                        <div class="row">
+                            <div class="col-md-8">
+                                <ul class="options">
+                                    <h4 class="m_12">Select a Size(cm)</h4>
+                                    <li><a href="#">XS</a></li>
+                                    <li><a href="#">S</a></li>
+                                    <li><a href="#">M</a></li>
+                                    <li><a href="#">L</a></li>
+                                    <li><a href="#">XL</a></li>
+                                </ul>
+                                <ul class="product-colors">
+                                    <h3>available Colors</h3>
+                                    <li><a class="color1" href="#"><span> </span></a></li>
+                                    <li><a class="color2" href="#"><span> </span></a></li>
+                                    <li><a class="color3" href="#"><span> </span></a></li>
+                                    <li><a class="color4" href="#"><span> </span></a></li>
+                                    <li><a class="color5" href="#"><span> </span></a></li>
+                                    <li><a class="color6" href="#"><span> </span></a></li>
+                                    <div class="clear"> </div>
+                                </ul>
+                                <div class="btn_form">
+                                    <form>
+                                        <a href="checkoutprd.html" type="submit" value="buy now" title=""></a>
+                                    </form>
+                                </div>
+                            </div>
+                            <!--<ul class="add-to-links">
 								<li><img src="images/wish.png" alt=""><a href="#">Add to wishlist</a></li>
 								</ul>
 								<div class="social_buttons">
@@ -248,36 +287,33 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 									<i class="icon-pinterest"></i> Pinterest
 									</button>
 								</div>-->
-								<div class="col-md-4">
-									<div class="box-info-product">
-									<p class="price2">$130.25</p>
-											<ul class="prosuct-qty">
-												<span>Quantity:</span>
-												<select>
-													<option>1</option>
-													<option>2</option>
-													<option>3</option>
-													<option>4</option>
-													<option>5</option>
-													<option>6</option>
-												</select>
-											</ul>
-											<a href="checkoutprd.html" type="submit" name="Submit" class="exclusive">
-												<span>Buy</span>
-											</a>
-									</div>
-								</div>
-							</div>
-
-
-				    </div>
-				        <!--<div class="clear"> </div>-->
-				<!--</div>-->
-				
-			</div>
-			<h4 class="m_11">Related Products in the same Category</h4>
-			<!--<div class="row">-->
-				<!--<div class="col-md-4 product1">
+                            <div class="col-md-4">
+                                <div class="box-info-product">
+                                    <p class="price2">$130.25</p>
+                                    <ul class="prosuct-qty">
+                                        <span>Quantity:</span>
+                                        <select>
+                                            <option>1</option>
+                                            <option>2</option>
+                                            <option>3</option>
+                                            <option>4</option>
+                                            <option>5</option>
+                                            <option>6</option>
+                                        </select>
+                                    </ul>
+                                    <a href="checkoutprd.html" type="submit" name="Submit" class="exclusive">
+                                        <span>Buy</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--<div class="clear"> </div>-->
+                    <!--</div>-->
+                </div>
+                <h4 class="m_11">Related Products in the same Category</h4>
+                <!--<div class="row">-->
+                <!--<div class="col-md-4 product1">
 					<img src="images/s1.jpg" class="img-responsive" alt=""/> 
 					<div class="shop_desc"><a href="single.html">
 						</a><h3><a href="single.html"></a><a href="#">aliquam volutp</a></h3>
@@ -319,88 +355,237 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					    </ul>
 				    </div>
 				</div>-->
-			<!--</div>-->
-			<div class="row">
-				<div class="col-md-3 top_box">
-					<div class="view view-ninth"><a href="single.html">
-                    <img src="images/Baki (1).jpg" class="img-responsive" alt=""/>
-                    <div class="mask mask-1"> </div>
-                    <div class="mask mask-2"> </div>
-                      <div class="content">
-						<h2>Playera Olimpica</h2>
-                        <p>Playera con diseño inspirado en el anime "Baki". <br>Haz click para ver el producto.</p>
-                      </div>
-                    </a> </div>
-					<h4 class="m_4"><a href="#">Playera Baki Hanma</a></h4>
-					<p class="m_5">Categoria: Olimpica</p>
-					<div class="button-container">
-						<button class="btn add-to-cart"><i class="fas fa-shopping-cart"></i></button>
-						<button class="btn add-to-wishlist"><i class="fas fa-heart"></i></button> 
-						<button class="btn buy-now"><i class="fas fa-credit-card"></i></button>
-					</div>
-				</div>
-				<div class="col-md-3 top_box">
-					<div class="view view-ninth"><a href="single.html">
-                    <img src="images/Hallowen.jpg" class="img-responsive" alt=""/>
-                    <div class="mask mask-1"> </div>
-                    <div class="mask mask-2"> </div>
-                      <div class="content">
-                        <h2>Playera Polo</h2>
-                        <p>Playera con diseño inspirado en Hallowen. <br>Haz click para ver el producto.</p>
-                      </div>
-                    </a> </div>
-                   <h4 class="m_4"><a href="#">Playera Hallowen</a></h4>
-                   <p class="m_5">Categoria: Polo</p>
-				   <div class="button-container">
-					<button class="btn add-to-cart"><i class="fas fa-shopping-cart"></i></button><button class="btn add-to-wishlist"><i class="fas fa-heart"></i></button> <button class="btn buy-now"><i class="fas fa-credit-card"></i></button>
-				</div>
-				</div>
-				<div class="col-md-3 top_box1">
-					<div class="view view-ninth"><a href="single.html">
-                    <img src="images/NBA.jpg" class="img-responsive" alt=""/>
-                    <div class="mask mask-1"> </div>
-                    <div class="mask mask-2"> </div>
-                      <div class="content">
-                        <h2>Playera Deportiva</h2>
-						<p>Playera con diseño inspirado en el equipo de la NBA GS Warriors. <br>Haz click para ver el producto.</p>
-                      </div>
-                     </a> </div>
-                   <h4 class="m_4"><a href="#">Playera GS Warriors</a></h4>
-                   <p class="m_5">Categoria: Deportiva</p>
-				   <div class="button-container">
-					<button class="btn add-to-cart"><i class="fas fa-shopping-cart"></i></button><button class="btn add-to-wishlist"><i class="fas fa-heart"></i></button> <button class="btn buy-now"><i class="fas fa-credit-card"></i></button>
-				</div>
-				</div>
-				<div class="col-md-3 top_box1">
-					<div class="view view-ninth"><a href="single.html">
-                    <img src="images/Boy.jpg" class="img-responsive" alt=""/>
-                    <div class="mask mask-1"> </div>
-                    <div class="mask mask-2"> </div>
-                      <div class="content">
-                        <h2>Playera Cuello Redondo</h2>
-                        <p>Playera con diseño inspirado en el anime "Cowboy Bebop". <br>Haz click para ver el producto.</p>
-                      </div>
-                     </a> </div>
-                   <h4 class="m_4"><a href="#">Pleyera Cowboy Bebop</a></h4>
-                   <p class="m_5">Categoria: Cuello Redondo</p>
-				   <div class="button-container">
-					<button class="btn add-to-cart"><i class="fas fa-shopping-cart"></i></button><button class="btn add-to-wishlist"><i class="fas fa-heart"></i></button> <button class="btn buy-now"><i class="fas fa-credit-card"></i></button>
-				</div>
-				</div>
-			</div>	
-	    </div>
-	   </div>
-	  </div>
-	  <div id="footer-placeholder"></div>
-	  <script>
-		  document.addEventListener("DOMContentLoaded", function() {
-			  fetch('footer.html')
-				  .then(response => response.text())
-				  .then(data => {
-					  document.getElementById('footer-placeholder').innerHTML = data;
-				  })
-				  .catch(error => console.error('Error cargando el encabezado:', error));
-		  });
-	  </script>
-</body>	
+
+                <!--</div>-->
+                <div class="row">
+                    <div class="col-md-3 top_box">
+                        <div class="view view-ninth"><a href="single.html">
+                                <img src="images/Baki (1).jpg" class="img-responsive" alt="" />
+                                <div class="mask mask-1"> </div>
+                                <div class="mask mask-2"> </div>
+                                <div class="content">
+                                    <h2>Playera Olimpica</h2>
+                                    <p>Playera con diseño inspirado en el anime "Baki". <br>Haz click para ver el producto.</p>
+                                </div>
+                            </a> </div>
+                        <h4 class="m_4"><a href="#">Playera Baki Hanma</a></h4>
+                        <p class="m_5">Categoria: Olimpica</p>
+                        <div class="button-container">
+                            <button class="btn add-to-cart"><i class="fas fa-shopping-cart"></i></button>
+                            <button class="btn add-to-wishlist"><i class="fas fa-heart"></i></button>
+                            <button class="btn buy-now"><i class="fas fa-credit-card"></i></button>
+                        </div>
+                    </div>
+                    <div class="col-md-3 top_box">
+                        <div class="view view-ninth"><a href="single.html">
+                                <img src="images/Hallowen.jpg" class="img-responsive" alt="" />
+                                <div class="mask mask-1"> </div>
+                                <div class="mask mask-2"> </div>
+                                <div class="content">
+                                    <h2>Playera Polo</h2>
+                                    <p>Playera con diseño inspirado en Hallowen. <br>Haz click para ver el producto.</p>
+                                </div>
+                            </a> </div>
+                        <h4 class="m_4"><a href="#">Playera Hallowen</a></h4>
+                        <p class="m_5">Categoria: Polo</p>
+                        <div class="button-container">
+                            <button class="btn add-to-cart"><i class="fas fa-shopping-cart"></i></button><button class="btn add-to-wishlist"><i class="fas fa-heart"></i></button> <button class="btn buy-now"><i class="fas fa-credit-card"></i></button>
+                        </div>
+                    </div>
+                    <div class="col-md-3 top_box1">
+                        <div class="view view-ninth"><a href="single.html">
+                                <img src="images/NBA.jpg" class="img-responsive" alt="" />
+                                <div class="mask mask-1"> </div>
+                                <div class="mask mask-2"> </div>
+                                <div class="content">
+                                    <h2>Playera Deportiva</h2>
+                                    <p>Playera con diseño inspirado en el equipo de la NBA GS Warriors. <br>Haz click para ver el producto.</p>
+                                </div>
+                            </a> </div>
+                        <h4 class="m_4"><a href="#">Playera GS Warriors</a></h4>
+                        <p class="m_5">Categoria: Deportiva</p>
+                        <div class="button-container">
+                            <button class="btn add-to-cart"><i class="fas fa-shopping-cart"></i></button><button class="btn add-to-wishlist"><i class="fas fa-heart"></i></button> <button class="btn buy-now"><i class="fas fa-credit-card"></i></button>
+                        </div>
+                    </div>
+                    <div class="col-md-3 top_box1">
+                        <div class="view view-ninth"><a href="single.html">
+                                <img src="images/Boy.jpg" class="img-responsive" alt="" />
+                                <div class="mask mask-1"> </div>
+                                <div class="mask mask-2"> </div>
+                                <div class="content">
+                                    <h2>Playera Cuello Redondo</h2>
+                                    <p>Playera con diseño inspirado en el anime "Cowboy Bebop". <br>Haz click para ver el producto.</p>
+                                </div>
+                            </a> </div>
+                        <h4 class="m_4"><a href="#">Pleyera Cowboy Bebop</a></h4>
+                        <p class="m_5">Categoria: Cuello Redondo</p>
+                        <div class="button-container">
+                            <button class="btn add-to-cart"><i class="fas fa-shopping-cart"></i></button><button class="btn add-to-wishlist"><i class="fas fa-heart"></i></button> <button class="btn buy-now"><i class="fas fa-credit-card"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <style>
+    /* Básicos de la Página */
+    body {
+        font-family: 'Open Sans', sans-serif;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    /* Estilos del Footer */
+    .footer {
+        background-color: #333;
+        color: #f8f8f2;
+        padding: 40px 0;
+    }
+
+    .footer .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 15px;
+    }
+
+    .footer .row {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .footer .col-md-3 {
+        flex: 0 0 25%;
+        max-width: 25%;
+        padding: 0 15px;
+    }
+
+    .footer .footer_box {
+        list-style: none;
+        padding: 0;
+    }
+
+    .footer .footer_box h4 {
+        font-size: 18px;
+        margin-bottom: 15px;
+        color: #fff;
+    }
+
+    .footer .footer_box li {
+        margin-bottom: 10px;
+    }
+
+    .footer .footer_box li a {
+        color: #ccc;
+        text-decoration: none;
+        transition: color 0.3s;
+    }
+
+    .footer .footer_box li a:hover {
+        color: #fff;
+    }
+
+    .footer .social {
+        display: flex;
+        gap: 10px;
+        padding: 0;
+        list-style: none;
+    }
+
+    .footer .social li {
+        display: inline-block;
+    }
+
+    .footer .social li a {
+        color: #f8f8f2;
+        font-size: 20px;
+        transition: color 0.3s;
+    }
+
+    .footer .social li a:hover {
+        color: #fff;
+    }
+
+    .footer_bottom {
+        text-align: center;
+        padding: 20px 0;
+        border-top: 1px solid #444;
+    }
+
+    .footer_bottom p {
+        margin: 0;
+        color: #ccc;
+    }
+
+    .footer_bottom p a {
+        color: #fff;
+        text-decoration: none;
+    }
+
+    .footer_bottom p a:hover {
+        color: #ccc;
+    }
+    </style>
+    <!-- Footer Section -->
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <ul class="footer_box">
+                        <h4>Products</h4>
+                        <li><a href="shop.html">Shop</a></li>
+                        <li><a href="laboratory.html">Custom</a></li>
+                        <li><a href="membresias.html">Memberships</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <ul class="footer_box">
+                        <h4>About</h4>
+                        <li><a href="#about-us">About us</a></li>
+                        <li><a href="contact.html">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <ul class="footer_box">
+                        <h4>Customer Support</h4>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="profile.html">Shipping and Order Tracking</a></li>
+                        <li><a href="chat.html">Chat Support</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <ul class="footer_box">
+                        <h4></h4>
+                        <p style="color: #f8f8f2;"></p>
+                        <ul class="social">
+                            <li class="facebook">
+                                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            </li>
+                            <li class="X">
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                            </li>
+                            <li class="instagram">
+                                <a href="#"><i class="fab fa-instagram"></i></a>
+                            </li>
+                            <li class="youtube">
+                                <a href="#"><i class="fab fa-youtube"></i></a>
+                            </li>
+                        </ul>
+                    </ul>
+                </div>
+            </div>
+            <div class="row footer_bottom">
+                <div class="copy">
+                    <p>
+                        © 2024 web page by
+                        <a href="https://github.com/ArmandoVallejo/PrintLn" target="_blank">Equipo 3</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+
 </html>
