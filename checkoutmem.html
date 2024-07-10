@@ -6,101 +6,114 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 -->
 <!DOCTYPE HTML>
 <html>
+
 <head>
-<title>println</title>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-<link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
-<link href="css/style.css" rel='stylesheet' type='text/css' />
-<link rel="stylesheet" href="css/styles1.css">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
-<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
-<script src="js/jquery.min.js"></script>
-<!--<script src="js/jquery.easydropdown.js"></script>-->
-<!--start slider -->
-<link rel="stylesheet" href="css/fwslider.css" media="all">
-<script src="js/jquery-ui.min.js"></script>
-<script src="js/fwslider.js"></script>
-<!--end slider -->
-<script type="text/javascript">
-        $(document).ready(function() {
-            $(".dropdown img.flag").addClass("flagvisibility");
+    <title>println</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!--
+<link href="css/bootstrap.css" rel='stylesheet' type='text/css' />-->
+    <!-- Bootstrap CSS v5.0-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <!-- Bootstrap Icons CSS    -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="css/style.css" rel='stylesheet' type='text/css' />
+    <link rel="stylesheet" href="css/styles1.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <script type="application/x-javascript">
+    addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
 
-            $(".dropdown dt a").click(function() {
-                $(".dropdown dd ul").toggle();
-            });
-                        
-            $(".dropdown dd ul li a").click(function() {
-                var text = $(this).html();
-                $(".dropdown dt a span").html(text);
-                $(".dropdown dd ul").hide();
-                $("#result").html("Selected value is: " + getSelectedValue("sample"));
-            });
-                        
-            function getSelectedValue(id) {
-                return $("#" + id).find("dt a span.value").html();
-            }
+    function hideURLbar() { window.scrollTo(0, 1); }
+    </script>
+    <script src="js/jquery.min.js"></script>
+    <!--<script src="js/jquery.easydropdown.js"></script>-->
+    <!--start slider -->
+    <link rel="stylesheet" href="css/fwslider.css" media="all">
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/fwslider.js"></script>
+    <!--end slider -->
+    <script type="text/javascript">
+    $(document).ready(function() {
+        $(".dropdown img.flag").addClass("flagvisibility");
 
-            $(document).bind('click', function(e) {
-                var $clicked = $(e.target);
-                if (! $clicked.parents().hasClass("dropdown"))
-                    $(".dropdown dd ul").hide();
-            });
-
-
-            $("#flagSwitcher").click(function() {
-                $(".dropdown img.flag").toggleClass("flagvisibility");
-            });
+        $(".dropdown dt a").click(function() {
+            $(".dropdown dd ul").toggle();
         });
-		function toggleCardDetails(method) {
-            var cardDetails = document.getElementsByClassName('card-details');
 
-            for (var i = 0; i < cardDetails.length; i++) {
-                cardDetails[i].style.display = 'none';
-            }
+        $(".dropdown dd ul li a").click(function() {
+            var text = $(this).html();
+            $(".dropdown dt a span").html(text);
+            $(".dropdown dd ul").hide();
+            $("#result").html("Selected value is: " + getSelectedValue("sample"));
+        });
 
-            var selectedMethodDetails = document.getElementById(method + 'Details');
-            if (selectedMethodDetails) {
-                selectedMethodDetails.style.display = 'block';
-            }
+        function getSelectedValue(id) {
+            return $("#" + id).find("dt a span.value").html();
         }
 
-        function processPayment() {
-            var fullName = document.getElementById('fullName').value;
-            var email = document.getElementById('email').value;
-            var visaCardNumber = document.getElementById('visaCardNumber').value;
-            var visaExpiryDate = document.getElementById('visaExpiryDate').value;
-            var visaCvv = document.getElementById('visaCvv').value;
-            var mastercardNumber = document.getElementById('mastercardNumber').value;
-            var mastercardExpiryDate = document.getElementById('mastercardExpiryDate').value;
-            var mastercardCvv = document.getElementById('mastercardCvv').value;
-            var paypalEmail = document.getElementById('paypalEmail').value;
+        $(document).bind('click', function(e) {
+            var $clicked = $(e.target);
+            if (!$clicked.parents().hasClass("dropdown"))
+                $(".dropdown dd ul").hide();
+        });
 
-            if (fullName && email) {
-                if ((visaCardNumber && visaExpiryDate && visaCvv) || (mastercardNumber && mastercardExpiryDate && mastercardCvv) || paypalEmail) {
-                    var subtotal = 49.99;
-                    var iva = subtotal * 0.16;
-                    var total = subtotal + iva;
 
-                    document.getElementById('subtotal').innerText = '$' + subtotal.toFixed(2);
-                    document.getElementById('iva').innerText = '$' + iva.toFixed(2);
-                    document.getElementById('totalAmount').innerText = '$' + total.toFixed(2);
+        $("#flagSwitcher").click(function() {
+            $(".dropdown img.flag").toggleClass("flagvisibility");
+        });
+    });
 
-                    alert('Pago realizado con éxito para ' + fullName);
-                } else {
-                    alert('Por favor, completa los datos de la tarjeta o el correo de PayPal.');
-                }
+    function toggleCardDetails(method) {
+        var cardDetails = document.getElementsByClassName('card-details');
+
+        for (var i = 0; i < cardDetails.length; i++) {
+            cardDetails[i].style.display = 'none';
+        }
+
+        var selectedMethodDetails = document.getElementById(method + 'Details');
+        if (selectedMethodDetails) {
+            selectedMethodDetails.style.display = 'block';
+        }
+    }
+
+    function processPayment() {
+        var fullName = document.getElementById('fullName').value;
+        var email = document.getElementById('email').value;
+        var visaCardNumber = document.getElementById('visaCardNumber').value;
+        var visaExpiryDate = document.getElementById('visaExpiryDate').value;
+        var visaCvv = document.getElementById('visaCvv').value;
+        var mastercardNumber = document.getElementById('mastercardNumber').value;
+        var mastercardExpiryDate = document.getElementById('mastercardExpiryDate').value;
+        var mastercardCvv = document.getElementById('mastercardCvv').value;
+        var paypalEmail = document.getElementById('paypalEmail').value;
+
+        if (fullName && email) {
+            if ((visaCardNumber && visaExpiryDate && visaCvv) || (mastercardNumber && mastercardExpiryDate && mastercardCvv) || paypalEmail) {
+                var subtotal = 49.99;
+                var iva = subtotal * 0.16;
+                var total = subtotal + iva;
+
+                document.getElementById('subtotal').innerText = '$' + subtotal.toFixed(2);
+                document.getElementById('iva').innerText = '$' + iva.toFixed(2);
+                document.getElementById('totalAmount').innerText = '$' + total.toFixed(2);
+
+                alert('Pago realizado con éxito para ' + fullName);
             } else {
-                alert('Por favor, completa todos los campos del formulario.');
+                alert('Por favor, completa los datos de la tarjeta o el correo de PayPal.');
             }
+        } else {
+            alert('Por favor, completa todos los campos del formulario.');
         }
-     </script>
-	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-	  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    }
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>-->
 </head>
+
 <body>
-	<!--<div class="header">
+    <!--<div class="header">
 		<div class="container">
 			<div class="row">
 			  <div class="col-md-12">
@@ -124,9 +137,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	    		    <div class="clear"></div>
 	    	    </div>
 	            <div class="header_right">-->
-
-	    		  <!-- start search-->
-				      <!--<div class="search-box">
+    <!-- start search-->
+    <!--<div class="search-box">
 							<div id="sb-search" class="sb-search">
 								<form>
 									<input class="sb-search-input" placeholder="Enter your search term..." type="search" name="search" id="search">
@@ -135,16 +147,14 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 								</form>
 							</div>
 						</div> -->
-
-						<!----search-scripts---->
-						<!--<script src="js/classie.js"></script>
+    <!----search-scripts---->
+    <!--<script src="js/classie.js"></script>
 						<script src="js/uisearch.js"></script>
 						<script>
 							new UISearch( document.getElementById( 'sb-search' ) );
 						</script> -->
-
-						<!----//search-scripts---->
-				    <!--<ul class="icon1 sub-icon1 profile_img">
+    <!----//search-scripts---->
+    <!--<ul class="icon1 sub-icon1 profile_img">
 					 <li><a class="active-icon c1" href="#"> </a>
 						<ul class="sub-icon1 list">
 						  <div class="product_control_buttons">
@@ -170,69 +180,110 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		 </div>
 	    </div>
 	</div>-->
-	
-	<header>
-		<div class="header-left">
-		  <div class="logo">
-			<img src="images/WhatsApp_Image_2024-07-02_at_9.33.25_AM-removebg-preview.png" alt="Logo" style="width: 80px;  height: 60px">
-		  </div>
-		  <nav class="menu">
-			<ul class="nav-links" id="nav-links">
-			  <li><a href="shop.html">Shop</a></li>
-			  <!---->
-			  <li><a href="laboratory.html">Custom</a></li>
-			  <li><a href="faq.html">FaQ</a></li>
-			  <li><a href="contact.html">Contact</a></li>
-			  <li><a href="chat.html">Chat</a></li>
-			  <li><a href="wishlist.html">Wishlist</a></li>
-			</ul>
-			<div class="menu-icon" onclick="toggleMenu()">
-			  &#9776;
-			</div>
-		  </nav>
-		</div>
-		<div class="header-right">
-		  <div class="icons">
-			<ul class="icon1 sub-icon1 profile_img">
-			  <li>
-				<a class="active-icon c1" href="single.html"></i></a>
-				<ul class="sub-icon1 list">
-				  <div class="product_control_buttons">
-					<a href="profile.html"><img src="images/edit.png" alt=""></a>
-					<a href="profile.html"><img src="images/close_edit.png" alt=""></a>
-				  </div>
-				  <div class="clear"></div>
-				  <li class="list_img"><img src="images/ansiedad2.png" alt="" width="60"></li>
-				  <li class="list_desc">
-					<h4><a href="single.html">Playera ansiedad</a></h4>
-					<span class="actual">1 x $12.00</span>
-				  </li>
-				  <div class="login_buttons">
-					<div class="check_button"><a href="checkout.html">Check out</a></div>
-					<div class="clear"></div>
-				  </div>
-				  <div class="clear"></div>
-				</ul>
-			  </li>
-			  <li>
-				<a class="icon1 sub-icon1 profile_img" href="login.html"><i class="fas fa-user"></i></a>
-				<!-- Aqui se pondira el link a la pagina de login-->
-			  </li>
-			</ul>
-			<ul>
-			</ul>
-		  </div>
-		  <div class="search">
-			<form class="search-form">
-			  <input type="text" placeholder="Busca tu playera">
-			  <input type="submit" value="Buscar">
-			</form>
-		  </div>
-		</div>
-	  </header>
-	  <br>
-	  <br>
-	<div class="container checkout-container">
+    <!--<header>
+        <div class="header-left">
+            <div class="logo">
+                <img src="images/WhatsApp_Image_2024-07-02_at_9.33.25_AM-removebg-preview.png" alt="Logo" style="width: 80px;  height: 60px">
+            </div>
+            <nav class="menu">
+                <ul class="nav-links" id="nav-links">
+                    <li><a href="shop.html">Shop</a></li>
+                   
+                    <li><a href="laboratory.html">Custom</a></li>
+                    <li><a href="faq.html">FaQ</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="chat.html">Chat</a></li>
+                    <li><a href="wishlist.html">Wishlist</a></li>
+                </ul>
+                <div class="menu-icon" onclick="toggleMenu()">
+                    &#9776;
+                </div>
+            </nav>
+        </div>
+        <div class="header-right">
+            <div class="icons">
+                <ul class="icon1 sub-icon1 profile_img">
+                    <li>
+                        <a class="active-icon c1" href="single.html"></i></a>
+                        <ul class="sub-icon1 list">
+                            <div class="product_control_buttons">
+                                <a href="profile.html"><img src="images/edit.png" alt=""></a>
+                                <a href="profile.html"><img src="images/close_edit.png" alt=""></a>
+                            </div>
+                            <div class="clear"></div>
+                            <li class="list_img"><img src="images/ansiedad2.png" alt="" width="60"></li>
+                            <li class="list_desc">
+                                <h4><a href="single.html">Playera ansiedad</a></h4>
+                                <span class="actual">1 x $12.00</span>
+                            </li>
+                            <div class="login_buttons">
+                                <div class="check_button"><a href="checkout.html">Check out</a></div>
+                                <div class="clear"></div>
+                            </div>
+                            <div class="clear"></div>
+                        </ul>
+                    </li>
+                    <li>
+                        <a class="icon1 sub-icon1 profile_img" href="login.html"><i class="fas fa-user"></i></a>
+                        
+                    </li>
+                </ul>
+                <ul>
+                </ul>
+            </div>
+            <div class="search">
+                <form class="search-form">
+                    <input type="text" placeholder="Busca tu playera">
+                    <input type="submit" value="Buscar">
+                </form>
+            </div>
+        </div>
+    </header>-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark py-4">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+                <img src="images/logo-2.png" alt="" width="80" height="24">
+            </a>
+            <!-- Parte responsiva -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item mx-2">
+                        <a class="nav-link active text-btn" aria-current="page" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link text-btn" aria-current="page" href="shop.html">Tienda</a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link text-btn" href="laboratory.html">Customizado</a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link text-btn" href="contact.html">Contacto</a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link text-btn" href="membresias.html">Membresías</a>
+                    </li>
+                </ul>
+                <div class="d-flex">
+                    <div class="nav-item mx-2">
+                        <a class="nav-link" aria-current="page" href="profile.html"><i class="bi bi-heart-fill icon-color"></i></a>
+                    </div>
+                    <div class="nav-item mx-2">
+                        <a class="nav-link" aria-current="page" href="profile.html"><i class="bi bi-cart-fill icon-color"></i></a>
+                    </div>
+                    <form class="d-flex">
+                        <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit"><i class="bi bi-search"></i></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <br>
+    <br>
+    <div class="container checkout-container">
         <div class="checkout-header">
             <h2>Checkout de Membresía</h2>
             <p>Completa tu información para finalizar el pago</p>
@@ -241,12 +292,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
             <div class="form-section">
                 <div class="payment-methods">
                     <h5>Métodos de Pago</h5>
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Visa_Inc._logo.svg" alt="Visa"
-                        onclick="toggleCardDetails('visa')">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Mastercard-logo.svg"
-                        alt="Mastercard" onclick="toggleCardDetails('mastercard')">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a4/Paypal_2014_logo.png" alt="PayPal"
-                        onclick="toggleCardDetails('paypal')">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Visa_Inc._logo.svg" alt="Visa" onclick="toggleCardDetails('visa')">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Mastercard-logo.svg" alt="Mastercard" onclick="toggleCardDetails('mastercard')">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a4/Paypal_2014_logo.png" alt="PayPal" onclick="toggleCardDetails('paypal')">
                 </div>
                 <form id="checkoutForm">
                     <div class="form-group">
@@ -265,8 +313,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                         <div class="form-row">
                             <div class="form-group col-md-6">
                                 <label for="visaExpiryDate">Fecha de Expiración</label>
-                                <input type="text" class="form-control" id="visaExpiryDate" placeholder="MM/AA"
-                                    maxlength="5" required>
+                                <input type="text" class="form-control" id="visaExpiryDate" placeholder="MM/AA" maxlength="5" required>
                             </div>
                             <div class="form-group col-md-6">
                                 <label for="visaCvv">CVV</label>
@@ -282,8 +329,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                         <div class="form-row">
                             <div class="form-group col-md-6">
                                 <label for="mastercardExpiryDate">Fecha de Expiración</label>
-                                <input type="text" class="form-control" id="mastercardExpiryDate" placeholder="MM/AA"
-                                    maxlength="5" required>
+                                <input type="text" class="form-control" id="mastercardExpiryDate" placeholder="MM/AA" maxlength="5" required>
                             </div>
                             <div class="form-group col-md-6">
                                 <label for="mastercardCvv">CVV</label>
@@ -313,88 +359,10 @@ License URL: http://creativecommons.org/licenses/by/3.0/
             </div>
         </div>
     </div>
-	<br>
-	<br>
-	<br>
-	<br>
-		<!--<div class="footer">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-3">
-						<ul class="footer_box">
-							<h4>Products</h4>
-							<li><a href="#">Mens</a></li>
-							<li><a href="#">Womens</a></li>
-							<li><a href="#">Youth</a></li>
-						</ul>
-					</div>
-					<div class="col-md-3">
-						<ul class="footer_box">
-							<h4>About</h4>
-							<li><a href="#">Careers and internships</a></li>
-							<li><a href="#">Sponserships</a></li>
-							<li><a href="#">team</a></li>
-							<li><a href="#">Catalog Request/Download</a></li>
-						</ul>
-					</div>
-					<div class="col-md-3">
-						<ul class="footer_box">
-							<h4>Customer Support</h4>
-							<li><a href="#">Contact Us</a></li>
-							<li><a href="#">Shipping and Order Tracking</a></li>
-							<li><a href="#">Easy Returns</a></li>
-							<li><a href="#">Warranty</a></li>
-							<li><a href="#">Replacement Binding Parts</a></li>
-						</ul>
-					</div>
-					<div class="col-md-3">
-						<ul class="footer_box">
-							<h4>Newsletter</h4>
-							<div class="footer_search">
-								<input 
-								type="text" 
-								value="Enter your email" 
-								onfocus="this.value = '';" 
-								onblur="if (this.value == '') {this.value = 'Enter your email';}" 
-								pattern="^[^ ]+@[^ ]+\.[a-z]{2,6}$"
-								title="Please enter a valid email address without spaces and with a @ symbol."
-								required
-							>
-							<input type="submit" value="Go">
-							<script>
-								function validateEmail(form) {
-									const emailInput = form.querySelector('input[type="text"]');
-									const emailValue = emailInput.value;
-									const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,6}$/;
-								
-									if (!emailPattern.test(emailValue)) {
-										alert('Please enter a valid email address without spaces and with a @ symbol.');
-										return false; // Prevent form submission
-									}
-									return true; // Allow form submission
-								}
-								</script>
-
-					        </div>
-							<ul class="social">	
-							  <li class="facebook"><a href="#"><span> </span></a></li>
-							  <li class="twitter"><a href="#"><span> </span></a></li>
-							  <li class="instagram"><a href="#"><span> </span></a></li>	
-							  <li class="pinterest"><a href="#"><span> </span></a></li>	
-							  <li class="youtube"><a href="#"><span> </span></a></li>										  				
-						    </ul>
-		   					
-						</ul>
-					</div>
-				</div>
-				<div class="row footer_bottom">
-				    <div class="copy">
-			           <p>© 2024 page by <a href="https://github.com/ArmandoVallejo/PrintLn" target="_blank">Equipo 3</a></p>
-		            </div>
-   				</div>
-			</div>
-		</div>-->
-		
+    <br>
+    <br>
+    <br>
+    <br>
 		  <!-- Footer Section -->
 		  <div id="footer-placeholder"></div>
 		  <script>
@@ -408,4 +376,5 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			  });
 		  </script>
 </body>	
+
 </html>
