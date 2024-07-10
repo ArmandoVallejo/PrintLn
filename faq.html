@@ -1,148 +1,164 @@
-<!DOCTYPE HTML>
-<html>
+<!DOCTYPE html>
+<html lang="es">
 <head>
-    <title>Preguntas frecuentes</title>
-    <link rel="stylesheet" href="css/header.css">
-    <link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
-    <link href="css/style.css" rel='stylesheet' type='text/css' />
-    <link href="css/categoriashop.css" rel='stylesheet' type='text/css' />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link href="css/wishlist.css" rel='stylesheet' type='text/css' />
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
-    <script type="application/x-javascript"> 
-        addEventListener("load", function() { 
-            setTimeout(hideURLbar, 0); 
-        }, false); 
-        function hideURLbar() { 
-            window.scrollTo(0, 1); 
-        } 
-    </script>
-    <script src="js/jquery.min.js"></script>
-    <script src="js/categoriashop.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preguntas Frecuentes</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            padding-top: 60px;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+            background-color: #ffffff;
+            box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+            border-radius: 8px;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .accordion-item {
+            margin-bottom: 15px;
+        }
+        .accordion-header {
+            background-color: #f1f1f1;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 6px;
+        }
+        .accordion-header:hover {
+            background-color: #e0e0e0;
+        }
+        .accordion-body {
+            padding: 10px 20px;
+            border-left: 1px solid #ddd;
+            border-right: 1px solid #ddd;
+            border-bottom: 1px solid #ddd;
+            display: none;
+        }
+        .accordion-body.show {
+            display: block;
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <div class="header-left">
-          
-          <div class="logo">
-            <img src="images\WhatsApp_Image_2024-07-02_at_9.33.25_AM-removebg-preview.png" alt="Logo" style="width: 80px; height: 60px; ">
-          </div>
-          <nav class="menu">
-            <ul class="nav-links" id="nav-links">
-              <li><a href="shop.html">Shop</a></li>
-              <li><a href="team.html">Team</a></li>
-              <li><a href="laboratory.html">Lab</a></li>
-              <li><a href="faq.html">FaQ</a></li>
-              <li><a href="contact.html">Contact</a></li>
-              <li><a href="wishlist.html">Wishlist</a></li>
-              <li><a href="login.html">Login</a></li>
-              
-            </ul>
-            <div class="menu-icon" onclick="toggleMenu()">
-              &#9776;
-              <!-- Icono de menú de hamburguesa -->
-            </div>
-          </nav>
+
+<div class="container">
+    <h1>Preguntas Frecuentes</h1>
+
+    <div class="accordion-item">
+        <div class="accordion-header">
+          ¿Cómo puedo personalizar mi playera?
         </div>
-        <div class="header-right">
-          <div class="icons">
-            <ul class="icon1 sub-icon1 profile_img">
-              <li><a class="active-icon c1" href="#"> </a>
-                  <ul class="sub-icon1 list">
-                      <div class="product_control_buttons">
-                          <a href="#"><img src="images/edit.png"
-                                  alt /></a>
-                          <a href="#"><img src="images/close_edit.png"
-                                  alt /></a>
-                      </div>
-                      <div class="clear"></div>
-                      <li class="list_img"><img src="images/1.jpg"
-                              alt /></li>
-                      <li class="list_desc"><h4><a href="#">velit esse
-                                  molestie</a></h4><span
-                              class="actual">1 x
-                              $12.00</span></li>
-                      <div class="login_buttons">
-                          <div class="check_button"><a
-                                  href="checkout.html">Check
-                                  out</a></div>
-                          <div class="clear"></div>
-                      </div>
-                      <div class="clear"></div>
-                  </ul>
-              </li>
-          </ul>
-          </div>
-    
-          <div class="search">
-            <form class="search-form">
-              <input type="text" placeholder="Search for books, authors, categories and more..">
-              <input type="submit" value="Submit">
-            </form>
-          </div>
-          
+        <div class="accordion-body">
+            <p>Puedes personalizar tu playera seleccionando el diseño, color, tamaño y añadiendo texto o imágenes según tus preferencias en nuestra herramienta de personalización en línea.</p>
         </div>
-        
-        <script>
-        function toggleMenu() {
-          const navLinks = document.querySelector('.nav-links');
-          navLinks.classList.toggle('active');
-        }
-      </script>
+    </div>
 
+    <div class="accordion-item">
+        <div class="accordion-header">
+          ¿Qué tipos de playeras ofrecen para personalizar?
+        </div>
+        <div class="accordion-body">
+            <p>Ofrecemos una variedad de tipos de playeras, incluyendo playeras de manga corta, manga larga, cuello redondo, cuello en V, y más, en diferentes materiales y colores.</p>
+        </div>
+    </div>
 
+    <div class="accordion-item">
+        <div class="accordion-header">
+          ¿Puedo ver ejemplos de playeras personalizadas que han hecho antes?
+        </div>
+        <div class="accordion-body">
+            <p>Sí, puedes ver ejemplos de playeras personalizadas en nuestra galería de clientes satisfechos en nuestro sitio web o en nuestras redes sociales.
+            </p>
+        </div>
+    </div>
+    <div class="accordion-item">
+      <div class="accordion-header">
+        ¿Cuánto tiempo toma el proceso de personalización y entrega?
+      </div>
+      <div class="accordion-body">
+          <p>El tiempo de personalización y entrega varía, pero generalmente toma entre 15 días hábiles desde la confirmación del diseño hasta la entrega.</p>
+      </div>
+  </div>
 
-      </header>
+  <div class="accordion-item">
+    <div class="accordion-header">
+      ¿Cuáles son las opciones de pago disponibles?
+    </div>
+    <div class="accordion-body">
+        <p>Aceptamos pagos con tarjeta de crédito/débito, PayPal y otros métodos de pago seguros en nuestra plataforma en línea.</p>
+    </div>
+</div>
 
-    <style>.faq-item h3{
-    font-size: 1.5em;
-    color: #333;
-    margin-bottom: 10px;
-    position: relative;
-    padding-left: 5%;}
-    
-    
-    .faq-item p{
-    font-size: 1em;
-    color: #333;
-    margin-bottom: 10px;
-    position: relative;
-    padding-left: 10%;}
-    
-    </style>
+<div class="accordion-item">
+  <div class="accordion-header">
+    ¿Ofrecen descuentos por pedidos grandes?
+  </div>
+  <div class="accordion-body">
+      <p>Sí, ofrecemos descuentos por pedidos grandes. Ponte en contacto con nuestro equipo de atención al cliente para obtener más detalles y una cotización personalizada.</p>
+  </div>
+</div>
 
-      <section class="faq-item">
-        <h3>¿Qué formato deben tener los diseños?</h3>
-        <p class="respuesta"> necesitamos el archivo editable en (.ai)illustrator o (.psd) photoshop separado en capas con la guía de medidas específicas con las que trabajaremos</p>
-    </section>
+<div class="accordion-item">
+  <div class="accordion-header">
+    ¿Hay alguna restricción en cuanto al diseño que puedo imprimir en la playera?
+  </div>
+  <div class="accordion-body">
+      <p>Recomendamos diseños de alta resolución en formatos como JPG, PNG, o SVG. Evita contenido protegido por derechos de autor sin permiso.</p>
+  </div>
+</div>
+<div class="accordion-item">
+  <div class="accordion-header">
+    ¿Qué materiales utilizan para las playeras?
+  </div>
+  <div class="accordion-body">
+      <p>Utilizamos materiales de alta calidad, como algodón orgánico, poliéster, y mezclas de algodón/poliéster, dependiendo del tipo de playera seleccionada.</p>
+  </div>
+</div>
+<div class="accordion-item">
+  <div class="accordion-header">
+    ¿Cómo puedo lavar y cuidar mi playera personalizada?
+  </div>
+  <div class="accordion-body">
+      <p>Te recomendamos lavar las playeras del revés con agua fría y secarlas al aire para preservar la calidad de la impresión y prolongar su vida útil.
+      </p>
+  </div>
+</div>
+<div class="accordion-item">
+  <div class="accordion-header">
+    ¿Cuál es su política de devolución o cambio si no estoy satisfecho con mi pedido?
+  </div>
+  <div class="accordion-body">
+      <p>Si no estás satisfecho con tu pedido, contáctanos dentro de los 15 días posteriores a la recepción para discutir opciones de devolución, cambio o reembolso según nuestras políticas.</p>
+  </div>
+</div>
 
-    <section class="faq-item">
-        <h3>¿Cuál es la medida máxima de la impresión?</h3>
-        <p class="respuesta">Todo va a depender de la talla del producto a immprimir, de frente y espalda son 16x20 in, manga corta 4x6 in, manga corta(mujer) 4x3.5 in, manga larga 4x20 in</p>
-    </section>
-    
-    <section class="faq-item">
-        <h3>¿Cuál es el límite de colores?</h3>
-        <p class="respuesta">tenemos un límmite de 8 colores por diseño incluyendo la base y si podemos imprimir colores neón</p>
-    </section>
+</div>
 
-    <section class="faq-item">
-        <h3>Cuánto tardaría en recibir mi pedido?</h3>
-        <p class="respuesta">nuestro tiempo de producciónn es de 10 a 15 días hábiles, más el tiempo de envio que son 4 a 5 días hábiles</p>
-    </section>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const accordionHeaders = document.querySelectorAll(".accordion-header");
 
-    <div id="footer-placeholder"></div>
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            fetch('footer.html')
-                .then(response => response.text())
-                .then(data => {
-                    document.getElementById('footer-placeholder').innerHTML = data;
-                })
-                .catch(error => console.error('Error cargando el pie de página:', error));
+        accordionHeaders.forEach(header => {
+            header.addEventListener("click", function() {
+                const accordionBody = this.nextElementSibling;
+                accordionBody.classList.toggle("show");
+            });
         });
-    </script>
+    });
+</script>
+
 </body>
 </html>
