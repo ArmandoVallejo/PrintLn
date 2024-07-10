@@ -2512,8 +2512,7 @@ fieldset.input input[type="submit"]:hover {
 .register-top-grid div,
 .register-bottom-grid div {
   width: 50%;
-  float: center;
-  margin: 10px ;
+  margin: 10px;
 }
 .register-top-grid span,
 .register-bottom-grid span {
