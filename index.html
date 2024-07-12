@@ -38,7 +38,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
 <!--end slider -->
 <script type="text/javascript">
-        $(document).ready(function() {
+$(document).ready(function()  {
             $(".dropdown img.flag").addClass("flagvisibility");
 
             $(".dropdown dt a").click(function() {
@@ -61,7 +61,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                 if (! $clicked.parents().hasClass("dropdown"))
                     $(".dropdown dd ul").hide();
             });
-
+});
 
 </script>
     <!-- Bootstrap Icons CSS    -->
@@ -85,36 +85,38 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     <script src="js/fwslider.js"></script>
     <link rel="stylesheet" href="css/styles1.css">
     <!--end slider -->
+
     <script type="text/javascript">
-    $(document).ready(function() {
-        $(".dropdown img.flag").addClass("flagvisibility");
+        $(document).ready(function() {
+    $(".dropdown img.flag").addClass("flagvisibility");
 
-        $(".dropdown dt a").click(function() {
-            $(".dropdown dd ul").toggle();
-        });
-
-        $(".dropdown dd ul li a").click(function() {
-            var text = $(this).html();
-            $(".dropdown dt a span").html(text);
-            $(".dropdown dd ul").hide();
-            $("#result").html("Selected value is: " + getSelectedValue("sample"));
-        });
-
-        function getSelectedValue(id) {
-            return $("#" + id).find("dt a span.value").html();
-        }
-
-        $(document).bind('click', function(e) {
-            var $clicked = $(e.target);
-            if (!$clicked.parents().hasClass("dropdown"))
-                $(".dropdown dd ul").hide();
-        });
-
-
-        $("#flagSwitcher").click(function() {
-            $(".dropdown img.flag").toggleClass("flagvisibility");
-        });
+    $(".dropdown dt a").click(function() {
+        $(".dropdown dd ul").toggle();
     });
+
+    $(".dropdown dd ul li a").click(function() {
+        var text = $(this).html();
+        $(".dropdown dt a span").html(text);
+        $(".dropdown dd ul").hide();
+        $("#result").html("Selected value is: " + getSelectedValue("sample"));
+    });
+
+    function getSelectedValue(id) {
+        return $("#" + id).find("dt a span").html();
+    }
+
+    $(document).bind('click', function(e) {
+        var $clicked = $(e.target);
+        if (!$clicked.parents().hasClass("dropdown")) {
+            $(".dropdown dd ul").hide();
+        }
+    });
+
+    $("#flagSwitcher").click(function() {
+        $(".dropdown img.flag").toggleClass("flagvisibility");
+    });
+});
+
     </script>
 </head>
 
@@ -249,76 +251,96 @@ License URL: http://creativecommons.org/licenses/by/3.0/
             <h3 class="m_3">Productos más vendidos</h3>
             <div class="close_but"><i class="close1"> </i></div>
             <div class="row">
-                <div class="col-md-3 top_box">
-                    <div class="view view-ninth"><a href="single.html">
-                            <img src="images/Baki (1).jpg" class="img-responsive" alt="" />
-                            <div class="mask mask-1"> </div>
-                            <div class="mask mask-2"> </div>
-                            <div class="content">
-                                <h2>Playera Olimpica</h2>
-                                <p>Playera con diseño inspirado en el anime "Baki". <br>Haz click para ver el producto.</p>
+                <div class="col-sm-6 col-md-3 product-box">
+                    <div class="product-view product-view-ninth">
+                        <a href="single.html">
+                            <img src="images/Baki (1).jpg" class="img-fluid" alt=""/>
+                            <div class="hover-mask"> 
+                                <div class="hover-content">
+                                    <h2>Playera Olimpica</h2>
+                                    <p>Playera con diseño inspirado en el anime "Baki". <br>Haz click para ver el producto.</p>
+                                </div>
                             </div>
-                        </a> </div>
+                        </a>
+                    </div>
                     <h4 class="m_4"><a href="single.html">Playera Baki Hanma</a></h4>
                     <p class="m_5">Categoria: Olimpica</p>
-                    <div class="button-container">
-                        <button class="btn add-to-cart"><i class="fas fa-shopping-cart"></i></button>
-                        <button class="btn add-to-wishlist"><i class="fas fa-heart"></i></button>
-                        <button class="btn buy-now"><i class="fas fa-credit-card"></i></button>
+                    <br>
+                    <div class="btn-container">
+                        <button class="btn btn-primary add-to-cart"><i class="fas fa-shopping-cart"></i></button>
+                        <button class="btn btn-secondary add-to-wishlist"><i class="fas fa-heart"></i></button>
+                        <button class="btn btn-success buy-now"><i class="fas fa-credit-card"></i></button>
                     </div>
                 </div>
-                <div class="col-md-3 top_box">
-                    <div class="view view-ninth"><a href="single.html">
-                            <img src="images/Hallowen.jpg" class="img-responsive" alt="" />
-                            <div class="mask mask-1"> </div>
-                            <div class="mask mask-2"> </div>
-                            <div class="content">
-                                <h2>Playera Polo</h2>
-                                <p>Playera con diseño inspirado en Hallowen. <br>Haz click para ver el producto.</p>
+                <div class="col-sm-6 col-md-3 product-box">
+                    <div class="product-view product-view-ninth">
+                        <a href="single.html">
+                            <img src="images/Hallowen.jpg" class="img-fluid" alt=""/>
+                            <div class="hover-mask">
+                                <div class="hover-content">
+                                    <h2>Playera Polo</h2>
+                                    <p>Playera con diseño inspirado en Hallowen. <br>Haz click para ver el producto.</p>
+                                </div>
                             </div>
-                        </a> </div>
+                        </a>
+                    </div>
                     <h4 class="m_4"><a href="single.html">Playera Hallowen</a></h4>
                     <p class="m_5">Categoria: Polo</p>
-                    <div class="button-container">
-                        <button class="btn add-to-cart"><i class="fas fa-shopping-cart"></i></button><button class="btn add-to-wishlist"><i class="fas fa-heart"></i></button> <button class="btn buy-now"><i class="fas fa-credit-card"></i></button>
+                    <br>
+                    <div class="btn-container">
+                        <button class="btn btn-primary add-to-cart"><i class="fas fa-shopping-cart"></i></button>
+                        <button class="btn btn-secondary add-to-wishlist"><i class="fas fa-heart"></i></button>
+                        <button class="btn btn-success buy-now"><i class="fas fa-credit-card"></i></button>
                     </div>
                 </div>
-                <div class="col-md-3 top_box1">
-                    <div class="view view-ninth"><a href="single.html">
-                            <img src="images/NBA.jpg" class="img-responsive" alt="" />
-                            <div class="mask mask-1"> </div>
-                            <div class="mask mask-2"> </div>
-                            <div class="content">
-                                <h2>Playera Deportiva</h2>
-                                <p>Playera con diseño inspirado en el equipo de la NBA GS Warriors. <br>Haz click para ver el producto.</p>
+                <div class="col-sm-6 col-md-3 product-box">
+                    <div class="product-view product-view-ninth">
+                        <a href="single.html">
+                            <img src="images/NBA.jpg" class="img-fluid" alt=""/>
+                            <div class="hover-mask">
+                                <div class="hover-content">
+                                    <h2>Playera Deportiva</h2>
+                                    <p>Playera con diseño inspirado en el equipo de la NBA GS Warriors. <br>Haz click para ver el producto.</p>
+                                </div>
                             </div>
-                        </a> </div>
+                        </a>
+                    </div>
                     <h4 class="m_4"><a href="single.html">Playera GS Warriors</a></h4>
                     <p class="m_5">Categoria: Deportiva</p>
-                    <div class="button-container">
-                        <button class="btn add-to-cart"><i class="fas fa-shopping-cart"></i></button><button class="btn add-to-wishlist"><i class="fas fa-heart"></i></button> <button class="btn buy-now"><i class="fas fa-credit-card"></i></button>
+                        <br>
+                        <div class="btn-container">
+                        <button class="btn btn-primary add-to-cart"><i class="fas fa-shopping-cart"></i></button>
+                        <button class="btn btn-secondary add-to-wishlist"><i class="fas fa-heart"></i></button>
+                        <button class="btn btn-success buy-now"><i class="fas fa-credit-card"></i></button>
                     </div>
                 </div>
-                <div class="col-md-3 top_box1">
-                    <div class="view view-ninth"><a href="single.html">
-                            <img src="images/Boy.jpg" class="img-responsive" alt="" />
-                            <div class="mask mask-1"> </div>
-                            <div class="mask mask-2"> </div>
-                            <div class="content">
-                                <h2>Playera Cuello Redondo</h2>
-                                <p>Playera con diseño inspirado en el anime "Cowboy Bebop". <br>Haz click para ver el producto.</p>
+                <div class="col-sm-6 col-md-3 product-box">
+                    <div class="product-view product-view-ninth">
+                        <a href="single.html">
+                            <img src="images/Boy.jpg" class="img-fluid" alt=""/>
+                            <div class="hover-mask">
+                                <div class="hover-content">
+                                    <h2>Playera Cuello Redondo</h2>
+                                    <p>Playera con diseño inspirado en el anime "Cowboy Bebop". <br>Haz click para ver el producto.</p>
+                               </div>
                             </div>
-                        </a> </div>
+                        </a>
+                    </div>
                     <h4 class="m_4"><a href="single.html">Playera Cowboy Bebop</a></h4>
                     <p class="m_5">Categoria: Cuello Redondo</p>
-                    <div class="button-container">
-                        <button class="btn add-to-cart"><i class="fas fa-shopping-cart"></i></button><button class="btn add-to-wishlist"><i class="fas fa-heart"></i></button> <button class="btn buy-now"><i class="fas fa-credit-card"></i></button>
+                    <br>
+                    <div class="btn-container">
+                        <button class="btn btn-primary add-to-cart"><i class="fas fa-shopping-cart"></i></button>
+                        <button class="btn btn-secondary add-to-wishlist"><i class="fas fa-heart"></i></button>
+                        <button class="btn btn-success buy-now"><i class="fas fa-credit-card"></i></button>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    </div>
+        
+    </div>   
+</div>
+
     <div id="footer-placeholder"></div>
 
 		<script>
@@ -329,7 +351,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 						document.getElementById('footer-placeholder').innerHTML = data;
 					})
 					.catch(error => console.error('Error cargando el encabezado:', error));
-			});
+		        });
 		</script>
 </body>
-</html>
+</html>  
