@@ -16,88 +16,7 @@
     5.15.4/css/all.min.css" rel="stylesheet">
 
     <link href="css/style.css" rel='stylesheet' type='text/css' />
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f8f9fa;
-            padding: 20px;
-        }
-
-        .checkout-container {
-            max-width: 800px;
-            margin: 0 auto;
-            background: #fff;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            padding: 20px;
-        }
-
-         
-        .form-group {
-            margin-bottom: 15px;
-        }
-
-        .btn-custom {
-            width: 100%;
-            border-radius: 50px;
-            padding: 10px;
-        }
-
-        .summary {
-            padding: 10px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-        }
-
-        .summary p {
-            margin: 0;
-        }
-
-        .payment-methods {
-            margin-bottom: 20px;
-        }
-
-        .payment-methods img {
-            width: 50px;
-            margin-right: 10px;
-            cursor: pointer;
-        }
-
-        .flex-container {
-            display: flex;
-            justify-content: space-between;
-        }
-
-        .form-section {
-            flex: 1;
-            padding-right: 20px;
-        }
-
-        .summary-section {
-            width: 250px;
-        }
-
-        .card-details {
-            display: none;
-            margin-top: 20px;
-        }
-
-        .product-image {
-            width: 100%;
-            border-radius: 5px;
-        }
-
-        .product-description {
-            margin-top: 10px;
-            font-size: 14px;
-            color: #555;
-        }
-        header{
-            display: flex;
-        }
-    </style>
 </head>
-
 <body>
    
     <div id="header-placeholder"></div>
@@ -112,6 +31,7 @@
         });
 
     </script>
+    <br>
     <div class="container checkout-container">
         <div class="checkout-header">
             <h2>Checkout de Camiseta</h2>
@@ -190,6 +110,7 @@
             </div>
         </div>
     </div>
+    <br>
     <script>
     function toggleCardDetails(method) {
         var cardDetails = document.getElementsByClassName('card-details');
