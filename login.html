@@ -6,56 +6,67 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 -->
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Free Snow Bootstrap Website Template | Checkout :: w3layouts</title>
-    <link href="css/bootstrap.css" rel="stylesheet" type="text/css" />
+
+
+<head>
+    <title>PrintLn</title>
+    <!--<link href="css/bootstrap.css" rel="stylesheet" type="text/css" />-->
+    <!-- Bootstrap CSS v5.0-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <!-- Bootstrap Icons CSS    -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet" type="text/css" />
-	<link rel="stylesheet" href="css/styles1.css">
+    <link rel="stylesheet" href="css/styles1.css">
+
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <link
-      href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800"
-      rel="stylesheet"
-      type="text/css" />
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800" rel="stylesheet" type="text/css" />
     <script type="application/x-javascript">
-      addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); }
+    addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+
+    function hideURLbar() { window.scrollTo(0, 1); }
     </script>
     <script src="js/jquery.min.js"></script>
     <script type="text/javascript">
-      $(document).ready(function () {
+    $(document).ready(function() {
         $(".dropdown img.flag").addClass("flagvisibility");
 
-        $(".dropdown dt a").click(function () {
-          $(".dropdown dd ul").toggle();
+        $(".dropdown dt a").click(function() {
+            $(".dropdown dd ul").toggle();
         });
 
-        $(".dropdown dd ul li a").click(function () {
-          var text = $(this).html();
-          $(".dropdown dt a span").html(text);
-          $(".dropdown dd ul").hide();
-          $("#result").html("Selected value is: " + getSelectedValue("sample"));
+        $(".dropdown dd ul li a").click(function() {
+            var text = $(this).html();
+            $(".dropdown dt a span").html(text);
+            $(".dropdown dd ul").hide();
+            $("#result").html("Selected value is: " + getSelectedValue("sample"));
         });
 
         function getSelectedValue(id) {
-          return $("#" + id)
-            .find("dt a span.value")
-            .html();
+            return $("#" + id)
+                .find("dt a span.value")
+                .html();
         }
 
-        $(document).bind("click", function (e) {
-          var $clicked = $(e.target);
-          if (!$clicked.parents().hasClass("dropdown"))
-            $(".dropdown dd ul").hide();
+        $(document).bind("click", function(e) {
+            var $clicked = $(e.target);
+            if (!$clicked.parents().hasClass("dropdown"))
+                $(".dropdown dd ul").hide();
         });
 
-        $("#flagSwitcher").click(function () {
-          $(".dropdown img.flag").toggleClass("flagvisibility");
+        $("#flagSwitcher").click(function() {
+            $(".dropdown img.flag").toggleClass("flagvisibility");
         });
-      });
+    });
     </script>
-  </head>
-  <body>
-	<div id="header-placeholder"></div>
+
+</head>
+
+<body>
+   
+    <div id="header-placeholder"></div>
     <script>
         document.addEventListener("DOMContentLoaded", function() {
             fetch('header.html')
@@ -65,230 +76,63 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                 })
                 .catch(error => console.error('Error cargando el encabezado:', error));
         });
+
     </script>
-
     <div class="main">
-      <div class="shop_top">
-        <div class="container">
-          <div class="row">
-            <div style="width: 100%; display: flex; justify-content: center;">
-              <div
-                class="login-title"
-                style="width: 50%;box-shadow: 0px 0px 10px rgba(64, 64, 64, 1);">
-                <h4 class="title">Iniciar Sesión</h4>
-                <div id="loginbox" class="loginbox">
-                  <form action method="post" name="login" id="login-form">
-                    <fieldset class="input">
-                      <p id="login-form-username">
-                        <label for="modlgn_username">Correo Electronico</label>
-                        <input
-                          id="modlgn_username"
-                          type="text"
-                          name="email"
-                          class="inputbox"
-                          size="18"
-                          autocomplete="off" />
-                      </p>
-                      <p id="login-form-password">
-                        <label for="modlgn_passwd">Contraseña</label>
-                        <input
-                          id="modlgn_passwd"
-                          type="password"
-                          name="password"
-                          class="inputbox"
-                          size="18"
-                          autocomplete="off" />
-                      </p>
-                      <input
-                        type="submit"
-                        name="Submit"
-                        class="button"
-                        value="Iniciar Sesion" />
-                      <div class="remember">
-                        <p>
-                          <label for="modlgn_remember"><a
-                              href="register.html">¿No tienes una cuenta?
-                              Registrate</a></label></p>
+        <div class="shop_top">
+            <div class="container">
+                <div class="row">
+                    <div style="width: 100%; display: flex; justify-content: center;">
+                        <div class="login-title" style="width: 50%;box-shadow: 0px 0px 10px rgba(64, 64, 64, 1);">
+                            <h4 class="title">Iniciar Sesión</h4>
+                            <div id="loginbox" class="loginbox">
+                                <form action method="post" name="login" id="login-form">
+                                    <fieldset class="input">
+                                        <p id="login-form-username">
+                                            <label for="modlgn_username">Correo Electronico</label>
+                                            <input id="modlgn_username" type="text" name="email" class="inputbox" size="18" autocomplete="off" />
+                                        </p>
+                                        <p id="login-form-password">
+                                            <label for="modlgn_passwd">Contraseña</label>
+                                            <input id="modlgn_passwd" type="password" name="password" class="inputbox" size="18" autocomplete="off" />
+                                        </p>
+                                        <input type="submit" name="Submit" class="button" value="Iniciar Sesion" />
+                                        <div class="remember">
+                                            <p>
+                                                <label for="modlgn_remember"><a href="register.html">¿No tienes una cuenta?
+                                                        Registrate</a></label></p>
+                                            <div class="clear"></div>
+                                        </div>
+                                        <div class="remember">
+                                            <p>
+                                                <label for="modlgn_remember"><a href="#">¿Olvidaste tu
+                                                        contraseña? </a></label>
+                                            </p>
+                                            <div class="clear"></div>
+                                        </div>
+                                    </fieldset>
+                                </form>
+                            </div>
+                        </div>
                         <div class="clear"></div>
-                      </div>
-
-                      <div class="remember">
-                        <p>
-                          <label for="modlgn_remember"><a href="#">¿Olvidaste tu
-                              contraseña? </a></label>
-                        </p>
-
-                        <div class="clear"></div>
-                      </div>
-                    </fieldset>
-                  </form>
+                    </div>
                 </div>
-              </div>
-              <div class="clear"></div>
-
             </div>
-          </div>
         </div>
-      </div>
     </div>
+    <div id="footer-placeholder"></div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            fetch('footer.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('footer-placeholder').innerHTML = data;
+                })
+                .catch(error => console.error('Error cargando el encabezado:', error));
+        });
+    </script>
+</body>
 
-    <style>/* Básicos de la Página */
-			body {
-			  font-family: 'Open Sans', sans-serif;
-			  margin: 0;
-			  padding: 0;
-			  box-sizing: border-box;
-			}
-			
-			/* Estilos del Footer */
-			.footer {
-			  background-color: #333;
-			  color: #f8f8f2;
-			  padding: 40px 0;
-			}
-			
-			.footer .container {
-			  max-width: 1200px;
-			  margin: 0 auto;
-			  padding: 0 15px;
-			}
-			
-			.footer .row {
-			  display: flex;
-			  flex-wrap: wrap;
-			}
-			
-			.footer .col-md-3 {
-			  flex: 0 0 25%;
-			  max-width: 25%;
-			  padding: 0 15px;
-			}
-			
-			.footer .footer_box {
-			  list-style: none;
-			  padding: 0;
-			}
-			
-			.footer .footer_box h4 {
-			  font-size: 18px;
-			  margin-bottom: 15px;
-			  color: #fff;
-			}
-			
-			.footer .footer_box li {
-			  margin-bottom: 10px;
-			}
-			
-			.footer .footer_box li a {
-			  color: #ccc;
-			  text-decoration: none;
-			  transition: color 0.3s;
-			}
-			
-			.footer .footer_box li a:hover {
-			  color: #fff;
-			}
-			
-			.footer .social {
-			  display: flex;
-			  gap: 10px;
-			  padding: 0;
-			  list-style: none;
-			}
-			
-			.footer .social li {
-			  display: inline-block;
-			}
-			
-			.footer .social li a {
-			  color: #f8f8f2;
-			  font-size: 20px;
-			  transition: color 0.3s;
-			}
-			
-			.footer .social li a:hover {
-			  color: #fff;
-			}
-			
-			.footer_bottom {
-			  text-align: center;
-			  padding: 20px 0;
-			  border-top: 1px solid #444;
-			}
-			
-			.footer_bottom p {
-			  margin: 0;
-			  color: #ccc;
-			}
-			
-			.footer_bottom p a {
-			  color: #fff;
-			  text-decoration: none;
-			}
-			
-			.footer_bottom p a:hover {
-			  color: #ccc;
-			}
-			</style>
-		  <!-- Footer Section -->
-		  <div class="footer">
-			<div class="container">
-			  <div class="row">
-				<div class="col-md-3">
-				  <ul class="footer_box">
-					<h4>Products</h4>
-					<li><a href="shop.html">Shop</a></li>
-					<li><a href="laboratory.html">Custom</a></li>
-					<li><a href="membresias.html">Memberships</a></li>
-				  </ul>
-				</div>
-				<div class="col-md-3">
-				  <ul class="footer_box">
-					<h4>About</h4>
-					<li><a href="#about-us">About us</a></li>
-					<li><a href="contact.html">Contacto</a></li>
-				  </ul>
-				</div>
-				<div class="col-md-3">
-				  <ul class="footer_box">
-					<h4>Customer Support</h4>
-					<li><a href="contact.html">Contact Us</a></li>
-					<li><a href="profile.html">Shipping and Order Tracking</a></li>
-					<li><a href="chat.html">Chat Support</a></li>
-			
-				  </ul>
-				</div>
-				<div class="col-md-3">
-				  <ul class="footer_box">
-					<h4></h4>
-					<p style="color: #f8f8f2;"></p>
-					<ul class="social">
-					  <li class="facebook">
-						<a href="#"><i class="fab fa-facebook-f"></i></a>
-					  </li>
-					  <li class="X">
-						<a href="#"><i class="fab fa-twitter"></i></a>
-					  </li>
-					  <li class="instagram">
-						<a href="#"><i class="fab fa-instagram"></i></a>
-					  </li>
-					  <li class="youtube">
-						<a href="#"><i class="fab fa-youtube"></i></a>
-					  </li>
-					</ul>
-				  </ul>
-				</div>
-			  </div>
-			  <div class="row footer_bottom">
-				<div class="copy">
-				  <p>
-					© 2024 web page by
-					<a href="https://github.com/ArmandoVallejo/PrintLn" target="_blank">Equipo 3</a>
-				  </p>
-				</div>
-			  </div>
-			</div>
-		  </div>
 
-  </body>
 </html>
+

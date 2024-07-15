@@ -2,158 +2,36 @@
 <html lang="es">
 
 <head>
-    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/styles1.css">
+    <link rel="stylesheet" href="css/style.css">
     <title>Checkout de Camiseta</title>
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
-    
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f8f9fa;
-            padding: 20px;
-        }
+    <!--<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">-->
+    <!-- Bootstrap CSS v5.0-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <!-- Bootstrap Icons CSS    -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/
+    5.15.4/css/all.min.css" rel="stylesheet">
 
-        .checkout-container {
-            max-width: 800px;
-            margin: 0 auto;
-            background: #fff;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            padding: 20px;
-        }
-
-         
-
-        .form-group {
-            margin-bottom: 15px;
-        }
-
-        .btn-custom {
-            width: 100%;
-            border-radius: 50px;
-            padding: 10px;
-        }
-
-        .summary {
-            padding: 10px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-        }
-
-        .summary p {
-            margin: 0;
-        }
-
-        .payment-methods {
-            margin-bottom: 20px;
-        }
-
-        .payment-methods img {
-            width: 50px;
-            margin-right: 10px;
-            cursor: pointer;
-        }
-
-        .flex-container {
-            display: flex;
-            justify-content: space-between;
-        }
-
-        .form-section {
-            flex: 1;
-            padding-right: 20px;
-        }
-
-        .summary-section {
-            width: 250px;
-        }
-
-        .card-details {
-            display: none;
-            margin-top: 20px;
-        }
-
-        .product-image {
-            width: 100%;
-            border-radius: 5px;
-        }
-
-        .product-description {
-            margin-top: 10px;
-            font-size: 14px;
-            color: #555;
-        }
-        header{
-            display: flex;
-        }
-    </style>
+    <link href="css/style.css" rel='stylesheet' type='text/css' />
 </head>
-
 <body>
-  <header>
-		<div class="header-left">
-		  <div class="logo">
-			<img src="images/WhatsApp_Image_2024-07-02_at_9.33.25_AM-removebg-preview.png" alt="Logo" style="width: 80px;  height: 60px">
-		  </div>
-		  <nav class="menu">
-			<ul class="nav-links" id="nav-links">
-			  <li><a href="shop.html">Shop</a></li>
-			  <!---->
-			  <li><a href="laboratory.html">Custom</a></li>
-			  <li><a href="faq.html">FaQ</a></li>
-			  <li><a href="contact.html">Contact</a></li>
-			  <li><a href="chat.html">Chat</a></li>
-			  <li><a href="wishlist.html">Wishlist</a></li>
-			</ul>
-			<div class="menu-icon" onclick="toggleMenu()">
-			  &#9776;
-			</div>
-		  </nav>
-		</div>
-		<div class="header-right">
-		  <div class="icons">
-			<ul class="icon1 sub-icon1 profile_img">
-			  <li>
-				<a class="active-icon c1" href="single.html"></i></a>
-				<ul class="sub-icon1 list">
-				  <div class="product_control_buttons">
-					<a href="profile.html"><img src="images/edit.png" alt=""></a>
-					<a href="profile.html"><img src="images/close_edit.png" alt=""></a>
-				  </div>
-				  <div class="clear"></div>
-				  <li class="list_img"><img src="images/ansiedad2.png" alt="" width="60"></li>
-				  <li class="list_desc">
-					<h4><a href="single.html">Playera ansiedad</a></h4>
-					<span class="actual">1 x $12.00</span>
-				  </li>
-				  <div class="login_buttons">
-					<div class="check_button"><a href="checkout.html">Check out</a></div>
-					<div class="clear"></div>
-				  </div>
-				  <div class="clear"></div>
-				</ul>
-			  </li>
-			  <li>
-				<a class="icon1 sub-icon1 profile_img" href="login.html"><i class="fas fa-user"></i></a>
-				<!-- Aqui se pondira el link a la pagina de login-->
-			  </li>
-			</ul>
-			<ul>
-			</ul>
-		  </div>
-		 <!--<div class="search">
-			<form class="search-form">
-			  <input type="text" placeholder="Busca tu playera">
-			  <input type="submit" value="Buscar">
-			</form>
-		  </div>--> 
-		</div>
-	  </header>
-    
+   
+    <div id="header-placeholder"></div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            fetch('header.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('header-placeholder').innerHTML = data;
+                })
+                .catch(error => console.error('Error cargando el encabezado:', error));
+        });
+
+    </script>
+    <br>
     <div class="container checkout-container">
         <div class="checkout-header">
             <h2>Checkout de Camiseta</h2>
@@ -163,12 +41,9 @@
             <div class="form-section">
                 <div class="payment-methods">
                     <h5>Métodos de Pago</h5>
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Visa_Inc._logo.svg" alt="Visa"
-                        onclick="toggleCardDetails('visa')">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Mastercard-logo.svg"
-                        alt="Mastercard" onclick="toggleCardDetails('mastercard')">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a4/Paypal_2014_logo.png" alt="PayPal"
-                        onclick="toggleCardDetails('paypal')">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Visa_Inc._logo.svg" alt="Visa" onclick="toggleCardDetails('visa')">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Mastercard-logo.svg" alt="Mastercard" onclick="toggleCardDetails('mastercard')">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a4/Paypal_2014_logo.png" alt="PayPal" onclick="toggleCardDetails('paypal')">
                 </div>
                 <form id="checkoutForm">
                     <div class="form-group">
@@ -187,8 +62,7 @@
                         <div class="form-row">
                             <div class="form-group col-md-6">
                                 <label for="visaExpiryDate">Fecha de Expiración</label>
-                                <input type="text" class="form-control" id="visaExpiryDate" placeholder="MM/AA"
-                                    maxlength="5" required>
+                                <input type="text" class="form-control" id="visaExpiryDate" placeholder="MM/AA" maxlength="5" required>
                             </div>
                             <div class="form-group col-md-6">
                                 <label for="visaCvv">CVV</label>
@@ -204,8 +78,7 @@
                         <div class="form-row">
                             <div class="form-group col-md-6">
                                 <label for="mastercardExpiryDate">Fecha de Expiración</label>
-                                <input type="text" class="form-control" id="mastercardExpiryDate" placeholder="MM/AA"
-                                    maxlength="5" required>
+                                <input type="text" class="form-control" id="mastercardExpiryDate" placeholder="MM/AA" maxlength="5" required>
                             </div>
                             <div class="form-group col-md-6">
                                 <label for="mastercardCvv">CVV</label>
@@ -237,211 +110,66 @@
             </div>
         </div>
     </div>
-
+    <br>
     <script>
-        function toggleCardDetails(method) {
-            var cardDetails = document.getElementsByClassName('card-details');
+    function toggleCardDetails(method) {
+        var cardDetails = document.getElementsByClassName('card-details');
 
-            for (var i = 0; i < cardDetails.length; i++) {
-                cardDetails[i].style.display = 'none';
-            }
-
-            var selectedMethodDetails = document.getElementById(method + 'Details');
-            if (selectedMethodDetails) {
-                selectedMethodDetails.style.display = 'block';
-            }
+        for (var i = 0; i < cardDetails.length; i++) {
+            cardDetails[i].style.display = 'none';
         }
 
-        function processPayment() {
-            var fullName = document.getElementById('fullName').value;
-            var email = document.getElementById('email').value;
-            var visaCardNumber = document.getElementById('visaCardNumber').value;
-            var visaExpiryDate = document.getElementById('visaExpiryDate').value;
-            var visaCvv = document.getElementById('visaCvv').value;
-            var mastercardNumber = document.getElementById('mastercardNumber').value;
-            var mastercardExpiryDate = document.getElementById('mastercardExpiryDate').value;
-            var mastercardCvv = document.getElementById('mastercardCvv').value;
-            var paypalEmail = document.getElementById('paypalEmail').value;
+        var selectedMethodDetails = document.getElementById(method + 'Details');
+        if (selectedMethodDetails) {
+            selectedMethodDetails.style.display = 'block';
+        }
+    }
 
-            if (fullName && email) {
-                if ((visaCardNumber && visaExpiryDate && visaCvv) || (mastercardNumber && mastercardExpiryDate && mastercardCvv) || paypalEmail) {
-                    var subtotal = 29.99;
-                    var iva = subtotal * 0.16;
-                    var total = subtotal + iva;
+    function processPayment() {
+        var fullName = document.getElementById('fullName').value;
+        var email = document.getElementById('email').value;
+        var visaCardNumber = document.getElementById('visaCardNumber').value;
+        var visaExpiryDate = document.getElementById('visaExpiryDate').value;
+        var visaCvv = document.getElementById('visaCvv').value;
+        var mastercardNumber = document.getElementById('mastercardNumber').value;
+        var mastercardExpiryDate = document.getElementById('mastercardExpiryDate').value;
+        var mastercardCvv = document.getElementById('mastercardCvv').value;
+        var paypalEmail = document.getElementById('paypalEmail').value;
 
-                    document.getElementById('subtotal').innerText = '$' + subtotal.toFixed(2);
-                    document.getElementById('iva').innerText = '$' + iva.toFixed(2);
-                    document.getElementById('totalAmount').innerText = '$' + total.toFixed(2);
+        if (fullName && email) {
+            if ((visaCardNumber && visaExpiryDate && visaCvv) || (mastercardNumber && mastercardExpiryDate && mastercardCvv) || paypalEmail) {
+                var subtotal = 29.99;
+                var iva = subtotal * 0.16;
+                var total = subtotal + iva;
 
-                    alert('Pago realizado con éxito para ' + fullName);
-                } else {
-                    alert('Por favor, completa los datos de la tarjeta o el correo de PayPal.');
-                }
+                document.getElementById('subtotal').innerText = '$' + subtotal.toFixed(2);
+                document.getElementById('iva').innerText = '$' + iva.toFixed(2);
+                document.getElementById('totalAmount').innerText = '$' + total.toFixed(2);
+
+                alert('Pago realizado con éxito para ' + fullName);
             } else {
-                alert('Por favor, completa todos los campos del formulario.');
+                alert('Por favor, completa los datos de la tarjeta o el correo de PayPal.');
             }
+        } else {
+            alert('Por favor, completa todos los campos del formulario.');
         }
+    }
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <div id="footer-placeholder"></div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            fetch('footer.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('footer-placeholder').innerHTML = data;
+                })
+                .catch(error => console.error('Error cargando el encabezado:', error));
+        });
     </script>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <style>/* Básicos de la Página */
-        body {
-          font-family: 'Open Sans', sans-serif;
-          margin: 0;
-          padding: 0;
-          box-sizing: border-box;
-        }
-        
-        /* Estilos del Footer */
-        .footer {
-          background-color: #333;
-          color: #f8f8f2;
-          padding: 40px 0;
-        }
-        
-        .footer .container {
-          max-width: 1200px;
-          margin: 0 auto;
-          padding: 0 15px;
-        }
-        
-        .footer .row {
-          display: flex;
-          flex-wrap: wrap;
-        }
-        
-        .footer .col-md-3 {
-          flex: 0 0 25%;
-          max-width: 25%;
-          padding: 0 15px;
-        }
-        
-        .footer .footer_box {
-          list-style: none;
-          padding: 0;
-        }
-        
-        .footer .footer_box h4 {
-          font-size: 18px;
-          margin-bottom: 15px;
-          color: #fff;
-        }
-        
-        .footer .footer_box li {
-          margin-bottom: 10px;
-        }
-        
-        .footer .footer_box li a {
-          color: #ccc;
-          text-decoration: none;
-          transition: color 0.3s;
-        }
-        
-        .footer .footer_box li a:hover {
-          color: #fff;
-        }
-        
-        .footer .social {
-          display: flex;
-          gap: 10px;
-          padding: 0;
-          list-style: none;
-        }
-        
-        .footer .social li {
-          display: inline-block;
-        }
-        
-        .footer .social li a {
-          color: #f8f8f2;
-          font-size: 20px;
-          transition: color 0.3s;
-        }
-        
-        .footer .social li a:hover {
-          color: #fff;
-        }
-        
-        .footer_bottom {
-          text-align: center;
-          padding: 20px 0;
-          border-top: 1px solid #444;
-        }
-        
-        .footer_bottom p {
-          margin: 0;
-          color: #ccc;
-        }
-        
-        .footer_bottom p a {
-          color: #fff;
-          text-decoration: none;
-        }
-        
-        .footer_bottom p a:hover {
-          color: #ccc;
-        }
-        </style>
-      <!-- Footer Section -->
-      <div class="footer">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-3">
-              <ul class="footer_box">
-                <h4>Products</h4>
-                <li><a href="shop.html">Shop</a></li>
-                <li><a href="laboratory.html">Custom</a></li>
-                <li><a href="membresias.html">Memberships</a></li>
-              </ul>
-            </div>
-            <div class="col-md-3">
-              <ul class="footer_box">
-                <h4>About</h4>
-                <li><a href="#about-us">About us</a></li>
-                <li><a href="contact.html">Contacto</a></li>
-              </ul>
-            </div>
-            <div class="col-md-3">
-              <ul class="footer_box">
-                <h4>Customer Support</h4>
-                <li><a href="contact.html">Contact Us</a></li>
-                <li><a href="profile.html">Shipping and Order Tracking</a></li>
-                <li><a href="chat.html">Chat Support</a></li>
-        
-              </ul>
-            </div>
-            <div class="col-md-3">
-              <ul class="footer_box">
-                <h4></h4>
-                <p style="color: #f8f8f2;"></p>
-                <ul class="social">
-                  <li class="facebook">
-                    <a href="#"><i class="fab fa-facebook-f"></i></a>
-                  </li>
-                  <li class="X">
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                  </li>
-                  <li class="instagram">
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                  </li>
-                  <li class="youtube">
-                    <a href="#"><i class="fab fa-youtube"></i></a>
-                  </li>
-                </ul>
-              </ul>
-            </div>
-          </div>
-          <div class="row footer_bottom">
-            <div class="copy">
-              <p>
-                © 2024 web page by
-                <a href="https://github.com/ArmandoVallejo/PrintLn" target="_blank">Equipo 3</a>
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
 </body>
 
 </html>
