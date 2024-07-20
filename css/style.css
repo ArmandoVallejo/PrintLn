@@ -990,8 +990,8 @@ li.list_desc h4 a:hover {
 
 .nbs-flexisel-item {
     float: left;
-    margin: 0px;
-    padding: 0px;
+    margin: 10px;
+    padding: 10px;
     cursor: pointer;
     position: relative;
     line-height: 0px;
