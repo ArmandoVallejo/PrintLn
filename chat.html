@@ -8,7 +8,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <html>
 
 <head>
-    <title>println</title>
+    <title>Chat</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <!-- Google tag (gtag.js) -->
@@ -51,62 +51,58 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     <script src="js/fwslider.js"></script>
     <!--end slider -->
     <script type="text/javascript">
-    $(document).ready(function() {
-        $(".dropdown img.flag").addClass("flagvisibility");
-
-        $(".dropdown dt a").click(function() {
-            $(".dropdown dd ul").toggle();
+        $(document).ready(function()  {
+                    $(".dropdown img.flag").addClass("flagvisibility");
+        
+                    $(".dropdown dt a").click(function() {
+                        $(".dropdown dd ul").toggle();
+                    });
+                                
+                    $(".dropdown dd ul li a").click(function() {
+                        var text = $(this).html();
+                        $(".dropdown dt a span").html(text);
+                        $(".dropdown dd ul").hide();
+                        $("#result").html("Selected value is: " + getSelectedValue("sample"));
+                    });
+                                
+                    function getSelectedValue(id) {
+                        return $("#" + id).find("dt a span.value").html();
+                    }
+        
+                    $(document).bind('click', function(e) {
+                        var $clicked = $(e.target);
+                        if (! $clicked.parents().hasClass("dropdown"))
+                            $(".dropdown dd ul").hide();
+                    });
         });
-
-        $(".dropdown dd ul li a").click(function() {
-            var text = $(this).html();
-            $(".dropdown dt a span").html(text);
-            $(".dropdown dd ul").hide();
-            $("#result").html("Selected value is: " + getSelectedValue("sample"));
-        });
-
-        function getSelectedValue(id) {
-            return $("#" + id).find("dt a span.value").html();
-        }
-
-        $(document).bind('click', function(e) {
-            var $clicked = $(e.target);
-            if (!$clicked.parents().hasClass("dropdown"))
-
-
-
-        $("#flagSwitcher").click(function() {
-            $(".dropdown img.flag").toggleClass("flagvisibility");
-        });
-    });
+        
 
     function sendMessage() {
-        var userInput = document.getElementById("userInput");
-        var chatMessages = document.getElementById("chatMessages");
+            var userInput = document.getElementById("userInput");
+            var chatMessages = document.getElementById("chatMessages");
 
-        if (userInput.value.trim() !== "") {
-            var userMessage = document.createElement("div");
-            userMessage.className = "message user-message";
-            userMessage.innerText = userInput.value;
-            chatMessages.appendChild(userMessage);
-            chatMessages.scrollTop = chatMessages.scrollHeight;
+            if (userInput.value.trim() !== "") {
+                var userMessage = document.createElement("div");
+                userMessage.className = "message user-message";
+                userMessage.innerText = userInput.value;
+                chatMessages.appendChild(userMessage);
+                chatMessages.scrollTop = chatMessages.scrollHeight;
 
-            var botMessage = document.createElement("div");
-            botMessage.className = "message bot-message";
-            botMessage.innerText = "Recibido: " + userInput.value; // Simple bot response
-            chatMessages.appendChild(botMessage);
-            chatMessages.scrollTop = chatMessages.scrollHeight;
+                var botMessage = document.createElement("div");
+                botMessage.className = "message bot-message";
+                botMessage.innerText = "Recibido: " + userInput.value;  // Simple bot response
+                chatMessages.appendChild(botMessage);
+                chatMessages.scrollTop = chatMessages.scrollHeight;
 
-            userInput.value = "";
+                userInput.value = "";
+            }
         }
-    }
 
-    function checkEnter(event) {
-        if (event.key === "Enter") {
-            sendMessage();
+        function checkEnter(event) {
+            if (event.key === "Enter") {
+                sendMessage();
+            }
         }
-    }
-}
     </script>
 </head>
 
@@ -145,7 +141,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         </div>
     </div>
     </div>
-    <!--<div class="footer">
+    <div class="footer">
 			<div class="container">
 				<div class="row">
 					<div class="col-md-3">

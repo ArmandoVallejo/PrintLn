@@ -109,11 +109,11 @@ $(document).ready(function(){
         if(orientation == "front"){
             orientation="back";
             $(".reference").attr("src",orientation+"-"+parts[1]);
-            $(this).text("Go Front");
+            $(this).text("Ir al frente");
         }else{
             orientation="front";
             $(".reference").attr("src",orientation+"-"+parts[1]);
-            $(this).text("Go Back");
+            $(this).text("Ir atrás");
         }
     });
 
