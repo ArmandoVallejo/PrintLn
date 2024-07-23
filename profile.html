@@ -500,6 +500,9 @@
             e.preventDefault();
             $(this).tab('show');
         });
+        $('#logout').on('click',function(e){
+            window.location.href = "login.html";
+        });
 
         $(document).ready(function() {
             $('#my-orders-table').DataTable();
